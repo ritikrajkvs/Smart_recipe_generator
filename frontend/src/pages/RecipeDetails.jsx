@@ -12,7 +12,7 @@ const RecipeDetails = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/recipes/${id}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`);
         const data = await res.json();
         if (data.success) setRecipe(data.recipe);
       } catch (err) { console.error(err); }
