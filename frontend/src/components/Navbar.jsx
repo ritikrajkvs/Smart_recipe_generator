@@ -7,25 +7,30 @@ const Navbar = () => {
   const { favorites, user, logout } = useContext(AppContext);
   const isActive = (path) => location.pathname === path;
 
-  // Helper to render Auth buttons based on current page
+  // Determine if the user is on an authentication page
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
+
+  // --- RENDER FUNCTIONS ---
+
+  // Renders login/signup buttons or text on auth pages
   const renderAuthButtons = () => {
     if (location.pathname === '/login') {
       return (
-        <div className="flex items-center gap-2 text-sm text-slate-500">
-          <span>New here?</span>
-          <Link to="/signup" className="text-green-600 font-bold hover:underline">Create Account</Link>
+        <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
+          New to RecipeGen?
+          <Link to="/signup" className="text-green-600 font-bold hover:text-green-700 hover:underline transition">Create Account</Link>
         </div>
       );
     }
     if (location.pathname === '/signup') {
       return (
-        <div className="flex items-center gap-2 text-sm text-slate-500">
-          <span>Have an account?</span>
-          <Link to="/login" className="text-green-600 font-bold hover:underline">Log In</Link>
+        <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
+          Have an account?
+          <Link to="/login" className="text-green-600 font-bold hover:text-green-700 hover:underline transition">Log In</Link>
         </div>
       );
     }
-    // Default view (e.g. Home Page before login)
+    // Default logged-out buttons (not shown in protected flow, but good for completeness)
     return (
       <div className="flex gap-3">
         <Link to="/login" className="px-5 py-2 rounded-full font-bold text-slate-600 hover:bg-slate-100 transition">Log In</Link>
@@ -33,9 +38,63 @@ const Navbar = () => {
       </div>
     );
   };
+  
+  // Renders the main app navigation pills
+  const renderAppNav = () => (
+    <div className="hidden md:flex items-center gap-1 bg-white/50 p-1.5 rounded-full border border-white/80 backdrop-blur-sm shadow-md transition-all duration-300">
+      {['/', '/results', '/suggested'].map(path => (
+        <Link key={path} to={path} className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${isActive(path) 
+          ? 'bg-slate-800 text-white shadow-lg shadow-black/10' 
+          : 'text-slate-600 hover:text-slate-800 hover:bg-white'
+        }`}>
+          {path === '/' ? 'Home' : path === '/results' ? 'Recipes' : 'For You'}
+        </Link>
+      ))}
+    </div>
+  );
+
+  // Renders the logged-in profile area
+  const renderUserProfile = () => (
+    <div className="flex items-center gap-4">
+      {/* Saved Button (Attractive Icon Style) */}
+      <Link 
+        to="/favorites" 
+        className={`relative group p-2 text-3xl transition-transform hover:scale-110 
+          ${isActive('/favorites') ? 'text-red-600' : 'text-slate-500 hover:text-red-500'}`}
+        title="Saved Recipes"
+      >
+        ❤️
+        {/* Counter Badge */}
+        {favorites.length > 0 && (
+          <span className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-extrabold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white shadow-md">
+            {favorites.length}
+          </span>
+        )}
+      </Link>
+
+      {/* Profile & Logout Group */}
+      <div className="flex items-center gap-3 pl-4 border-l border-slate-200">
+        
+        {/* User Initial Avatar */}
+        <div className="w-10 h-10 bg-gradient-to-br from-slate-900 to-slate-700 rounded-full flex items-center justify-center text-white font-extrabold text-lg shadow-lg ring-2 ring-green-500/50">
+          {user.username.charAt(0).toUpperCase()}
+        </div>
+        
+        {/* Username */}
+        <p className="text-base font-bold text-slate-800 hidden lg:block">{user.username}</p>
+        
+        {/* Logout Button (Attractive Icon) */}
+        <button onClick={logout} className="text-slate-400 hover:text-red-500 transition-colors" title="Logout">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 shadow-sm transition-all duration-300">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xl transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
         {/* Logo */}
@@ -44,48 +103,17 @@ const Navbar = () => {
           <span className="text-2xl font-extrabold bg-gradient-to-r from-green-600 to-teal-500 bg-clip-text text-transparent tracking-tight">RecipeGen</span>
         </Link>
 
-        {/* Center Navigation - Only visible when logged in */}
-        {user && (
-          <div className="hidden md:flex items-center gap-1 bg-slate-100/50 p-1.5 rounded-full border border-slate-200/50">
-            {['/', '/results', '/suggested'].map(path => (
-              <Link key={path} to={path} className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${isActive(path) ? 'bg-white text-green-600 shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}>
-                {path === '/' ? 'Home' : path === '/results' ? 'Recipes' : 'For You'}
-              </Link>
-            ))}
-          </div>
-        )}
-
-        {/* Right Side: User Profile OR Auth Buttons */}
+        {/* Dynamic Center Content */}
+        {!isAuthPage && user ? renderAppNav() : <div className="hidden md:block"></div>}
+        
+        {/* Dynamic Right Content */}
         <div className="flex items-center gap-4">
-          {user ? (
-            <>
-              {/* Saved Button */}
-              <Link to="/favorites" className="relative group p-2 text-2xl hover:scale-110 transition-transform" title="Saved Recipes">
-                ❤️
-                {favorites.length > 0 && (
-                  <span className="absolute top-0 right-0 bg-green-500 text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full border-2 border-white">
-                    {favorites.length}
-                  </span>
-                )}
-              </Link>
-
-              {/* Profile Dropdown / Display */}
-              <div className="flex items-center gap-3 pl-4 border-l border-slate-200">
-                <div className="text-right hidden sm:block">
-                  <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Welcome</p>
-                  <p className="text-sm font-bold text-slate-800 leading-none">{user.username}</p>
-                </div>
-                <div className="w-10 h-10 bg-gradient-to-br from-slate-800 to-slate-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
-                  {user.username.charAt(0).toUpperCase()}
-                </div>
-                <button onClick={logout} className="ml-2 text-slate-400 hover:text-red-500 transition-colors" title="Logout">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                  </svg>
-                </button>
-              </div>
-            </>
-          ) : (
-            renderAuthButtons()
-          )}
+          {isAuthPage ? renderAuthButtons() : (user ? renderUserProfile() : null)}
         </div>
+
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
