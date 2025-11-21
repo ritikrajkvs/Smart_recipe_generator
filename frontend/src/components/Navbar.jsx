@@ -7,7 +7,6 @@ const Navbar = () => {
   const { favorites, user, logout } = useContext(AppContext);
   const isActive = (path) => location.pathname === path;
 
-  // Helper to render Auth buttons based on current page
   const renderAuthButtons = () => {
     if (location.pathname === '/login') {
       return (
@@ -25,7 +24,6 @@ const Navbar = () => {
         </div>
       );
     }
-    // Default view (e.g. Home Page before login)
     return (
       <div className="flex gap-3">
         <Link to="/login" className="px-5 py-2 rounded-full font-bold text-slate-600 hover:bg-slate-100 transition">Log In</Link>
@@ -44,7 +42,7 @@ const Navbar = () => {
           <span className="text-2xl font-extrabold bg-gradient-to-r from-green-600 to-teal-500 bg-clip-text text-transparent tracking-tight">RecipeGen</span>
         </Link>
 
-        {/* Center Navigation - Only visible when logged in */}
+        {/* Center Navigation */}
         {user && (
           <div className="hidden md:flex items-center gap-1 bg-slate-100/50 p-1.5 rounded-full border border-slate-200/50">
             {['/', '/results', '/suggested'].map(path => (
@@ -55,34 +53,35 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* Right Side: User Profile OR Auth Buttons */}
+        {/* Right Side */}
         <div className="flex items-center gap-4">
           {user ? (
             <>
-              {/* Saved Button */}
-              <Link to="/favorites" className="relative group p-2 text-2xl hover:scale-110 transition-transform" title="Saved Recipes">
-                ❤️
+              {/* Saved Button - FIXED: Text is now always visible */}
+              <Link 
+                to="/favorites" 
+                className={`relative group flex items-center gap-2 px-4 py-2 rounded-full font-bold transition-all duration-300
+                  ${isActive('/favorites') 
+                    ? 'bg-red-50 text-red-600 border border-red-100' 
+                    : 'text-slate-500 hover:bg-red-50 hover:text-red-500'
+                  }`}
+              >
+                <span className="text-xl transition-transform group-hover:scale-110">❤️</span>
+                <span>Saved</span>
+                
+                {/* Counter Badge */}
                 {favorites.length > 0 && (
-                  <span className="absolute top-0 right-0 bg-green-500 text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full border-2 border-white">
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-extrabold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white shadow-sm">
                     {favorites.length}
                   </span>
                 )}
               </Link>
 
-              {/* Profile Dropdown / Display */}
               <div className="flex items-center gap-3 pl-4 border-l border-slate-200">
-                <div className="text-right hidden sm:block">
-                  <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Welcome</p>
-                  <p className="text-sm font-bold text-slate-800 leading-none">{user.username}</p>
-                </div>
-                <div className="w-10 h-10 bg-gradient-to-br from-slate-800 to-slate-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
+                <div className="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
                   {user.username.charAt(0).toUpperCase()}
                 </div>
-                <button onClick={logout} className="ml-2 text-slate-400 hover:text-red-500 transition-colors" title="Logout">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                  </svg>
-                </button>
+                <button onClick={logout} className="text-xs font-bold text-slate-400 hover:text-slate-600 uppercase tracking-wider">Logout</button>
               </div>
             </>
           ) : (
