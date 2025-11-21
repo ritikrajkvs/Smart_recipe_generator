@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Results from './pages/Results';
 import RecipeDetails from './pages/RecipeDetails';
@@ -8,6 +8,7 @@ import Suggested from './pages/Suggested';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
 import { AppProvider } from './context/AppContext';
 
 export default function App(){
@@ -17,13 +18,19 @@ export default function App(){
         <Navbar />
         <div className="pt-20">
           <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/results' element={<Results/>}/>
-            <Route path='/recipe/:id' element={<RecipeDetails/>}/>
-            <Route path='/favorites' element={<Favorites/>}/>
-            <Route path='/suggested' element={<Suggested/>}/>
+            {/* Public Routes */}
             <Route path='/login' element={<Login/>}/>
             <Route path='/signup' element={<Signup/>}/>
+
+            {/* Protected Routes (Require Login) */}
+            <Route path='/' element={<ProtectedRoute><Home/></ProtectedRoute>}/>
+            <Route path='/results' element={<ProtectedRoute><Results/></ProtectedRoute>}/>
+            <Route path='/recipe/:id' element={<ProtectedRoute><RecipeDetails/></ProtectedRoute>}/>
+            <Route path='/favorites' element={<ProtectedRoute><Favorites/></ProtectedRoute>}/>
+            <Route path='/suggested' element={<ProtectedRoute><Suggested/></ProtectedRoute>}/>
+
+            {/* Catch all: Redirect unknown pages to Home (which will redirect to Login if needed) */}
+            <Route path='*' element={<Navigate to="/" replace />}/>
           </Routes>
         </div>
       </BrowserRouter>
