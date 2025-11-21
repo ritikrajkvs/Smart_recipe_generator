@@ -12,7 +12,6 @@ const RecipeDetails = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        // Use VITE_API_URL for production backend
         const res = await fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`);
         const data = await res.json();
         if (data.success) setRecipe(data.recipe);
@@ -33,8 +32,8 @@ const RecipeDetails = () => {
 
   const rateRecipe = (r) => setRatings({ ...ratings, [id]: r });
   
-  // Scale ingredients based on serving size
-  const scaledIngredients = recipe ? recipe.map((ing) => ({
+  // FIX APPLIED HERE: Map over recipe.ingredients, not recipe directly
+  const scaledIngredients = recipe ? recipe.ingredients.map(ing => ({
     ...ing,
     qty: Number((ing.qty * servings).toFixed(2))
   })) : [];
@@ -43,8 +42,14 @@ const RecipeDetails = () => {
   const decreaseServings = () => servings > 1 && setServings(servings - 1);
 
   // Helper component for Nutrition Bars
+  // Note: Colors are hardcoded here to ensure Tailwind reads them during build
   const NutritionBar = ({ label, value, maxVal, color }) => {
     const percentage = Math.min((value / maxVal) * 100, 100);
+    let barColor;
+    if (color === 'blue') barColor = 'bg-blue-500';
+    else if (color === 'orange') barColor = 'bg-orange-500';
+    else barColor = 'bg-red-500';
+
     return (
       <div className="space-y-1">
         <div className="flex justify-between text-sm">
@@ -52,11 +57,12 @@ const RecipeDetails = () => {
           <span className="font-bold">{value}g</span>
         </div>
         <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-          <div className={`bg-${color}-500 h-full`} style={{ width: `${percentage}%` }}></div>
+          <div className={barColor + ' h-full'} style={{ width: `${percentage}%` }}></div>
         </div>
       </div>
     );
   };
+
 
   if (loading) return <div className="flex justify-center pt-32"><div className="animate-spin h-8 w-8 border-4 border-green-500 border-t-transparent rounded-full"></div></div>;
   if (!recipe) return <p className="p-10 text-center text-slate-500">Recipe not found.</p>;
