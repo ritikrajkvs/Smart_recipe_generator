@@ -9,7 +9,9 @@
       {"name": "tea leaves", "qty": 2, "unit": "tsp"},
       {"name": "sugar", "qty": 2, "unit": "tsp"},
       {"name": "ginger", "qty": 1, "unit": "inch"},
-      {"name": "cardamom", "qty": 2, "unit": "pods"}
+      {"name": "cardamom", "qty": 2, "unit": "pods"},
+      {"name": "chai", "qty": 1, "unit": "cup"},
+      {"name": "beverage", "qty": 1, "unit": "cup"}
     ],
     "steps": ["Boil water with crushed ginger and cardamom.", "Add tea leaves and simmer.", "Add milk and sugar.", "Boil twice and strain."],
     "difficulty": "Easy",
@@ -29,7 +31,9 @@
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "butter", "qty": 3, "unit": "tbsp"},
       {"name": "cream", "qty": 0.25, "unit": "cup"},
-      {"name": "cashew", "qty": 10, "unit": "pcs"}
+      {"name": "cashew", "qty": 10, "unit": "pcs"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Sauté onion, tomato, cashew.", "Blend to paste.", "Cook paste in butter with spices.", "Add paneer and cream."],
     "difficulty": "Medium",
@@ -48,7 +52,10 @@
       {"name": "potato", "qty": 3, "unit": "pcs"},
       {"name": "green chilli", "qty": 2, "unit": "pcs"},
       {"name": "coriander", "qty": 1, "unit": "tbsp"},
-      {"name": "butter", "qty": 1, "unit": "tbsp"}
+      {"name": "butter", "qty": 1, "unit": "tbsp"},
+      {"name": "paratha", "qty": 1, "unit": "pc"},
+      {"name": "bread", "qty": 1, "unit": "pc"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Mash boiled potatoes with spices.", "Stuff into dough balls.", "Roll flat and cook on tawa with butter."],
     "difficulty": "Medium",
@@ -67,7 +74,9 @@
       {"name": "basmati rice", "qty": 2, "unit": "cups"},
       {"name": "yogurt", "qty": 1, "unit": "cup"},
       {"name": "onion", "qty": 3, "unit": "pcs"},
-      {"name": "saffron", "qty": 1, "unit": "pinch"}
+      {"name": "saffron", "qty": 1, "unit": "pinch"},
+      {"name": "biryani", "qty": 1, "unit": "pot"},
+      {"name": "rice dish", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Marinate chicken.", "Fry onions.", "Layer half-cooked rice over chicken.", "Dum cook for 40 mins."],
     "difficulty": "Hard",
@@ -86,7 +95,9 @@
       {"name": "tomato", "qty": 1, "unit": "pc"},
       {"name": "onion", "qty": 1, "unit": "pc"},
       {"name": "garlic", "qty": 4, "unit": "cloves"},
-      {"name": "ghee", "qty": 2, "unit": "tbsp"}
+      {"name": "ghee", "qty": 2, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "lentil soup", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Pressure cook dal.", "Fry cumin, garlic, onion, tomato in ghee.", "Mix with dal and simmer."],
     "difficulty": "Easy",
@@ -105,7 +116,10 @@
       {"name": "maida", "qty": 2, "unit": "cups"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "tomato", "qty": 2, "unit": "pcs"},
-      {"name": "spices", "qty": 1, "unit": "tbsp"}
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "fried bread", "qty": 2, "unit": "pcs"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Cook chickpeas with spices.", "Make dough with maida and yogurt.", "Deep fry bhature.", "Serve hot."],
     "difficulty": "Medium",
@@ -124,7 +138,9 @@
       {"name": "paneer", "qty": 200, "unit": "g"},
       {"name": "cream", "qty": 2, "unit": "tbsp"},
       {"name": "garlic", "qty": 4, "unit": "cloves"},
-      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+      {"name": "green chilli", "qty": 2, "unit": "pcs"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Blanch and blend spinach.", "Sauté garlic and spices.", "Add spinach puree and paneer.", "Finish with cream."],
     "difficulty": "Medium",
@@ -136,14 +152,15 @@
   },
   {
     "id": "r008",
-    "title": "Pohaa",
+    "title": "Poha",
     "description": "Light flattened rice breakfast with peanuts.",
     "ingredients": [
       {"name": "poha", "qty": 2, "unit": "cups"},
       {"name": "onion", "qty": 1, "unit": "pc"},
       {"name": "potato", "qty": 1, "unit": "pc"},
       {"name": "peanuts", "qty": 2, "unit": "tbsp"},
-      {"name": "curry leaves", "qty": 5, "unit": "pcs"}
+      {"name": "curry leaves", "qty": 5, "unit": "pcs"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Rinse poha.", "Sauté peanuts, veggies, and spices.", "Mix in poha and steam for 2 mins."],
     "difficulty": "Easy",
@@ -162,7 +179,10 @@
       {"name": "urad dal", "qty": 0.5, "unit": "cup"},
       {"name": "potato", "qty": 3, "unit": "pcs"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
-      {"name": "mustard seeds", "qty": 1, "unit": "tsp"}
+      {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
+      {"name": "dosa", "qty": 1, "unit": "pc"},
+      {"name": "crepe", "qty": 1, "unit": "pc"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Ferment batter overnight.", "Make potato filling.", "Spread batter on tawa.", "Roll with filling."],
     "difficulty": "Hard",
@@ -181,7 +201,10 @@
       {"name": "toor dal", "qty": 1, "unit": "cup"},
       {"name": "drumstick", "qty": 1, "unit": "pc"},
       {"name": "carrot", "qty": 1, "unit": "pc"},
-      {"name": "tamarind", "qty": 1, "unit": "tbsp"}
+      {"name": "tamarind", "qty": 1, "unit": "tbsp"},
+      {"name": "idli", "qty": 4, "unit": "pcs"},
+      {"name": "stew", "qty": 1, "unit": "bowl"},
+      {"name": "curry", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Steam idlis.", "Boil dal with veggies.", "Add tamarind and sambar powder.", "Simmer."],
     "difficulty": "Medium",
@@ -200,7 +223,10 @@
       {"name": "rice", "qty": 1, "unit": "cup"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "tomato", "qty": 2, "unit": "pcs"},
-      {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"}
+      {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"},
+      {"name": "rice dish", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Soak and pressure cook rajma.", "Prepare gravy with onion-tomato.", "Simmer beans in gravy.", "Serve with rice."],
     "difficulty": "Medium",
@@ -219,7 +245,10 @@
       {"name": "cauliflower", "qty": 1, "unit": "cup"},
       {"name": "peas", "qty": 0.5, "unit": "cup"},
       {"name": "butter", "qty": 50, "unit": "g"},
-      {"name": "pav", "qty": 4, "unit": "pcs"}
+      {"name": "pav", "qty": 4, "unit": "pcs"},
+      {"name": "bread", "qty": 4, "unit": "pcs"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "mash", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil and mash veggies.", "Cook with butter and pav bhaji masala.", "Toast pav in butter.", "Serve hot."],
     "difficulty": "Medium",
@@ -238,7 +267,9 @@
       {"name": "besan", "qty": 1, "unit": "cup"},
       {"name": "onion", "qty": 1, "unit": "pc"},
       {"name": "spices", "qty": 1, "unit": "tsp"},
-      {"name": "oil", "qty": 1, "unit": "cup"}
+      {"name": "oil", "qty": 1, "unit": "cup"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "soup", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Mix curd, besan, water for kadhi.", "Fry onion-besan pakoras.", "Simmer kadhi and add pakoras."],
     "difficulty": "Medium",
@@ -257,7 +288,9 @@
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "tomato", "qty": 2, "unit": "pcs"},
       {"name": "garlic", "qty": 4, "unit": "cloves"},
-      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+      {"name": "green chilli", "qty": 2, "unit": "pcs"},
+      {"name": "mash", "qty": 1, "unit": "bowl"},
+      {"name": "curry", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Roast eggplant on open flame.", "Peel and mash.", "Cook with onions, tomatoes, and spices."],
     "difficulty": "Medium",
@@ -275,7 +308,9 @@
       {"name": "okra", "qty": 500, "unit": "g"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "tomato", "qty": 1, "unit": "pc"},
-      {"name": "spices", "qty": 1, "unit": "tbsp"}
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "stir fry", "qty": 1, "unit": "bowl"},
+      {"name": "curry", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Wash and dry okra.", "Chop and fry with onions.", "Add spices and cook until soft."],
     "difficulty": "Easy",
@@ -294,7 +329,9 @@
       {"name": "milk", "qty": 1, "unit": "liter"},
       {"name": "sugar", "qty": 1, "unit": "cup"},
       {"name": "ghee", "qty": 2, "unit": "tbsp"},
-      {"name": "nuts", "qty": 0.25, "unit": "cup"}
+      {"name": "nuts", "qty": 0.25, "unit": "cup"},
+      {"name": "dessert", "qty": 1, "unit": "bowl"},
+      {"name": "sweet", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Grate carrots.", "Simmer in milk until dry.", "Fry in ghee with sugar and nuts."],
     "difficulty": "Medium",
@@ -313,7 +350,9 @@
       {"name": "milk", "qty": 1, "unit": "liter"},
       {"name": "sugar", "qty": 0.5, "unit": "cup"},
       {"name": "cardamom", "qty": 2, "unit": "pods"},
-      {"name": "nuts", "qty": 2, "unit": "tbsp"}
+      {"name": "nuts", "qty": 2, "unit": "tbsp"},
+      {"name": "dessert", "qty": 1, "unit": "bowl"},
+      {"name": "pudding", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil milk.", "Add soaked rice.", "Simmer until thick.", "Add sugar and garnish."],
     "difficulty": "Easy",
@@ -332,7 +371,9 @@
       {"name": "potato", "qty": 4, "unit": "pcs"},
       {"name": "peas", "qty": 0.5, "unit": "cup"},
       {"name": "spices", "qty": 1, "unit": "tbsp"},
-      {"name": "oil", "qty": 2, "unit": "cups"}
+      {"name": "oil", "qty": 2, "unit": "cups"},
+      {"name": "snack", "qty": 1, "unit": "pc"},
+      {"name": "fried food", "qty": 1, "unit": "pc"}
     ],
     "steps": ["Prepare dough.", "Make potato filling.", "Shape and fill samosas.", "Deep fry."],
     "difficulty": "Hard",
@@ -351,7 +392,9 @@
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "potato", "qty": 1, "unit": "pc"},
       {"name": "spinach", "qty": 0.5, "unit": "cup"},
-      {"name": "oil", "qty": 2, "unit": "cups"}
+      {"name": "oil", "qty": 2, "unit": "cups"},
+      {"name": "fritters", "qty": 1, "unit": "plate"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Slice vegetables.", "Mix with besan and water.", "Deep fry until golden."],
     "difficulty": "Easy",
@@ -370,7 +413,8 @@
       {"name": "onion", "qty": 1, "unit": "pc"},
       {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
       {"name": "green chilli", "qty": 2, "unit": "pcs"},
-      {"name": "water", "qty": 3, "unit": "cups"}
+      {"name": "water", "qty": 3, "unit": "cups"},
+      {"name": "breakfast", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Roast semolina.", "Sauté veggies and spices.", "Add boiling water and cook until fluffy."],
     "difficulty": "Easy",
@@ -389,7 +433,8 @@
       {"name": "lemon", "qty": 2, "unit": "pcs"},
       {"name": "peanuts", "qty": 2, "unit": "tbsp"},
       {"name": "turmeric", "qty": 0.5, "unit": "tsp"},
-      {"name": "curry leaves", "qty": 10, "unit": "pcs"}
+      {"name": "curry leaves", "qty": 10, "unit": "pcs"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Cook rice.", "Tempering with mustard seeds, peanuts, curry leaves.", "Mix with turmeric and lemon juice."],
     "difficulty": "Easy",
@@ -408,7 +453,9 @@
       {"name": "onion", "qty": 3, "unit": "pcs"},
       {"name": "tomato", "qty": 2, "unit": "pcs"},
       {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"},
-      {"name": "spices", "qty": 2, "unit": "tbsp"}
+      {"name": "spices", "qty": 2, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Brown chicken.", "Make gravy with onion, tomato, spices.", "Simmer chicken in gravy until tender."],
     "difficulty": "Medium",
@@ -426,7 +473,9 @@
       {"name": "egg", "qty": 4, "unit": "pcs"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "tomato", "qty": 2, "unit": "pcs"},
-      {"name": "spices", "qty": 1, "unit": "tbsp"}
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil and peel eggs.", "Prepare spicy gravy.", "Add eggs and simmer for 10 mins."],
     "difficulty": "Easy",
@@ -445,7 +494,8 @@
       {"name": "red chilli powder", "qty": 1, "unit": "tbsp"},
       {"name": "lemon", "qty": 1, "unit": "pc"},
       {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"},
-      {"name": "oil", "qty": 0.5, "unit": "cup"}
+      {"name": "oil", "qty": 0.5, "unit": "cup"},
+      {"name": "fry", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Marinate fish with spices and lemon.", "Shallow fry until crispy."],
     "difficulty": "Easy",
@@ -464,7 +514,9 @@
       {"name": "yogurt", "qty": 1, "unit": "cup"},
       {"name": "spices", "qty": 2, "unit": "tbsp"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
-      {"name": "ghee", "qty": 3, "unit": "tbsp"}
+      {"name": "ghee", "qty": 3, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Brown meat.", "Add beaten yogurt and spices.", "Slow cook for 2 hours."],
     "difficulty": "Hard",
@@ -482,7 +534,8 @@
       {"name": "rice", "qty": 1, "unit": "cup"},
       {"name": "mixed vegetables", "qty": 1, "unit": "cup"},
       {"name": "whole spices", "qty": 1, "unit": "tbsp"},
-      {"name": "ghee", "qty": 1, "unit": "tbsp"}
+      {"name": "ghee", "qty": 1, "unit": "tbsp"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Sauté spices and veggies in ghee.", "Add rice and water.", "Cook until rice is done."],
     "difficulty": "Easy",
@@ -500,7 +553,8 @@
       {"name": "curd", "qty": 1, "unit": "cup"},
       {"name": "cucumber", "qty": 0.5, "unit": "pc"},
       {"name": "cumin powder", "qty": 0.5, "unit": "tsp"},
-      {"name": "salt", "qty": 0.5, "unit": "tsp"}
+      {"name": "salt", "qty": 0.5, "unit": "tsp"},
+      {"name": "side dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Whisk curd.", "Add grated cucumber and spices.", "Chill and serve."],
     "difficulty": "Easy",
@@ -518,7 +572,8 @@
       {"name": "mango", "qty": 1, "unit": "pc"},
       {"name": "curd", "qty": 1, "unit": "cup"},
       {"name": "sugar", "qty": 2, "unit": "tbsp"},
-      {"name": "cardamom", "qty": 1, "unit": "pinch"}
+      {"name": "cardamom", "qty": 1, "unit": "pinch"},
+      {"name": "beverage", "qty": 1, "unit": "glass"}
     ],
     "steps": ["Blend mango pulp, curd, and sugar.", "Add cardamom.", "Serve chilled."],
     "difficulty": "Easy",
@@ -530,49 +585,14 @@
   },
   {
     "id": "r029",
-    "title": "Tomato Soup",
-    "description": "Classic comforting tomato soup.",
-    "ingredients": [
-      {"name": "tomato", "qty": 5, "unit": "pcs"},
-      {"name": "butter", "qty": 1, "unit": "tbsp"},
-      {"name": "cream", "qty": 1, "unit": "tbsp"},
-      {"name": "bread", "qty": 1, "unit": "slice"}
-    ],
-    "steps": ["Boil and blend tomatoes.", "Strain.", "Simmer with butter.", "Serve with croutons."],
-    "difficulty": "Easy",
-    "cookTimeMin": 25,
-    "cuisine": "Continental",
-    "diet": ["vegetarian"],
-    "nutrition": {"calories": 150, "protein_g": 3, "fat_g": 8, "carbs_g": 18},
-    "popularity": 4.6
-  },
-  {
-    "id": "r030",
-    "title": "Veg Sandwich",
-    "description": "Simple breakfast sandwich with cucumber and tomato.",
-    "ingredients": [
-      {"name": "bread", "qty": 2, "unit": "slices"},
-      {"name": "butter", "qty": 1, "unit": "tsp"},
-      {"name": "cucumber", "qty": 4, "unit": "slices"},
-      {"name": "tomato", "qty": 4, "unit": "slices"}
-    ],
-    "steps": ["Butter the bread.", "Layer veggies.", "Season with salt pepper.", "Grill optionally."],
-    "difficulty": "Easy",
-    "cookTimeMin": 5,
-    "cuisine": "Continental",
-    "diet": ["vegetarian"],
-    "nutrition": {"calories": 200, "protein_g": 5, "fat_g": 6, "carbs_g": 30},
-    "popularity": 4.4
-  },
-  {
-    "id": "r031",
     "title": "Pani Puri",
     "description": "Crispy hollow balls filled with spicy water.",
     "ingredients": [
       {"name": "semolina", "qty": 1, "unit": "cup"},
       {"name": "mint", "qty": 1, "unit": "bunch"},
       {"name": "tamarind", "qty": 1, "unit": "tbsp"},
-      {"name": "potato", "qty": 2, "unit": "pcs"}
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Make puris.", "Prepare mint water and tamarind chutney.", "Mash potatoes for filling."],
     "difficulty": "Hard",
@@ -583,7 +603,7 @@
     "popularity": 5.0
   },
   {
-    "id": "r032",
+    "id": "r030",
     "title": "Bhel Puri",
     "description": "Puffed rice snack with chutneys.",
     "ingredients": [
@@ -591,7 +611,8 @@
       {"name": "onion", "qty": 1, "unit": "pc"},
       {"name": "tomato", "qty": 1, "unit": "pc"},
       {"name": "chutney", "qty": 2, "unit": "tbsp"},
-      {"name": "sev", "qty": 2, "unit": "tbsp"}
+      {"name": "sev", "qty": 2, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Mix puffed rice with chopped veggies.", "Add chutneys and spices.", "Garnish with sev."],
     "difficulty": "Easy",
@@ -602,14 +623,16 @@
     "popularity": 4.8
   },
   {
-    "id": "r033",
+    "id": "r031",
     "title": "Vada Pav",
     "description": "Spicy potato fritter in a bun.",
     "ingredients": [
       {"name": "potato", "qty": 3, "unit": "pcs"},
       {"name": "besan", "qty": 1, "unit": "cup"},
       {"name": "pav", "qty": 4, "unit": "pcs"},
-      {"name": "garlic chutney", "qty": 2, "unit": "tbsp"}
+      {"name": "garlic chutney", "qty": 2, "unit": "tbsp"},
+      {"name": "bread", "qty": 4, "unit": "pcs"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Make potato filling.", "Dip in besan batter and fry vada.", "Serve in pav with chutney."],
     "difficulty": "Medium",
@@ -620,14 +643,15 @@
     "popularity": 4.9
   },
   {
-    "id": "r034",
+    "id": "r032",
     "title": "Dhokla",
     "description": "Steamed savory sponge cake.",
     "ingredients": [
       {"name": "besan", "qty": 1, "unit": "cup"},
       {"name": "yogurt", "qty": 0.5, "unit": "cup"},
       {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
-      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+      {"name": "green chilli", "qty": 2, "unit": "pcs"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Make batter with besan and ferment.", "Steam until fluffy.", "Temper with mustard and curry leaves."],
     "difficulty": "Medium",
@@ -638,26 +662,7 @@
     "popularity": 4.7
   },
   {
-    "id": "r035",
-    "title": "Hakaa Noodles",
-    "description": "Indian style vegetable stir fry noodles.",
-    "ingredients": [
-      {"name": "noodles", "qty": 200, "unit": "g"},
-      {"name": "cabbage", "qty": 0.5, "unit": "cup"},
-      {"name": "carrot", "qty": 1, "unit": "pc"},
-      {"name": "capsicum", "qty": 1, "unit": "pc"},
-      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
-    ],
-    "steps": ["Boil noodles.", "Stir fry veggies on high heat.", "Toss noodles with sauces."],
-    "difficulty": "Medium",
-    "cookTimeMin": 20,
-    "cuisine": "Chinese",
-    "diet": ["vegan"],
-    "nutrition": {"calories": 300, "protein_g": 6, "fat_g": 8, "carbs_g": 50},
-    "popularity": 4.8
-  },
-  {
-    "id": "r036",
+    "id": "r033",
     "title": "Veg Manchurian",
     "description": "Veggie balls in spicy Chinese gravy.",
     "ingredients": [
@@ -665,7 +670,9 @@
       {"name": "carrot", "qty": 1, "unit": "cup"},
       {"name": "maida", "qty": 0.5, "unit": "cup"},
       {"name": "soy sauce", "qty": 2, "unit": "tbsp"},
-      {"name": "corn flour", "qty": 2, "unit": "tbsp"}
+      {"name": "corn flour", "qty": 2, "unit": "tbsp"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"},
+      {"name": "curry", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Mix veggies and flour.", "Fry balls.", "Make gravy with sauces.", "Simmer balls in gravy."],
     "difficulty": "Hard",
@@ -676,260 +683,337 @@
     "popularity": 4.9
   },
   {
-    "id": "r037",
-    "title": "Tomato Basil Pasta",
-    "description": "Classic Italian pasta with red sauce.",
+    "id": "r034",
+    "title": "Hakka Noodles",
+    "description": "Stir fried noodles with veggies.",
     "ingredients": [
-      {"name": "pasta", "qty": 200, "unit": "g"},
-      {"name": "tomato", "qty": 3, "unit": "pcs"},
-      {"name": "basil", "qty": 10, "unit": "leaves"},
-      {"name": "garlic", "qty": 2, "unit": "cloves"},
-      {"name": "olive oil", "qty": 2, "unit": "tbsp"}
+      {"name": "noodles", "qty": 200, "unit": "g"},
+      {"name": "cabbage", "qty": 0.5, "unit": "cup"},
+      {"name": "carrot", "qty": 1, "unit": "pc"},
+      {"name": "capsicum", "qty": 1, "unit": "pc"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "stir fry", "qty": 1, "unit": "plate"}
     ],
-    "steps": ["Boil pasta.", "Cook tomatoes and garlic.", "Toss pasta in sauce.", "Garnish with basil."],
-    "difficulty": "Easy",
-    "cookTimeMin": 20,
-    "cuisine": "Italian",
-    "diet": ["vegetarian"],
-    "nutrition": {"calories": 400, "protein_g": 10, "fat_g": 12, "carbs_g": 60},
-    "popularity": 4.7
-  },
-  {
-    "id": "r038",
-    "title": "White Sauce Pasta",
-    "description": "Creamy cheesy pasta with vegetables.",
-    "ingredients": [
-      {"name": "pasta", "qty": 200, "unit": "g"},
-      {"name": "milk", "qty": 1, "unit": "cup"},
-      {"name": "butter", "qty": 2, "unit": "tbsp"},
-      {"name": "maida", "qty": 2, "unit": "tbsp"},
-      {"name": "cheese", "qty": 0.5, "unit": "cup"}
-    ],
-    "steps": ["Boil pasta.", "Make roux with butter and flour.", "Add milk to make sauce.", "Add cheese and pasta."],
+    "steps": ["Boil noodles.", "Stir fry veggies on high heat.", "Toss noodles with sauces."],
     "difficulty": "Medium",
-    "cookTimeMin": 25,
-    "cuisine": "Italian",
-    "diet": ["vegetarian"],
-    "nutrition": {"calories": 500, "protein_g": 15, "fat_g": 20, "carbs_g": 65},
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 6, "fat_g": 8, "carbs_g": 50},
     "popularity": 4.8
   },
   {
-    "id": "r039",
-    "title": "Pizza Margherita",
-    "description": "Simple cheese pizza with basil.",
+    "id": "r035",
+    "title": "Fried Rice",
+    "description": "Classic veg fried rice.",
     "ingredients": [
-      {"name": "pizza base", "qty": 1, "unit": "pc"},
-      {"name": "tomato sauce", "qty": 0.5, "unit": "cup"},
-      {"name": "mozzarella", "qty": 1, "unit": "cup"},
-      {"name": "basil", "qty": 5, "unit": "leaves"}
+      {"name": "rice", "qty": 2, "unit": "cups"},
+      {"name": "carrot", "qty": 0.25, "unit": "cup"},
+      {"name": "beans", "qty": 0.25, "unit": "cup"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
-    "steps": ["Spread sauce on base.", "Top with cheese.", "Bake until bubbly.", "Add basil."],
+    "steps": ["Cook rice.", "Stir fry fine chopped veggies.", "Toss with rice and sauce."],
     "difficulty": "Easy",
-    "cookTimeMin": 15,
-    "cuisine": "Italian",
-    "diet": ["vegetarian"],
-    "nutrition": {"calories": 600, "protein_g": 20, "fat_g": 25, "carbs_g": 70},
-    "popularity": 5.0
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 5, "fat_g": 8, "carbs_g": 50},
+    "popularity": 4.6
   },
   {
-    "id": "r040",
-    "title": "Chilli Chicken",
-    "description": "Spicy fried chicken in soy sauce.",
+    "id": "r036",
+    "title": "Chilli Paneer",
+    "description": "Spicy stir-fried paneer cubes.",
     "ingredients": [
-      {"name": "chicken", "qty": 300, "unit": "g"},
-      {"name": "capsicum", "qty": 2, "unit": "pcs"},
-      {"name": "onion", "qty": 2, "unit": "pcs"},
-      {"name": "soy sauce", "qty": 2, "unit": "tbsp"},
-      {"name": "green chilli", "qty": 4, "unit": "pcs"}
+      {"name": "paneer", "qty": 200, "unit": "g"},
+      {"name": "capsicum", "qty": 1, "unit": "pc"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"},
+      {"name": "curry", "qty": 1, "unit": "bowl"}
     ],
-    "steps": ["Fry marinated chicken.", "Sauté veggies.", "Toss in sauces."],
+    "steps": ["Coat paneer in corn flour and fry.", "Sauté veggies.", "Toss in sauces."],
     "difficulty": "Medium",
     "cookTimeMin": 30,
     "cuisine": "Chinese",
-    "diet": ["non-vegetarian"],
-    "nutrition": {"calories": 400, "protein_g": 30, "fat_g": 15, "carbs_g": 20},
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 12, "fat_g": 20, "carbs_g": 25},
+    "popularity": 4.8
+  },
+  {
+    "id": "r037",
+    "title": "Mutter Paneer",
+    "description": "Peas and paneer curry.",
+    "ingredients": [
+      {"name": "paneer", "qty": 200, "unit": "g"},
+      {"name": "peas", "qty": 1, "unit": "cup"},
+      {"name": "tomato", "qty": 3, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "cream", "qty": 2, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
+    ],
+    "steps": ["Fry paneer.", "Make onion-tomato gravy.", "Add peas and paneer.", "Simmer."],
+    "difficulty": "Medium",
+    "cookTimeMin": 35,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 15, "fat_g": 25, "carbs_g": 20},
+    "popularity": 4.8
+  },
+  {
+    "id": "r038",
+    "title": "Aloo Gobi",
+    "description": "Potato and cauliflower dry curry.",
+    "ingredients": [
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "cauliflower", "qty": 1, "unit": "head"},
+      {"name": "turmeric", "qty": 0.5, "unit": "tsp"},
+      {"name": "ginger", "qty": 1, "unit": "inch"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "sabzi", "qty": 1, "unit": "bowl"}
+    ],
+    "steps": ["Fry potato and gobi.", "Add ginger and spices.", "Steam cook until soft."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 6, "fat_g": 8, "carbs_g": 25},
+    "popularity": 4.7
+  },
+  {
+    "id": "r039",
+    "title": "Chana Masala",
+    "description": "Spicy chickpea curry.",
+    "ingredients": [
+      {"name": "chickpeas", "qty": 2, "unit": "cups"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "chana masala powder", "qty": 1, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
+    ],
+    "steps": ["Boil chickpeas.", "Cook onion tomato base.", "Add chickpeas and spices."],
+    "difficulty": "Medium",
+    "cookTimeMin": 45,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 350, "protein_g": 15, "fat_g": 8, "carbs_g": 50},
+    "popularity": 4.8
+  },
+  {
+    "id": "r040",
+    "title": "Shahi Paneer",
+    "description": "Royal paneer in sweet nut gravy.",
+    "ingredients": [
+      {"name": "paneer", "qty": 250, "unit": "g"},
+      {"name": "cashew", "qty": 0.5, "unit": "cup"},
+      {"name": "cream", "qty": 0.25, "unit": "cup"},
+      {"name": "saffron", "qty": 1, "unit": "pinch"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
+    ],
+    "steps": ["Make cashew onion paste.", "Cook with aromatic spices.", "Add paneer and cream."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 500, "protein_g": 15, "fat_g": 35, "carbs_g": 25},
     "popularity": 4.9
   },
   {
     "id": "r041",
-    "title": "Vegetable Soup",
-    "description": "Healthy mix vegetable clear soup.",
+    "title": "Malai Kofta",
+    "description": "Paneer dumplings in white gravy.",
     "ingredients": [
-      {"name": "carrot", "qty": 1, "unit": "pc"},
-      {"name": "beans", "qty": 10, "unit": "pcs"},
-      {"name": "cabbage", "qty": 0.5, "unit": "cup"},
-      {"name": "corn", "qty": 0.25, "unit": "cup"},
-      {"name": "pepper", "qty": 1, "unit": "tsp"}
+      {"name": "paneer", "qty": 200, "unit": "g"},
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "cream", "qty": 0.5, "unit": "cup"},
+      {"name": "cashew", "qty": 0.25, "unit": "cup"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
-    "steps": ["Chop all veggies.", "Boil in water.", "Season with salt and pepper."],
-    "difficulty": "Easy",
-    "cookTimeMin": 20,
-    "cuisine": "Continental",
-    "diet": ["vegan"],
-    "nutrition": {"calories": 100, "protein_g": 2, "fat_g": 0, "carbs_g": 20},
-    "popularity": 4.4
-  },
-  {
-    "id": "r042",
-    "title": "French Fries",
-    "description": "Classic salted fried potato sticks.",
-    "ingredients": [
-      {"name": "potato", "qty": 3, "unit": "pcs"},
-      {"name": "oil", "qty": 2, "unit": "cups"},
-      {"name": "salt", "qty": 1, "unit": "tsp"}
-    ],
-    "steps": ["Cut potatoes into strips.", "Soak in cold water.", "Deep fry twice for crispiness."],
-    "difficulty": "Medium",
-    "cookTimeMin": 30,
-    "cuisine": "Continental",
-    "diet": ["vegan"],
-    "nutrition": {"calories": 300, "protein_g": 3, "fat_g": 15, "carbs_g": 40},
-    "popularity": 5.0
-  },
-  {
-    "id": "r043",
-    "title": "Omelette",
-    "description": "Beaten eggs fried with veggies.",
-    "ingredients": [
-      {"name": "egg", "qty": 2, "unit": "pcs"},
-      {"name": "onion", "qty": 1, "unit": "pc"},
-      {"name": "green chilli", "qty": 1, "unit": "pc"},
-      {"name": "butter", "qty": 1, "unit": "tsp"}
-    ],
-    "steps": ["Whisk eggs with veggies.", "Pour into hot buttered pan.", "Fold and serve."],
-    "difficulty": "Easy",
-    "cookTimeMin": 10,
-    "cuisine": "Continental",
-    "diet": ["non-vegetarian"],
-    "nutrition": {"calories": 180, "protein_g": 12, "fat_g": 14, "carbs_g": 2},
-    "popularity": 4.8
-  },
-  {
-    "id": "r044",
-    "title": "Banana Milkshake",
-    "description": "Energy boosting drink.",
-    "ingredients": [
-      {"name": "banana", "qty": 2, "unit": "pcs"},
-      {"name": "milk", "qty": 1, "unit": "cup"},
-      {"name": "sugar", "qty": 1, "unit": "tbsp"},
-      {"name": "ice", "qty": 4, "unit": "cubes"}
-    ],
-    "steps": ["Blend everything until smooth."],
-    "difficulty": "Easy",
-    "cookTimeMin": 5,
-    "cuisine": "Beverage",
+    "steps": ["Make koftas and fry.", "Prepare rich cashew gravy.", "Add koftas before serving."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
     "diet": ["vegetarian"],
-    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 5, "carbs_g": 45},
-    "popularity": 4.8
-  },
-  {
-    "id": "r045",
-    "title": "Cold Coffee",
-    "description": "Chilled creamy coffee.",
-    "ingredients": [
-      {"name": "milk", "qty": 1, "unit": "cup"},
-      {"name": "coffee", "qty": 2, "unit": "tsp"},
-      {"name": "sugar", "qty": 2, "unit": "tsp"},
-      {"name": "ice", "qty": 4, "unit": "cubes"}
-    ],
-    "steps": ["Blend coffee, sugar, milk, ice.", "Serve topped with chocolate powder."],
-    "difficulty": "Easy",
-    "cookTimeMin": 5,
-    "cuisine": "Beverage",
-    "diet": ["vegetarian"],
-    "nutrition": {"calories": 150, "protein_g": 4, "fat_g": 5, "carbs_g": 20},
+    "nutrition": {"calories": 500, "protein_g": 12, "fat_g": 30, "carbs_g": 40},
     "popularity": 4.9
   },
   {
-    "id": "r046",
-    "title": "Lemonade",
-    "description": "Refreshing lime water.",
+    "id": "r042",
+    "title": "Aloo Matar",
+    "description": "Peas and potato curry.",
     "ingredients": [
-      {"name": "lemon", "qty": 1, "unit": "pc"},
-      {"name": "water", "qty": 1, "unit": "cup"},
-      {"name": "sugar", "qty": 2, "unit": "tbsp"},
-      {"name": "salt", "qty": 1, "unit": "pinch"}
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "green peas", "qty": 1, "unit": "cup"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "sabzi", "qty": 1, "unit": "bowl"}
     ],
-    "steps": ["Mix lemon juice, sugar, salt in water.", "Stir until dissolved.", "Serve with ice."],
+    "steps": ["Make base gravy.", "Add diced potato and peas.", "Simmer until tender."],
     "difficulty": "Easy",
-    "cookTimeMin": 5,
-    "cuisine": "Beverage",
+    "cookTimeMin": 25,
+    "cuisine": "Indian",
     "diet": ["vegan"],
-    "nutrition": {"calories": 80, "protein_g": 0, "fat_g": 0, "carbs_g": 20},
-    "popularity": 4.7
+    "nutrition": {"calories": 220, "protein_g": 6, "fat_g": 5, "carbs_g": 35},
+    "popularity": 4.6
   },
   {
-    "id": "r047",
-    "title": "Egg Bhurji",
-    "description": "Indian style scrambled eggs.",
+    "id": "r043",
+    "title": "Oats Upma",
+    "description": "Healthy savory oats.",
     "ingredients": [
-      {"name": "egg", "qty": 3, "unit": "pcs"},
-      {"name": "onion", "qty": 2, "unit": "pcs"},
-      {"name": "tomato", "qty": 1, "unit": "pc"},
-      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+      {"name": "oats", "qty": 1, "unit": "cup"},
+      {"name": "carrot", "qty": 0.5, "unit": "cup"},
+      {"name": "peas", "qty": 0.25, "unit": "cup"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "breakfast", "qty": 1, "unit": "bowl"}
     ],
-    "steps": ["Sauté onion, tomato, chilli.", "Add beaten eggs.", "Scramble until cooked."],
+    "steps": ["Roast oats.", "Sauté veggies.", "Add water and oats.", "Cook until dry."],
     "difficulty": "Easy",
     "cookTimeMin": 15,
     "cuisine": "Indian",
-    "diet": ["non-vegetarian"],
-    "nutrition": {"calories": 250, "protein_g": 18, "fat_g": 18, "carbs_g": 5},
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 6, "fat_g": 4, "carbs_g": 35},
+    "popularity": 4.5
+  },
+  {
+    "id": "r044",
+    "title": "Papdi Chaat",
+    "description": "Street food snack with tangy chutney.",
+    "ingredients": [
+      {"name": "papdi", "qty": 10, "unit": "pcs"},
+      {"name": "curd", "qty": 0.5, "unit": "cup"},
+      {"name": "potato", "qty": 1, "unit": "pc"},
+      {"name": "chutney", "qty": 2, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
+    ],
+    "steps": ["Layer papdi.", "Add potato and curd.", "Top with chutneys and spices."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 5, "fat_g": 10, "carbs_g": 35},
+    "popularity": 4.9
+  },
+  {
+    "id": "r045",
+    "title": "Sev Puri",
+    "description": "Flat puris topped with potato and chutney.",
+    "ingredients": [
+      {"name": "papdi", "qty": 10, "unit": "pcs"},
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "tomato", "qty": 1, "unit": "pc"},
+      {"name": "sev", "qty": 0.5, "unit": "cup"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
+    ],
+    "steps": ["Arrange papdi.", "Top with mash potato.", "Drizzle chutneys and sev."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 8, "carbs_g": 30},
+    "popularity": 4.8
+  },
+  {
+    "id": "r046",
+    "title": "Dahi Puri",
+    "description": "Puri shells filled with yogurt and chutney.",
+    "ingredients": [
+      {"name": "puri", "qty": 6, "unit": "pcs"},
+      {"name": "curd", "qty": 1, "unit": "cup"},
+      {"name": "potato", "qty": 1, "unit": "pc"},
+      {"name": "chutney", "qty": 2, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
+    ],
+    "steps": ["Crack puri top.", "Fill with potato.", "Pour sweet curd and chutneys."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 8, "carbs_g": 35},
+    "popularity": 4.9
+  },
+  {
+    "id": "r047",
+    "title": "Aloo Tikki",
+    "description": "Spiced potato patties.",
+    "ingredients": [
+      {"name": "potato", "qty": 4, "unit": "pcs"},
+      {"name": "peas", "qty": 0.5, "unit": "cup"},
+      {"name": "corn flour", "qty": 2, "unit": "tbsp"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
+    ],
+    "steps": ["Mash potato and peas.", "Shape patties.", "Shallow fry until crisp."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 8, "carbs_g": 30},
     "popularity": 4.8
   },
   {
     "id": "r048",
-    "title": "Pancakes",
-    "description": "Fluffy breakfast cakes.",
+    "title": "Bread Pakora",
+    "description": "Deep fried stuffed bread fritter.",
     "ingredients": [
-      {"name": "flour", "qty": 1, "unit": "cup"},
-      {"name": "milk", "qty": 1, "unit": "cup"},
-      {"name": "egg", "qty": 1, "unit": "pc"},
-      {"name": "baking powder", "qty": 1, "unit": "tsp"},
-      {"name": "butter", "qty": 1, "unit": "tbsp"}
+      {"name": "bread", "qty": 4, "unit": "slices"},
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "besan", "qty": 1, "unit": "cup"},
+      {"name": "oil", "qty": 2, "unit": "cups"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
-    "steps": ["Mix dry and wet ingredients.", "Pour batter on hot pan.", "Flip when bubbly."],
+    "steps": ["Sandwich spiced potato between bread.", "Dip in besan batter.", "Deep fry."],
     "difficulty": "Medium",
-    "cookTimeMin": 20,
-    "cuisine": "Continental",
-    "diet": ["non-vegetarian"],
-    "nutrition": {"calories": 350, "protein_g": 8, "fat_g": 10, "carbs_g": 50},
-    "popularity": 4.9
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 8, "fat_g": 15, "carbs_g": 45},
+    "popularity": 4.7
   },
   {
     "id": "r049",
-    "title": "Garlic Bread",
-    "description": "Toasted bread with garlic butter.",
+    "title": "Jeera Rice",
+    "description": "Cumin flavored rice.",
     "ingredients": [
-      {"name": "bread", "qty": 4, "unit": "slices"},
-      {"name": "butter", "qty": 2, "unit": "tbsp"},
-      {"name": "garlic", "qty": 4, "unit": "cloves"},
-      {"name": "oregano", "qty": 1, "unit": "tsp"}
+      {"name": "rice", "qty": 1, "unit": "cup"},
+      {"name": "cumin", "qty": 1, "unit": "tbsp"},
+      {"name": "ghee", "qty": 1, "unit": "tbsp"},
+      {"name": "water", "qty": 2, "unit": "cups"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
-    "steps": ["Mix crushed garlic with butter.", "Spread on bread.", "Toast until golden."],
+    "steps": ["Heat ghee, crackle cumin.", "Add rice and water.", "Cook until fluffy."],
     "difficulty": "Easy",
-    "cookTimeMin": 10,
-    "cuisine": "Italian",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
     "diet": ["vegetarian"],
-    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 10, "carbs_g": 25},
-    "popularity": 4.8
+    "nutrition": {"calories": 250, "protein_g": 4, "fat_g": 5, "carbs_g": 45},
+    "popularity": 4.7
   },
   {
     "id": "r050",
-    "title": "Fruit Salad",
-    "description": "Bowl of mixed fresh fruits.",
+    "title": "Curd Rice",
+    "description": "Soothing yogurt rice.",
     "ingredients": [
-      {"name": "apple", "qty": 1, "unit": "pc"},
-      {"name": "banana", "qty": 1, "unit": "pc"},
-      {"name": "grapes", "qty": 0.5, "unit": "cup"},
-      {"name": "orange", "qty": 1, "unit": "pc"}
+      {"name": "rice", "qty": 1, "unit": "cup"},
+      {"name": "curd", "qty": 1, "unit": "cup"},
+      {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
-    "steps": ["Chop all fruits.", "Mix in a bowl.", "Serve fresh."],
+    "steps": ["Mash cooked rice.", "Mix with curd.", "Add tempering.", "Garnish."],
     "difficulty": "Easy",
-    "cookTimeMin": 10,
-    "cuisine": "Continental",
-    "diet": ["vegan"],
-    "nutrition": {"calories": 150, "protein_g": 2, "fat_g": 0, "carbs_g": 38},
-    "popularity": 4.6
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 5, "carbs_g": 40},
+    "popularity": 4.7
   },
   {
     "id": "r051",
@@ -957,7 +1041,9 @@
       {"name": "wheat flour", "qty": 2, "unit": "cups"},
       {"name": "fenugreek", "qty": 1, "unit": "bunch"},
       {"name": "yogurt", "qty": 2, "unit": "tbsp"},
-      {"name": "spices", "qty": 1, "unit": "tsp"}
+      {"name": "spices", "qty": 1, "unit": "tsp"},
+      {"name": "flatbread", "qty": 1, "unit": "pc"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Mix chopped fenugreek with flour.", "Knead dough.", "Roll and cook on tawa."],
     "difficulty": "Medium",
@@ -975,7 +1061,8 @@
       {"name": "chicken", "qty": 200, "unit": "g"},
       {"name": "carrot", "qty": 1, "unit": "pc"},
       {"name": "onion", "qty": 1, "unit": "pc"},
-      {"name": "celery", "qty": 1, "unit": "stalk"}
+      {"name": "celery", "qty": 1, "unit": "stalk"},
+      {"name": "soup", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil chicken and veggies.", "Simmer for 30 mins.", "Season and serve."],
     "difficulty": "Easy",
@@ -994,7 +1081,8 @@
       {"name": "yogurt", "qty": 0.5, "unit": "cup"},
       {"name": "capsicum", "qty": 1, "unit": "pc"},
       {"name": "onion", "qty": 1, "unit": "pc"},
-      {"name": "spices", "qty": 1, "unit": "tbsp"}
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "starter", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Marinate paneer and veggies.", "Skewer them.", "Grill until charred."],
     "difficulty": "Medium",
@@ -1013,7 +1101,9 @@
       {"name": "butter", "qty": 4, "unit": "tbsp"},
       {"name": "tomato", "qty": 4, "unit": "pcs"},
       {"name": "cream", "qty": 0.5, "unit": "cup"},
-      {"name": "cashew", "qty": 10, "unit": "pcs"}
+      {"name": "cashew", "qty": 10, "unit": "pcs"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Cook chicken tikkas.", "Prepare tomato butter gravy.", "Simmer chicken in gravy."],
     "difficulty": "Hard",
@@ -1031,7 +1121,9 @@
       {"name": "besan", "qty": 2, "unit": "cups"},
       {"name": "ghee", "qty": 0.5, "unit": "cup"},
       {"name": "sugar", "qty": 1, "unit": "cup"},
-      {"name": "cardamom", "qty": 0.5, "unit": "tsp"}
+      {"name": "cardamom", "qty": 0.5, "unit": "tsp"},
+      {"name": "sweet", "qty": 1, "unit": "bowl"},
+      {"name": "dessert", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Roast besan in ghee until aromatic.", "Cool slightly.", "Mix sugar and shape balls."],
     "difficulty": "Medium",
@@ -1049,7 +1141,8 @@
       {"name": "rice", "qty": 1, "unit": "cup"},
       {"name": "cumin", "qty": 1, "unit": "tbsp"},
       {"name": "ghee", "qty": 1, "unit": "tbsp"},
-      {"name": "water", "qty": 2, "unit": "cups"}
+      {"name": "water", "qty": 2, "unit": "cups"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Heat ghee, crackle cumin.", "Add rice and water.", "Cook until fluffy."],
     "difficulty": "Easy",
@@ -1068,7 +1161,9 @@
       {"name": "potato", "qty": 2, "unit": "pcs"},
       {"name": "peas", "qty": 0.25, "unit": "cup"},
       {"name": "lettuce", "qty": 2, "unit": "leaves"},
-      {"name": "tomato", "qty": 2, "unit": "slices"}
+      {"name": "tomato", "qty": 2, "unit": "slices"},
+      {"name": "bread", "qty": 2, "unit": "pcs"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Make veg patty and fry.", "Toast buns.", "Assemble with veggies and sauce."],
     "difficulty": "Medium",
@@ -1086,7 +1181,9 @@
       {"name": "maida", "qty": 2, "unit": "cups"},
       {"name": "chicken", "qty": 250, "unit": "g"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
-      {"name": "soy sauce", "qty": 1, "unit": "tsp"}
+      {"name": "soy sauce", "qty": 1, "unit": "tsp"},
+      {"name": "dumpling", "qty": 1, "unit": "plate"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Make dough.", "Prepare minced chicken filling.", "Shape and steam."],
     "difficulty": "Hard",
@@ -1104,7 +1201,9 @@
       {"name": "cauliflower", "qty": 1, "unit": "head"},
       {"name": "corn flour", "qty": 0.5, "unit": "cup"},
       {"name": "soy sauce", "qty": 2, "unit": "tbsp"},
-      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"}
+      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"},
+      {"name": "starter", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Batter coat cauliflower and fry.", "Make spicy sauce.", "Toss florets in sauce."],
     "difficulty": "Medium",
@@ -1123,7 +1222,9 @@
       {"name": "peas", "qty": 1, "unit": "cup"},
       {"name": "tomato", "qty": 3, "unit": "pcs"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
-      {"name": "cream", "qty": 2, "unit": "tbsp"}
+      {"name": "cream", "qty": 2, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Fry paneer.", "Make onion-tomato gravy.", "Add peas and paneer.", "Simmer."],
     "difficulty": "Medium",
@@ -1141,7 +1242,9 @@
       {"name": "bread", "qty": 4, "unit": "slices"},
       {"name": "potato", "qty": 2, "unit": "pcs"},
       {"name": "besan", "qty": 1, "unit": "cup"},
-      {"name": "oil", "qty": 2, "unit": "cups"}
+      {"name": "oil", "qty": 2, "unit": "cups"},
+      {"name": "snack", "qty": 1, "unit": "plate"},
+      {"name": "fried food", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Sandwich spiced potato between bread.", "Dip in besan batter.", "Deep fry."],
     "difficulty": "Medium",
@@ -1159,7 +1262,9 @@
       {"name": "fish", "qty": 500, "unit": "g"},
       {"name": "tamarind", "qty": 1, "unit": "lemon size"},
       {"name": "coconut", "qty": 0.5, "unit": "cup"},
-      {"name": "spices", "qty": 2, "unit": "tbsp"}
+      {"name": "spices", "qty": 2, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Extract tamarind juice.", "Make coconut paste.", "Boil curry with fish."],
     "difficulty": "Medium",
@@ -1178,7 +1283,8 @@
       {"name": "tomato", "qty": 1, "unit": "pc"},
       {"name": "carrot", "qty": 1, "unit": "pc"},
       {"name": "onion", "qty": 1, "unit": "pc"},
-      {"name": "lemon", "qty": 0.5, "unit": "pc"}
+      {"name": "lemon", "qty": 0.5, "unit": "pc"},
+      {"name": "salad", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Chop all veggies.", "Toss with lemon juice and salt."],
     "difficulty": "Easy",
@@ -1196,7 +1302,9 @@
       {"name": "milk powder", "qty": 1, "unit": "cup"},
       {"name": "maida", "qty": 0.25, "unit": "cup"},
       {"name": "sugar", "qty": 2, "unit": "cups"},
-      {"name": "oil", "qty": 2, "unit": "cups"}
+      {"name": "oil", "qty": 2, "unit": "cups"},
+      {"name": "sweet", "qty": 1, "unit": "bowl"},
+      {"name": "dessert", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Make dough.", "Fry balls slowly.", "Soak in warm sugar syrup."],
     "difficulty": "Hard",
@@ -1214,7 +1322,9 @@
       {"name": "milk", "qty": 1, "unit": "liter"},
       {"name": "lemon juice", "qty": 2, "unit": "tbsp"},
       {"name": "sugar", "qty": 2, "unit": "cups"},
-      {"name": "water", "qty": 4, "unit": "cups"}
+      {"name": "water", "qty": 4, "unit": "cups"},
+      {"name": "sweet", "qty": 1, "unit": "bowl"},
+      {"name": "dessert", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Curdle milk to make chenna.", "Knead and shape balls.", "Boil in syrup."],
     "difficulty": "Hard",
@@ -1232,7 +1342,8 @@
       {"name": "noodles", "qty": 200, "unit": "g"},
       {"name": "cabbage", "qty": 0.5, "unit": "cup"},
       {"name": "carrot", "qty": 1, "unit": "pc"},
-      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "stir fry", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Boil noodles.", "Stir fry veggies.", "Mix noodles and sauce."],
     "difficulty": "Medium",
@@ -1250,7 +1361,9 @@
       {"name": "paneer", "qty": 200, "unit": "g"},
       {"name": "potato", "qty": 2, "unit": "pcs"},
       {"name": "cream", "qty": 0.5, "unit": "cup"},
-      {"name": "cashew", "qty": 0.25, "unit": "cup"}
+      {"name": "cashew", "qty": 0.25, "unit": "cup"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Make koftas and fry.", "Prepare rich cashew gravy.", "Add koftas before serving."],
     "difficulty": "Hard",
@@ -1268,7 +1381,9 @@
       {"name": "chicken", "qty": 300, "unit": "g"},
       {"name": "curd", "qty": 0.5, "unit": "cup"},
       {"name": "red chilli powder", "qty": 1, "unit": "tbsp"},
-      {"name": "curry leaves", "qty": 10, "unit": "pcs"}
+      {"name": "curry leaves", "qty": 10, "unit": "pcs"},
+      {"name": "starter", "qty": 1, "unit": "plate"},
+      {"name": "fried chicken", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Marinate chicken.", "Deep fry.", "Toss with curry leaves and chilli."],
     "difficulty": "Medium",
@@ -1286,7 +1401,9 @@
       {"name": "potato", "qty": 2, "unit": "pcs"},
       {"name": "cauliflower", "qty": 1, "unit": "head"},
       {"name": "turmeric", "qty": 0.5, "unit": "tsp"},
-      {"name": "ginger", "qty": 1, "unit": "inch"}
+      {"name": "ginger", "qty": 1, "unit": "inch"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "sabzi", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Fry potato and gobi.", "Add ginger and spices.", "Steam cook until soft."],
     "difficulty": "Medium",
@@ -1304,7 +1421,9 @@
       {"name": "chickpeas", "qty": 2, "unit": "cups"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "tomato", "qty": 2, "unit": "pcs"},
-      {"name": "chana masala powder", "qty": 1, "unit": "tbsp"}
+      {"name": "chana masala powder", "qty": 1, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil chickpeas.", "Cook onion tomato base.", "Add chickpeas and spices."],
     "difficulty": "Medium",
@@ -1322,7 +1441,9 @@
       {"name": "cabbage", "qty": 1, "unit": "cup"},
       {"name": "carrot", "qty": 0.5, "unit": "cup"},
       {"name": "spring roll sheets", "qty": 5, "unit": "sheets"},
-      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"},
+      {"name": "starter", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Stir fry filling.", "Wrap in sheets.", "Deep fry."],
     "difficulty": "Hard",
@@ -1340,7 +1461,8 @@
       {"name": "vegetable stock", "qty": 3, "unit": "cups"},
       {"name": "vinegar", "qty": 1, "unit": "tbsp"},
       {"name": "chilli sauce", "qty": 1, "unit": "tbsp"},
-      {"name": "mushrooms", "qty": 0.5, "unit": "cup"}
+      {"name": "mushrooms", "qty": 0.5, "unit": "cup"},
+      {"name": "soup", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil stock with veggies.", "Add sauces.", "Thicken with cornstarch."],
     "difficulty": "Easy",
@@ -1358,7 +1480,9 @@
       {"name": "paneer", "qty": 250, "unit": "g"},
       {"name": "cashew", "qty": 0.5, "unit": "cup"},
       {"name": "cream", "qty": 0.25, "unit": "cup"},
-      {"name": "saffron", "qty": 1, "unit": "pinch"}
+      {"name": "saffron", "qty": 1, "unit": "pinch"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Make cashew onion paste.", "Cook with aromatic spices.", "Add paneer and cream."],
     "difficulty": "Medium",
@@ -1376,7 +1500,8 @@
       {"name": "rice", "qty": 1, "unit": "cup"},
       {"name": "peas", "qty": 0.25, "unit": "cup"},
       {"name": "carrot", "qty": 0.25, "unit": "cup"},
-      {"name": "beans", "qty": 0.25, "unit": "cup"}
+      {"name": "beans", "qty": 0.25, "unit": "cup"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Sauté veggies.", "Add rice and water.", "Cook until fluffy."],
     "difficulty": "Easy",
@@ -1394,7 +1519,8 @@
       {"name": "corn", "qty": 1, "unit": "cup"},
       {"name": "corn flour", "qty": 2, "unit": "tbsp"},
       {"name": "pepper", "qty": 1, "unit": "tsp"},
-      {"name": "capsicum", "qty": 0.25, "unit": "cup"}
+      {"name": "capsicum", "qty": 0.25, "unit": "cup"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Coat corn in flour.", "Deep fry.", "Toss with veggies and spice."],
     "difficulty": "Medium",
@@ -1412,7 +1538,8 @@
       {"name": "papdi", "qty": 10, "unit": "pcs"},
       {"name": "potato", "qty": 2, "unit": "pcs"},
       {"name": "sev", "qty": 0.5, "unit": "cup"},
-      {"name": "chutney", "qty": 0.25, "unit": "cup"}
+      {"name": "chutney", "qty": 0.25, "unit": "cup"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Arrange papdi.", "Top with mash potato.", "Drizzle chutneys and sev."],
     "difficulty": "Easy",
@@ -1430,7 +1557,8 @@
       {"name": "puri", "qty": 6, "unit": "pcs"},
       {"name": "curd", "qty": 1, "unit": "cup"},
       {"name": "potato", "qty": 1, "unit": "pc"},
-      {"name": "chutney", "qty": 2, "unit": "tbsp"}
+      {"name": "chutney", "qty": 2, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Crack puri top.", "Fill with potato.", "Pour sweet curd and chutneys."],
     "difficulty": "Easy",
@@ -1448,7 +1576,8 @@
       {"name": "potato", "qty": 4, "unit": "pcs"},
       {"name": "peas", "qty": 0.5, "unit": "cup"},
       {"name": "corn flour", "qty": 2, "unit": "tbsp"},
-      {"name": "spices", "qty": 1, "unit": "tbsp"}
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Mash potato and peas.", "Shape patties.", "Shallow fry until crisp."],
     "difficulty": "Medium",
@@ -1466,7 +1595,9 @@
       {"name": "mixed vegetables", "qty": 2, "unit": "cups"},
       {"name": "coconut", "qty": 0.5, "unit": "cup"},
       {"name": "cashew", "qty": 10, "unit": "pcs"},
-      {"name": "spices", "qty": 1, "unit": "tbsp"}
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil veggies.", "Blend coconut and cashew.", "Simmer veggies in paste."],
     "difficulty": "Medium",
@@ -1484,7 +1615,9 @@
       {"name": "chicken", "qty": 500, "unit": "g"},
       {"name": "yogurt", "qty": 1, "unit": "cup"},
       {"name": "lemon", "qty": 1, "unit": "pc"},
-      {"name": "spices", "qty": 2, "unit": "tbsp"}
+      {"name": "spices", "qty": 2, "unit": "tbsp"},
+      {"name": "roasted chicken", "qty": 1, "unit": "plate"},
+      {"name": "starter", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Score chicken.", "Marinate overnight.", "Roast in oven or tandoor."],
     "difficulty": "Hard",
@@ -1502,7 +1635,8 @@
       {"name": "rice", "qty": 2, "unit": "cups"},
       {"name": "beans", "qty": 0.25, "unit": "cup"},
       {"name": "carrot", "qty": 0.25, "unit": "cup"},
-      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Cook rice.", "Stir fry fine chopped veggies.", "Toss with rice and sauce."],
     "difficulty": "Easy",
@@ -1520,7 +1654,9 @@
       {"name": "chicken wings", "qty": 6, "unit": "pcs"},
       {"name": "maida", "qty": 0.5, "unit": "cup"},
       {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"},
-      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"}
+      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "starter", "qty": 1, "unit": "plate"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Shape wings.", "Batter coat.", "Deep fry.", "Toss in sauce."],
     "difficulty": "Hard",
@@ -1538,7 +1674,9 @@
       {"name": "egg", "qty": 3, "unit": "pcs"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "pav", "qty": 2, "unit": "pcs"},
-      {"name": "butter", "qty": 1, "unit": "tbsp"}
+      {"name": "butter", "qty": 1, "unit": "tbsp"},
+      {"name": "bread", "qty": 2, "unit": "pcs"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Make spicy scrambled egg.", "Butter toast the pav.", "Serve together."],
     "difficulty": "Easy",
@@ -1556,7 +1694,8 @@
       {"name": "bread", "qty": 2, "unit": "slices"},
       {"name": "cheese", "qty": 0.5, "unit": "cup"},
       {"name": "chilli flakes", "qty": 1, "unit": "tsp"},
-      {"name": "capsicum", "qty": 1, "unit": "tbsp"}
+      {"name": "capsicum", "qty": 1, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Top bread with cheese and veggies.", "Grill until melted."],
     "difficulty": "Easy",
@@ -1574,7 +1713,8 @@
       {"name": "rice", "qty": 1, "unit": "cup"},
       {"name": "curd", "qty": 1, "unit": "cup"},
       {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
-      {"name": "pomegranate", "qty": 1, "unit": "tbsp"}
+      {"name": "pomegranate", "qty": 1, "unit": "tbsp"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Mash cooked rice.", "Mix with curd.", "Add tempering.", "Garnish."],
     "difficulty": "Easy",
@@ -1592,7 +1732,8 @@
       {"name": "mushroom", "qty": 200, "unit": "g"},
       {"name": "milk", "qty": 1, "unit": "cup"},
       {"name": "onion", "qty": 1, "unit": "pc"},
-      {"name": "butter", "qty": 1, "unit": "tbsp"}
+      {"name": "butter", "qty": 1, "unit": "tbsp"},
+      {"name": "soup", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Sauté mushrooms.", "Blend half.", "Simmer with milk and rest of mushrooms."],
     "difficulty": "Medium",
@@ -1610,7 +1751,8 @@
       {"name": "chicken", "qty": 200, "unit": "g"},
       {"name": "lettuce", "qty": 1, "unit": "head"},
       {"name": "olive oil", "qty": 1, "unit": "tbsp"},
-      {"name": "lemon", "qty": 1, "unit": "pc"}
+      {"name": "lemon", "qty": 1, "unit": "pc"},
+      {"name": "salad", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Grill chicken.", "Toss with lettuce and dressing."],
     "difficulty": "Easy",
@@ -1628,7 +1770,10 @@
       {"name": "moong dal", "qty": 1, "unit": "cup"},
       {"name": "ginger", "qty": 1, "unit": "inch"},
       {"name": "green chilli", "qty": 2, "unit": "pcs"},
-      {"name": "onion", "qty": 1, "unit": "pc"}
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "dosa", "qty": 1, "unit": "pc"},
+      {"name": "crepe", "qty": 1, "unit": "pc"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Soak moong dal.", "Blend to batter.", "Make dosa.", "Top with onions."],
     "difficulty": "Medium",
@@ -1646,7 +1791,10 @@
       {"name": "semolina", "qty": 1, "unit": "cup"},
       {"name": "rice flour", "qty": 0.5, "unit": "cup"},
       {"name": "curd", "qty": 0.25, "unit": "cup"},
-      {"name": "water", "qty": 2, "unit": "cups"}
+      {"name": "water", "qty": 2, "unit": "cups"},
+      {"name": "dosa", "qty": 1, "unit": "pc"},
+      {"name": "crepe", "qty": 1, "unit": "pc"},
+      {"name": "breakfast", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Mix thin batter.", "Pour on hot tawa.", "Cook until crisp."],
     "difficulty": "Medium",
@@ -1664,7 +1812,8 @@
       {"name": "rice", "qty": 2, "unit": "cups"},
       {"name": "egg", "qty": 2, "unit": "pcs"},
       {"name": "spring onion", "qty": 2, "unit": "stalks"},
-      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "rice dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Scramble eggs.", "Add rice and sauce.", "Stir fry."],
     "difficulty": "Easy",
@@ -1682,7 +1831,8 @@
       {"name": "pasta", "qty": 200, "unit": "g"},
       {"name": "chicken", "qty": 150, "unit": "g"},
       {"name": "tomato", "qty": 3, "unit": "pcs"},
-      {"name": "garlic", "qty": 2, "unit": "cloves"}
+      {"name": "garlic", "qty": 2, "unit": "cloves"},
+      {"name": "pasta dish", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Boil pasta.", "Cook chicken and sauce.", "Mix together."],
     "difficulty": "Medium",
@@ -1700,7 +1850,9 @@
       {"name": "paneer", "qty": 200, "unit": "g"},
       {"name": "onion", "qty": 2, "unit": "pcs"},
       {"name": "tomato", "qty": 1, "unit": "pc"},
-      {"name": "capsicum", "qty": 1, "unit": "pc"}
+      {"name": "capsicum", "qty": 1, "unit": "pc"},
+      {"name": "scramble", "qty": 1, "unit": "plate"},
+      {"name": "side dish", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Crumble paneer.", "Sauté veggies.", "Mix paneer and cook for 5 mins."],
     "difficulty": "Easy",
@@ -1718,7 +1870,9 @@
       {"name": "potato", "qty": 2, "unit": "pcs"},
       {"name": "peas", "qty": 1, "unit": "cup"},
       {"name": "tomato", "qty": 2, "unit": "pcs"},
-      {"name": "onion", "qty": 1, "unit": "pc"}
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "curry", "qty": 1, "unit": "bowl"},
+      {"name": "gravy", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Make base gravy.", "Add diced potato and peas.", "Simmer until tender."],
     "difficulty": "Easy",
@@ -1736,7 +1890,8 @@
       {"name": "oats", "qty": 1, "unit": "cup"},
       {"name": "carrot", "qty": 0.5, "unit": "cup"},
       {"name": "peas", "qty": 0.25, "unit": "cup"},
-      {"name": "onion", "qty": 1, "unit": "pc"}
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "breakfast", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Roast oats.", "Sauté veggies.", "Add water and oats.", "Cook until dry."],
     "difficulty": "Easy",
@@ -1754,7 +1909,9 @@
       {"name": "milk", "qty": 2, "unit": "cups"},
       {"name": "custard powder", "qty": 2, "unit": "tbsp"},
       {"name": "sugar", "qty": 3, "unit": "tbsp"},
-      {"name": "mixed fruit", "qty": 1, "unit": "cup"}
+      {"name": "mixed fruit", "qty": 1, "unit": "cup"},
+      {"name": "dessert", "qty": 1, "unit": "bowl"},
+      {"name": "pudding", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Thicken milk with custard powder.", "Cool completely.", "Mix in fruits."],
     "difficulty": "Easy",
@@ -1772,7 +1929,9 @@
       {"name": "bread", "qty": 2, "unit": "slices"},
       {"name": "cheese", "qty": 0.5, "unit": "cup"},
       {"name": "corn", "qty": 1, "unit": "tbsp"},
-      {"name": "capsicum", "qty": 1, "unit": "tbsp"}
+      {"name": "capsicum", "qty": 1, "unit": "tbsp"},
+      {"name": "pizza", "qty": 1, "unit": "slice"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Apply sauce on bread.", "Top with veggies and cheese.", "Toast on tawa covered."],
     "difficulty": "Easy",
@@ -1790,7 +1949,8 @@
       {"name": "corn", "qty": 1, "unit": "cup"},
       {"name": "corn flour", "qty": 1, "unit": "tbsp"},
       {"name": "sugar", "qty": 1, "unit": "tsp"},
-      {"name": "butter", "qty": 1, "unit": "tsp"}
+      {"name": "butter", "qty": 1, "unit": "tsp"},
+      {"name": "soup", "qty": 1, "unit": "bowl"}
     ],
     "steps": ["Boil corn.", "Blend half.", "Mix all and simmer.", "Thicken with starch."],
     "difficulty": "Easy",
@@ -1808,7 +1968,9 @@
       {"name": "bread", "qty": 2, "unit": "slices"},
       {"name": "chicken", "qty": 100, "unit": "g"},
       {"name": "mayonnaise", "qty": 1, "unit": "tbsp"},
-      {"name": "pepper", "qty": 1, "unit": "pinch"}
+      {"name": "pepper", "qty": 1, "unit": "pinch"},
+      {"name": "sandwich", "qty": 1, "unit": "pc"},
+      {"name": "snack", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Cook shredded chicken.", "Mix with mayo.", "Sandwich between bread."],
     "difficulty": "Easy",
@@ -1826,7 +1988,9 @@
       {"name": "mango", "qty": 1, "unit": "pc"},
       {"name": "milk", "qty": 1, "unit": "cup"},
       {"name": "sugar", "qty": 2, "unit": "tbsp"},
-      {"name": "ice cream", "qty": 1, "unit": "scoop"}
+      {"name": "ice cream", "qty": 1, "unit": "scoop"},
+      {"name": "shake", "qty": 1, "unit": "glass"},
+      {"name": "beverage", "qty": 1, "unit": "glass"}
     ],
     "steps": ["Blend mango and milk.", "Serve with ice cream topping."],
     "difficulty": "Easy",
@@ -1844,7 +2008,9 @@
       {"name": "papdi", "qty": 10, "unit": "pcs"},
       {"name": "curd", "qty": 0.5, "unit": "cup"},
       {"name": "potato", "qty": 1, "unit": "pc"},
-      {"name": "chutney", "qty": 2, "unit": "tbsp"}
+      {"name": "chutney", "qty": 2, "unit": "tbsp"},
+      {"name": "snack", "qty": 1, "unit": "plate"},
+      {"name": "chaat", "qty": 1, "unit": "plate"}
     ],
     "steps": ["Layer papdi.", "Add potato and curd.", "Top with chutneys and spices."],
     "difficulty": "Easy",
