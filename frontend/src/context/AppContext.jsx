@@ -9,22 +9,34 @@ export const AppProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [favorites, setFavorites] = useState([]);
   const [ratings, setRatings] = useState(JSON.parse(localStorage.getItem('ratings') || '{}'));
+  
+  // New State: prevents flickering/redirects while checking token
+  const [isAuthLoading, setIsAuthLoading] = useState(true);
 
   const API_URL = import.meta.env.VITE_API_URL;
 
+  // 1. Load User & Cloud Favorites on Startup
   useEffect(() => {
-    if (token) {
-      axios.get(`${API_URL}/api/auth/user`, { headers: { 'x-auth-token': token } })
-        .then(res => {
+    const loadUser = async () => {
+      if (token) {
+        try {
+          const res = await axios.get(`${API_URL}/api/auth/user`, { headers: { 'x-auth-token': token } });
           setUser(res.data);
-          setFavorites(res.data.favorites);
-        })
-        .catch(() => logout());
-    } else {
-      setFavorites(JSON.parse(localStorage.getItem('favorites') || '[]'));
-    }
+          setFavorites(res.data.favorites); // Load THIS user's favorites from DB
+        } catch (err) {
+          console.error("Auth Error:", err);
+          logout(); // Invalid token? Logout.
+        }
+      } else {
+        setUser(null);
+        setFavorites([]);
+      }
+      setIsAuthLoading(false); // Finished checking
+    };
+    loadUser();
   }, [token]);
 
+  // 2. Auth Functions
   const login = async (email, password) => {
     try {
       const res = await axios.post(`${API_URL}/api/auth/login`, { email, password });
@@ -50,28 +62,33 @@ export const AppProvider = ({ children }) => {
     setFavorites([]);
   };
 
+  // 3. Toggle Favorite (Cloud Only)
   const toggleFavorite = async (recipeId) => {
-    if (user) {
-      try {
-        const res = await axios.put(`${API_URL}/api/auth/favorites/${recipeId}`, {}, {
-          headers: { 'x-auth-token': token }
-        });
-        setFavorites(res.data);
-      } catch (err) { console.error(err); }
-    } else {
-      let newFavs;
-      if (favorites.includes(recipeId)) {
-        newFavs = favorites.filter(id => id !== recipeId);
-      } else {
-        newFavs = [...favorites, recipeId];
-      }
-      setFavorites(newFavs);
-      localStorage.setItem('favorites', JSON.stringify(newFavs));
+    if (!user) return; // Should not happen in protected mode
+    
+    // Optimistic UI update (update screen immediately)
+    const isFav = favorites.includes(recipeId);
+    const newFavs = isFav ? favorites.filter(id => id !== recipeId) : [...favorites, recipeId];
+    setFavorites(newFavs);
+
+    // Sync with DB
+    try {
+      await axios.put(`${API_URL}/api/auth/favorites/${recipeId}`, {}, {
+        headers: { 'x-auth-token': token }
+      });
+    } catch (err) {
+      console.error(err);
+      // Revert if server fails (optional safety)
     }
   };
 
   return (
-    <AppContext.Provider value={{ ingredients, setIngredients, user, login, signup, logout, favorites, toggleFavorite, ratings, setRatings }}>
+    <AppContext.Provider value={{ 
+      ingredients, setIngredients, 
+      user, login, signup, logout, isAuthLoading,
+      favorites, toggleFavorite, 
+      ratings, setRatings 
+    }}>
       {children}
     </AppContext.Provider>
   );
