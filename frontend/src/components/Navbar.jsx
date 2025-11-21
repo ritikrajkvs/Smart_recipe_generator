@@ -35,7 +35,6 @@ const Navbar = () => {
         title="Saved Recipes"
       >
         ❤️
-        {/* Counter Badge */}
         {favorites.length > 0 && (
           <span className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-extrabold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white shadow-md">
             {favorites.length}
@@ -43,24 +42,17 @@ const Navbar = () => {
         )}
       </Link>
 
-      {/* Profile Details and Logout */}
-      <div className="flex items-center gap-3">
-        
-        {/* Username and Info */}
+      <div className="flex items-center gap-3 border-l border-slate-200 pl-3">
         <div className="hidden lg:block text-right">
-            <p className="text-xs text-slate-400 font-medium uppercase tracking-widest leading-none">Logged In As</p>
+            <p className="text-xs text-slate-400 font-medium uppercase tracking-widest leading-none">Hello</p>
             <p className="text-base font-extrabold text-slate-800 leading-snug">{user.username}</p>
         </div>
-        
-        {/* Initial Avatar */}
         <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-teal-500 rounded-full flex items-center justify-center text-white font-extrabold text-lg shadow-md ring-2 ring-green-500/50">
           {user.username.charAt(0).toUpperCase()}
         </div>
-        
-        {/* Logout Button */}
         <button 
           onClick={logout} 
-          className="p-1.5 rounded-full text-slate-400 hover:text-red-500 hover:bg-slate-50 transition-colors" 
+          className="p-2 rounded-full text-slate-400 hover:text-red-500 hover:bg-slate-50 transition-colors" 
           title="Sign Out"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -76,27 +68,28 @@ const Navbar = () => {
     if (isAuthPage) {
         return (
             <div className="flex items-center gap-4">
-                {/* LinkedIn Contact Link */}
+                {/* LinkedIn Contact Link (Fixed & Professional) */}
                 <a 
-                  href="https://www.linkedin.com/in/ritikrajkvs" 
+                  href="https://www.linkedin.com/in/ritikrajkvs/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-bold border border-blue-100 hover:bg-blue-100 hover:shadow-md transition-all"
+                  className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-[#0077b5]/10 text-[#0077b5] text-sm font-bold border border-[#0077b5]/20 hover:bg-[#0077b5] hover:text-white hover:shadow-md transition-all"
+                  title="Connect on LinkedIn"
                 >
-                  <span className="text-lg">in</span>
-                  <span className="hidden sm:inline">Connect</span>
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span className="hidden md:inline">Let's Connect</span>
                 </a>
 
+                <div className="h-8 w-px bg-slate-200 hidden sm:block"></div>
+
                 {location.pathname === '/login' ? (
-                    <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
-                        New here?
-                        <Link to="/signup" className="text-green-600 font-bold hover:text-green-700 hover:underline transition">Create Account</Link>
-                    </div>
+                    <Link to="/signup" className="text-sm font-bold text-slate-600 hover:text-green-600 transition-colors">
+                        Create Account
+                    </Link>
                 ) : (
-                    <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
-                        Have an account?
-                        <Link to="/login" className="text-green-600 font-bold hover:text-green-700 hover:underline transition">Log In</Link>
-                    </div>
+                    <Link to="/login" className="text-sm font-bold text-slate-600 hover:text-green-600 transition-colors">
+                        Log In
+                    </Link>
                 )}
             </div>
         );
@@ -110,19 +103,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xl transition-all duration-300">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-xl transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-2xl shadow-inner group-hover:rotate-12 transition-transform">🥗</div>
           <span className="text-2xl font-extrabold bg-gradient-to-r from-green-600 to-teal-500 bg-clip-text text-transparent tracking-tight">RecipeGen</span>
         </Link>
 
-        {/* Dynamic Center Content */}
         {!isAuthPage && user && renderAppNav()}
         
-        {/* Dynamic Right Content */}
         <div className="flex items-center gap-4">
           {user ? renderUserProfile() : renderAuthButtons()}
         </div>
