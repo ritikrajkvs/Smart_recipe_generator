@@ -1,123 +1,1857 @@
 [
   {
     "id": "r001",
-    "title": "Tomato Basil Pasta",
+    "title": "Masala Chai",
+    "description": "Authentic Indian spiced tea with ginger and cardamom.",
     "ingredients": [
-      {
-        "name": "pasta",
-        "qty": 200,
-        "unit": "g"
-      },
-      {
-        "name": "tomato",
-        "qty": 3,
-        "unit": "pcs"
-      },
-      {
-        "name": "basil",
-        "qty": 10,
-        "unit": "g"
-      },
-      {
-        "name": "garlic",
-        "qty": 2,
-        "unit": "cloves"
-      }
+      {"name": "milk", "qty": 1, "unit": "cup"},
+      {"name": "water", "qty": 0.5, "unit": "cup"},
+      {"name": "tea leaves", "qty": 2, "unit": "tsp"},
+      {"name": "sugar", "qty": 2, "unit": "tsp"},
+      {"name": "ginger", "qty": 1, "unit": "inch"},
+      {"name": "cardamom", "qty": 2, "unit": "pods"}
     ],
-    "steps": [
-      "Boil pasta",
-      "Saute garlic and tomato",
-      "Mix"
-    ],
+    "steps": ["Boil water with crushed ginger and cardamom.", "Add tea leaves and simmer.", "Add milk and sugar.", "Boil twice and strain."],
     "difficulty": "Easy",
-    "cookTimeMin": 20,
-    "cuisine": "Italian",
-    "diet": [
-      "vegetarian"
-    ],
-    "nutrition": {
-      "calories": 420,
-      "protein_g": 12,
-      "fat_g": 10,
-      "carbs_g": 65
-    },
-    "popularity": 4.5
+    "cookTimeMin": 10,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 120, "protein_g": 4, "fat_g": 4, "carbs_g": 15},
+    "popularity": 5.0
   },
   {
     "id": "r002",
     "title": "Paneer Butter Masala",
+    "description": "Rich creamy curry with cottage cheese.",
     "ingredients": [
-      {
-        "name": "paneer",
-        "qty": 200,
-        "unit": "g"
-      },
-      {
-        "name": "tomato",
-        "qty": 3,
-        "unit": "pcs"
-      },
-      {
-        "name": "butter",
-        "qty": 2,
-        "unit": "tbsp"
-      }
+      {"name": "paneer", "qty": 250, "unit": "g"},
+      {"name": "tomato", "qty": 4, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "butter", "qty": 3, "unit": "tbsp"},
+      {"name": "cream", "qty": 0.25, "unit": "cup"},
+      {"name": "cashew", "qty": 10, "unit": "pcs"}
     ],
-    "steps": [
-      "Make gravy",
-      "Add paneer"
-    ],
+    "steps": ["Sauté onion, tomato, cashew.", "Blend to paste.", "Cook paste in butter with spices.", "Add paneer and cream."],
     "difficulty": "Medium",
-    "cookTimeMin": 30,
+    "cookTimeMin": 40,
     "cuisine": "Indian",
-    "diet": [
-      "vegetarian"
-    ],
-    "nutrition": {
-      "calories": 520,
-      "protein_g": 15,
-      "fat_g": 35,
-      "carbs_g": 20
-    },
-    "popularity": 4.8
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 450, "protein_g": 12, "fat_g": 35, "carbs_g": 20},
+    "popularity": 4.9
   },
   {
     "id": "r003",
-    "title": "Veg Fried Rice",
+    "title": "Aloo Paratha",
+    "description": "Stuffed potato flatbread served with butter.",
     "ingredients": [
-      {
-        "name": "rice",
-        "qty": 250,
-        "unit": "g"
-      },
-      {
-        "name": "carrot",
-        "qty": 1,
-        "unit": "pc"
-      },
-      {
-        "name": "peas",
-        "qty": 50,
-        "unit": "g"
-      }
+      {"name": "wheat flour", "qty": 2, "unit": "cups"},
+      {"name": "potato", "qty": 3, "unit": "pcs"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"},
+      {"name": "coriander", "qty": 1, "unit": "tbsp"},
+      {"name": "butter", "qty": 1, "unit": "tbsp"}
     ],
-    "steps": [
-      "Cook rice",
-      "Stir fry veg",
-      "Mix"
+    "steps": ["Mash boiled potatoes with spices.", "Stuff into dough balls.", "Roll flat and cook on tawa with butter."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 8, "fat_g": 10, "carbs_g": 45},
+    "popularity": 4.8
+  },
+  {
+    "id": "r004",
+    "title": "Chicken Biryani",
+    "description": "Aromatic rice dish layered with spiced chicken.",
+    "ingredients": [
+      {"name": "chicken", "qty": 500, "unit": "g"},
+      {"name": "basmati rice", "qty": 2, "unit": "cups"},
+      {"name": "yogurt", "qty": 1, "unit": "cup"},
+      {"name": "onion", "qty": 3, "unit": "pcs"},
+      {"name": "saffron", "qty": 1, "unit": "pinch"}
     ],
+    "steps": ["Marinate chicken.", "Fry onions.", "Layer half-cooked rice over chicken.", "Dum cook for 40 mins."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 600, "protein_g": 30, "fat_g": 20, "carbs_g": 70},
+    "popularity": 5.0
+  },
+  {
+    "id": "r005",
+    "title": "Dal Tadka",
+    "description": "Yellow lentils tempered with garlic and spices.",
+    "ingredients": [
+      {"name": "toor dal", "qty": 1, "unit": "cup"},
+      {"name": "tomato", "qty": 1, "unit": "pc"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "garlic", "qty": 4, "unit": "cloves"},
+      {"name": "ghee", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Pressure cook dal.", "Fry cumin, garlic, onion, tomato in ghee.", "Mix with dal and simmer."],
+    "difficulty": "Easy",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 12, "fat_g": 8, "carbs_g": 35},
+    "popularity": 4.7
+  },
+  {
+    "id": "r006",
+    "title": "Chole Bhature",
+    "description": "Spicy chickpea curry with fried fluffy bread.",
+    "ingredients": [
+      {"name": "chickpeas", "qty": 2, "unit": "cups"},
+      {"name": "maida", "qty": 2, "unit": "cups"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Cook chickpeas with spices.", "Make dough with maida and yogurt.", "Deep fry bhature.", "Serve hot."],
+    "difficulty": "Medium",
+    "cookTimeMin": 90,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 700, "protein_g": 18, "fat_g": 30, "carbs_g": 80},
+    "popularity": 4.9
+  },
+  {
+    "id": "r007",
+    "title": "Palak Paneer",
+    "description": "Paneer cubes in a smooth spinach gravy.",
+    "ingredients": [
+      {"name": "spinach", "qty": 1, "unit": "bunch"},
+      {"name": "paneer", "qty": 200, "unit": "g"},
+      {"name": "cream", "qty": 2, "unit": "tbsp"},
+      {"name": "garlic", "qty": 4, "unit": "cloves"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+    ],
+    "steps": ["Blanch and blend spinach.", "Sauté garlic and spices.", "Add spinach puree and paneer.", "Finish with cream."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 15, "fat_g": 25, "carbs_g": 10},
+    "popularity": 4.6
+  },
+  {
+    "id": "r008",
+    "title": "Pohaa",
+    "description": "Light flattened rice breakfast with peanuts.",
+    "ingredients": [
+      {"name": "poha", "qty": 2, "unit": "cups"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "potato", "qty": 1, "unit": "pc"},
+      {"name": "peanuts", "qty": 2, "unit": "tbsp"},
+      {"name": "curry leaves", "qty": 5, "unit": "pcs"}
+    ],
+    "steps": ["Rinse poha.", "Sauté peanuts, veggies, and spices.", "Mix in poha and steam for 2 mins."],
     "difficulty": "Easy",
     "cookTimeMin": 15,
-    "cuisine": "Asian",
-    "diet": [
-      "vegetarian"
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 250, "protein_g": 5, "fat_g": 8, "carbs_g": 45},
+    "popularity": 4.7
+  },
+  {
+    "id": "r009",
+    "title": "Masala Dosa",
+    "description": "Crispy rice crepe stuffed with spiced potato.",
+    "ingredients": [
+      {"name": "rice flour", "qty": 2, "unit": "cups"},
+      {"name": "urad dal", "qty": 0.5, "unit": "cup"},
+      {"name": "potato", "qty": 3, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "mustard seeds", "qty": 1, "unit": "tsp"}
     ],
-    "nutrition": {
-      "calories": 380,
-      "protein_g": 8,
-      "fat_g": 6,
-      "carbs_g": 70
-    },
+    "steps": ["Ferment batter overnight.", "Make potato filling.", "Spread batter on tawa.", "Roll with filling."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegetarian", "vegan"],
+    "nutrition": {"calories": 300, "protein_g": 6, "fat_g": 10, "carbs_g": 50},
+    "popularity": 5.0
+  },
+  {
+    "id": "r010",
+    "title": "Idli Sambar",
+    "description": "Steamed rice cakes with lentil stew.",
+    "ingredients": [
+      {"name": "idli batter", "qty": 500, "unit": "g"},
+      {"name": "toor dal", "qty": 1, "unit": "cup"},
+      {"name": "drumstick", "qty": 1, "unit": "pc"},
+      {"name": "carrot", "qty": 1, "unit": "pc"},
+      {"name": "tamarind", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Steam idlis.", "Boil dal with veggies.", "Add tamarind and sambar powder.", "Simmer."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 8, "fat_g": 2, "carbs_g": 40},
+    "popularity": 4.8
+  },
+  {
+    "id": "r011",
+    "title": "Rajma Chawal",
+    "description": "Red kidney beans curry served with steamed rice.",
+    "ingredients": [
+      {"name": "rajma", "qty": 1, "unit": "cup"},
+      {"name": "rice", "qty": 1, "unit": "cup"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Soak and pressure cook rajma.", "Prepare gravy with onion-tomato.", "Simmer beans in gravy.", "Serve with rice."],
+    "difficulty": "Medium",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 15, "fat_g": 8, "carbs_g": 60},
+    "popularity": 4.9
+  },
+  {
+    "id": "r012",
+    "title": "Pav Bhaji",
+    "description": "Spiced vegetable mash served with buttered buns.",
+    "ingredients": [
+      {"name": "potato", "qty": 3, "unit": "pcs"},
+      {"name": "cauliflower", "qty": 1, "unit": "cup"},
+      {"name": "peas", "qty": 0.5, "unit": "cup"},
+      {"name": "butter", "qty": 50, "unit": "g"},
+      {"name": "pav", "qty": 4, "unit": "pcs"}
+    ],
+    "steps": ["Boil and mash veggies.", "Cook with butter and pav bhaji masala.", "Toast pav in butter.", "Serve hot."],
+    "difficulty": "Medium",
+    "cookTimeMin": 45,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 500, "protein_g": 10, "fat_g": 20, "carbs_g": 60},
+    "popularity": 5.0
+  },
+  {
+    "id": "r013",
+    "title": "Kadhi Pakora",
+    "description": "Yogurt gram flour curry with deep fried fritters.",
+    "ingredients": [
+      {"name": "curd", "qty": 1, "unit": "cup"},
+      {"name": "besan", "qty": 1, "unit": "cup"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "spices", "qty": 1, "unit": "tsp"},
+      {"name": "oil", "qty": 1, "unit": "cup"}
+    ],
+    "steps": ["Mix curd, besan, water for kadhi.", "Fry onion-besan pakoras.", "Simmer kadhi and add pakoras."],
+    "difficulty": "Medium",
+    "cookTimeMin": 50,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 12, "fat_g": 15, "carbs_g": 30},
     "popularity": 4.6
+  },
+  {
+    "id": "r014",
+    "title": "Baingan Bharta",
+    "description": "Smoky roasted eggplant mash.",
+    "ingredients": [
+      {"name": "eggplant", "qty": 1, "unit": "large"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "garlic", "qty": 4, "unit": "cloves"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+    ],
+    "steps": ["Roast eggplant on open flame.", "Peel and mash.", "Cook with onions, tomatoes, and spices."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 150, "protein_g": 4, "fat_g": 8, "carbs_g": 15},
+    "popularity": 4.3
+  },
+  {
+    "id": "r015",
+    "title": "Bhindi Masala",
+    "description": "Spicy stir-fried okra.",
+    "ingredients": [
+      {"name": "okra", "qty": 500, "unit": "g"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 1, "unit": "pc"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Wash and dry okra.", "Chop and fry with onions.", "Add spices and cook until soft."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 180, "protein_g": 5, "fat_g": 8, "carbs_g": 12},
+    "popularity": 4.5
+  },
+  {
+    "id": "r016",
+    "title": "Gajar Ka Halwa",
+    "description": "Sweet carrot pudding made with milk and nuts.",
+    "ingredients": [
+      {"name": "carrot", "qty": 1, "unit": "kg"},
+      {"name": "milk", "qty": 1, "unit": "liter"},
+      {"name": "sugar", "qty": 1, "unit": "cup"},
+      {"name": "ghee", "qty": 2, "unit": "tbsp"},
+      {"name": "nuts", "qty": 0.25, "unit": "cup"}
+    ],
+    "steps": ["Grate carrots.", "Simmer in milk until dry.", "Fry in ghee with sugar and nuts."],
+    "difficulty": "Medium",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 8, "fat_g": 15, "carbs_g": 60},
+    "popularity": 5.0
+  },
+  {
+    "id": "r017",
+    "title": "Kheer",
+    "description": "Rice pudding with cardamom and saffron.",
+    "ingredients": [
+      {"name": "rice", "qty": 0.5, "unit": "cup"},
+      {"name": "milk", "qty": 1, "unit": "liter"},
+      {"name": "sugar", "qty": 0.5, "unit": "cup"},
+      {"name": "cardamom", "qty": 2, "unit": "pods"},
+      {"name": "nuts", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Boil milk.", "Add soaked rice.", "Simmer until thick.", "Add sugar and garnish."],
+    "difficulty": "Easy",
+    "cookTimeMin": 45,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 8, "fat_g": 10, "carbs_g": 40},
+    "popularity": 4.8
+  },
+  {
+    "id": "r018",
+    "title": "Samosa",
+    "description": "Deep fried pastry filled with spiced potatoes.",
+    "ingredients": [
+      {"name": "maida", "qty": 2, "unit": "cups"},
+      {"name": "potato", "qty": 4, "unit": "pcs"},
+      {"name": "peas", "qty": 0.5, "unit": "cup"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"},
+      {"name": "oil", "qty": 2, "unit": "cups"}
+    ],
+    "steps": ["Prepare dough.", "Make potato filling.", "Shape and fill samosas.", "Deep fry."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 4, "fat_g": 12, "carbs_g": 30},
+    "popularity": 5.0
+  },
+  {
+    "id": "r019",
+    "title": "Pakora",
+    "description": "Mixed vegetable fritters.",
+    "ingredients": [
+      {"name": "besan", "qty": 1, "unit": "cup"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "potato", "qty": 1, "unit": "pc"},
+      {"name": "spinach", "qty": 0.5, "unit": "cup"},
+      {"name": "oil", "qty": 2, "unit": "cups"}
+    ],
+    "steps": ["Slice vegetables.", "Mix with besan and water.", "Deep fry until golden."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegetarian", "vegan"],
+    "nutrition": {"calories": 200, "protein_g": 6, "fat_g": 10, "carbs_g": 20},
+    "popularity": 4.7
+  },
+  {
+    "id": "r020",
+    "title": "Upma",
+    "description": "Savory semolina breakfast dish.",
+    "ingredients": [
+      {"name": "semolina", "qty": 1, "unit": "cup"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"},
+      {"name": "water", "qty": 3, "unit": "cups"}
+    ],
+    "steps": ["Roast semolina.", "Sauté veggies and spices.", "Add boiling water and cook until fluffy."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 8, "carbs_g": 40},
+    "popularity": 4.5
+  },
+  {
+    "id": "r021",
+    "title": "Lemon Rice",
+    "description": "Tangy South Indian rice with lemon and turmeric.",
+    "ingredients": [
+      {"name": "rice", "qty": 2, "unit": "cups"},
+      {"name": "lemon", "qty": 2, "unit": "pcs"},
+      {"name": "peanuts", "qty": 2, "unit": "tbsp"},
+      {"name": "turmeric", "qty": 0.5, "unit": "tsp"},
+      {"name": "curry leaves", "qty": 10, "unit": "pcs"}
+    ],
+    "steps": ["Cook rice.", "Tempering with mustard seeds, peanuts, curry leaves.", "Mix with turmeric and lemon juice."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 5, "fat_g": 10, "carbs_g": 50},
+    "popularity": 4.6
+  },
+  {
+    "id": "r022",
+    "title": "Chicken Curry",
+    "description": "Homestyle chicken curry with simple spices.",
+    "ingredients": [
+      {"name": "chicken", "qty": 500, "unit": "g"},
+      {"name": "onion", "qty": 3, "unit": "pcs"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"},
+      {"name": "spices", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Brown chicken.", "Make gravy with onion, tomato, spices.", "Simmer chicken in gravy until tender."],
+    "difficulty": "Medium",
+    "cookTimeMin": 45,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 35, "fat_g": 15, "carbs_g": 10},
+    "popularity": 4.9
+  },
+  {
+    "id": "r023",
+    "title": "Egg Curry",
+    "description": "Boiled eggs in a spicy tomato gravy.",
+    "ingredients": [
+      {"name": "egg", "qty": 4, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Boil and peel eggs.", "Prepare spicy gravy.", "Add eggs and simmer for 10 mins."],
+    "difficulty": "Easy",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 14, "fat_g": 15, "carbs_g": 10},
+    "popularity": 4.7
+  },
+  {
+    "id": "r024",
+    "title": "Fish Fry",
+    "description": "Crispy spicy fried fish.",
+    "ingredients": [
+      {"name": "fish", "qty": 500, "unit": "g"},
+      {"name": "red chilli powder", "qty": 1, "unit": "tbsp"},
+      {"name": "lemon", "qty": 1, "unit": "pc"},
+      {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"},
+      {"name": "oil", "qty": 0.5, "unit": "cup"}
+    ],
+    "steps": ["Marinate fish with spices and lemon.", "Shallow fry until crispy."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 25, "fat_g": 20, "carbs_g": 2},
+    "popularity": 4.8
+  },
+  {
+    "id": "r025",
+    "title": "Mutton Rogan Josh",
+    "description": "Kashmiri style lamb curry.",
+    "ingredients": [
+      {"name": "mutton", "qty": 500, "unit": "g"},
+      {"name": "yogurt", "qty": 1, "unit": "cup"},
+      {"name": "spices", "qty": 2, "unit": "tbsp"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "ghee", "qty": 3, "unit": "tbsp"}
+    ],
+    "steps": ["Brown meat.", "Add beaten yogurt and spices.", "Slow cook for 2 hours."],
+    "difficulty": "Hard",
+    "cookTimeMin": 120,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 550, "protein_g": 30, "fat_g": 35, "carbs_g": 10},
+    "popularity": 4.9
+  },
+  {
+    "id": "r026",
+    "title": "Veg Pulao",
+    "description": "One pot spiced rice with vegetables.",
+    "ingredients": [
+      {"name": "rice", "qty": 1, "unit": "cup"},
+      {"name": "mixed vegetables", "qty": 1, "unit": "cup"},
+      {"name": "whole spices", "qty": 1, "unit": "tbsp"},
+      {"name": "ghee", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Sauté spices and veggies in ghee.", "Add rice and water.", "Cook until rice is done."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 6, "fat_g": 8, "carbs_g": 50},
+    "popularity": 4.6
+  },
+  {
+    "id": "r027",
+    "title": "Raita",
+    "description": "Cooling yogurt side dish.",
+    "ingredients": [
+      {"name": "curd", "qty": 1, "unit": "cup"},
+      {"name": "cucumber", "qty": 0.5, "unit": "pc"},
+      {"name": "cumin powder", "qty": 0.5, "unit": "tsp"},
+      {"name": "salt", "qty": 0.5, "unit": "tsp"}
+    ],
+    "steps": ["Whisk curd.", "Add grated cucumber and spices.", "Chill and serve."],
+    "difficulty": "Easy",
+    "cookTimeMin": 5,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 80, "protein_g": 4, "fat_g": 3, "carbs_g": 8},
+    "popularity": 4.5
+  },
+  {
+    "id": "r028",
+    "title": "Mango Lassi",
+    "description": "Sweet yogurt drink with mango pulp.",
+    "ingredients": [
+      {"name": "mango", "qty": 1, "unit": "pc"},
+      {"name": "curd", "qty": 1, "unit": "cup"},
+      {"name": "sugar", "qty": 2, "unit": "tbsp"},
+      {"name": "cardamom", "qty": 1, "unit": "pinch"}
+    ],
+    "steps": ["Blend mango pulp, curd, and sugar.", "Add cardamom.", "Serve chilled."],
+    "difficulty": "Easy",
+    "cookTimeMin": 5,
+    "cuisine": "Beverage",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 6, "fat_g": 5, "carbs_g": 35},
+    "popularity": 5.0
+  },
+  {
+    "id": "r029",
+    "title": "Tomato Soup",
+    "description": "Classic comforting tomato soup.",
+    "ingredients": [
+      {"name": "tomato", "qty": 5, "unit": "pcs"},
+      {"name": "butter", "qty": 1, "unit": "tbsp"},
+      {"name": "cream", "qty": 1, "unit": "tbsp"},
+      {"name": "bread", "qty": 1, "unit": "slice"}
+    ],
+    "steps": ["Boil and blend tomatoes.", "Strain.", "Simmer with butter.", "Serve with croutons."],
+    "difficulty": "Easy",
+    "cookTimeMin": 25,
+    "cuisine": "Continental",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 150, "protein_g": 3, "fat_g": 8, "carbs_g": 18},
+    "popularity": 4.6
+  },
+  {
+    "id": "r030",
+    "title": "Veg Sandwich",
+    "description": "Simple breakfast sandwich with cucumber and tomato.",
+    "ingredients": [
+      {"name": "bread", "qty": 2, "unit": "slices"},
+      {"name": "butter", "qty": 1, "unit": "tsp"},
+      {"name": "cucumber", "qty": 4, "unit": "slices"},
+      {"name": "tomato", "qty": 4, "unit": "slices"}
+    ],
+    "steps": ["Butter the bread.", "Layer veggies.", "Season with salt pepper.", "Grill optionally."],
+    "difficulty": "Easy",
+    "cookTimeMin": 5,
+    "cuisine": "Continental",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 5, "fat_g": 6, "carbs_g": 30},
+    "popularity": 4.4
+  },
+  {
+    "id": "r031",
+    "title": "Pani Puri",
+    "description": "Crispy hollow balls filled with spicy water.",
+    "ingredients": [
+      {"name": "semolina", "qty": 1, "unit": "cup"},
+      {"name": "mint", "qty": 1, "unit": "bunch"},
+      {"name": "tamarind", "qty": 1, "unit": "tbsp"},
+      {"name": "potato", "qty": 2, "unit": "pcs"}
+    ],
+    "steps": ["Make puris.", "Prepare mint water and tamarind chutney.", "Mash potatoes for filling."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 150, "protein_g": 3, "fat_g": 5, "carbs_g": 25},
+    "popularity": 5.0
+  },
+  {
+    "id": "r032",
+    "title": "Bhel Puri",
+    "description": "Puffed rice snack with chutneys.",
+    "ingredients": [
+      {"name": "puffed rice", "qty": 2, "unit": "cups"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "tomato", "qty": 1, "unit": "pc"},
+      {"name": "chutney", "qty": 2, "unit": "tbsp"},
+      {"name": "sev", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Mix puffed rice with chopped veggies.", "Add chutneys and spices.", "Garnish with sev."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 6, "carbs_g": 35},
+    "popularity": 4.8
+  },
+  {
+    "id": "r033",
+    "title": "Vada Pav",
+    "description": "Spicy potato fritter in a bun.",
+    "ingredients": [
+      {"name": "potato", "qty": 3, "unit": "pcs"},
+      {"name": "besan", "qty": 1, "unit": "cup"},
+      {"name": "pav", "qty": 4, "unit": "pcs"},
+      {"name": "garlic chutney", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Make potato filling.", "Dip in besan batter and fry vada.", "Serve in pav with chutney."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 8, "fat_g": 12, "carbs_g": 45},
+    "popularity": 4.9
+  },
+  {
+    "id": "r034",
+    "title": "Dhokla",
+    "description": "Steamed savory sponge cake.",
+    "ingredients": [
+      {"name": "besan", "qty": 1, "unit": "cup"},
+      {"name": "yogurt", "qty": 0.5, "unit": "cup"},
+      {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+    ],
+    "steps": ["Make batter with besan and ferment.", "Steam until fluffy.", "Temper with mustard and curry leaves."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 180, "protein_g": 6, "fat_g": 5, "carbs_g": 25},
+    "popularity": 4.7
+  },
+  {
+    "id": "r035",
+    "title": "Hakaa Noodles",
+    "description": "Indian style vegetable stir fry noodles.",
+    "ingredients": [
+      {"name": "noodles", "qty": 200, "unit": "g"},
+      {"name": "cabbage", "qty": 0.5, "unit": "cup"},
+      {"name": "carrot", "qty": 1, "unit": "pc"},
+      {"name": "capsicum", "qty": 1, "unit": "pc"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Boil noodles.", "Stir fry veggies on high heat.", "Toss noodles with sauces."],
+    "difficulty": "Medium",
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 6, "fat_g": 8, "carbs_g": 50},
+    "popularity": 4.8
+  },
+  {
+    "id": "r036",
+    "title": "Veg Manchurian",
+    "description": "Veggie balls in spicy Chinese gravy.",
+    "ingredients": [
+      {"name": "cabbage", "qty": 2, "unit": "cups"},
+      {"name": "carrot", "qty": 1, "unit": "cup"},
+      {"name": "maida", "qty": 0.5, "unit": "cup"},
+      {"name": "soy sauce", "qty": 2, "unit": "tbsp"},
+      {"name": "corn flour", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Mix veggies and flour.", "Fry balls.", "Make gravy with sauces.", "Simmer balls in gravy."],
+    "difficulty": "Hard",
+    "cookTimeMin": 45,
+    "cuisine": "Chinese",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 5, "fat_g": 15, "carbs_g": 40},
+    "popularity": 4.9
+  },
+  {
+    "id": "r037",
+    "title": "Tomato Basil Pasta",
+    "description": "Classic Italian pasta with red sauce.",
+    "ingredients": [
+      {"name": "pasta", "qty": 200, "unit": "g"},
+      {"name": "tomato", "qty": 3, "unit": "pcs"},
+      {"name": "basil", "qty": 10, "unit": "leaves"},
+      {"name": "garlic", "qty": 2, "unit": "cloves"},
+      {"name": "olive oil", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Boil pasta.", "Cook tomatoes and garlic.", "Toss pasta in sauce.", "Garnish with basil."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Italian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 10, "fat_g": 12, "carbs_g": 60},
+    "popularity": 4.7
+  },
+  {
+    "id": "r038",
+    "title": "White Sauce Pasta",
+    "description": "Creamy cheesy pasta with vegetables.",
+    "ingredients": [
+      {"name": "pasta", "qty": 200, "unit": "g"},
+      {"name": "milk", "qty": 1, "unit": "cup"},
+      {"name": "butter", "qty": 2, "unit": "tbsp"},
+      {"name": "maida", "qty": 2, "unit": "tbsp"},
+      {"name": "cheese", "qty": 0.5, "unit": "cup"}
+    ],
+    "steps": ["Boil pasta.", "Make roux with butter and flour.", "Add milk to make sauce.", "Add cheese and pasta."],
+    "difficulty": "Medium",
+    "cookTimeMin": 25,
+    "cuisine": "Italian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 500, "protein_g": 15, "fat_g": 20, "carbs_g": 65},
+    "popularity": 4.8
+  },
+  {
+    "id": "r039",
+    "title": "Pizza Margherita",
+    "description": "Simple cheese pizza with basil.",
+    "ingredients": [
+      {"name": "pizza base", "qty": 1, "unit": "pc"},
+      {"name": "tomato sauce", "qty": 0.5, "unit": "cup"},
+      {"name": "mozzarella", "qty": 1, "unit": "cup"},
+      {"name": "basil", "qty": 5, "unit": "leaves"}
+    ],
+    "steps": ["Spread sauce on base.", "Top with cheese.", "Bake until bubbly.", "Add basil."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Italian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 600, "protein_g": 20, "fat_g": 25, "carbs_g": 70},
+    "popularity": 5.0
+  },
+  {
+    "id": "r040",
+    "title": "Chilli Chicken",
+    "description": "Spicy fried chicken in soy sauce.",
+    "ingredients": [
+      {"name": "chicken", "qty": 300, "unit": "g"},
+      {"name": "capsicum", "qty": 2, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "soy sauce", "qty": 2, "unit": "tbsp"},
+      {"name": "green chilli", "qty": 4, "unit": "pcs"}
+    ],
+    "steps": ["Fry marinated chicken.", "Sauté veggies.", "Toss in sauces."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Chinese",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 30, "fat_g": 15, "carbs_g": 20},
+    "popularity": 4.9
+  },
+  {
+    "id": "r041",
+    "title": "Vegetable Soup",
+    "description": "Healthy mix vegetable clear soup.",
+    "ingredients": [
+      {"name": "carrot", "qty": 1, "unit": "pc"},
+      {"name": "beans", "qty": 10, "unit": "pcs"},
+      {"name": "cabbage", "qty": 0.5, "unit": "cup"},
+      {"name": "corn", "qty": 0.25, "unit": "cup"},
+      {"name": "pepper", "qty": 1, "unit": "tsp"}
+    ],
+    "steps": ["Chop all veggies.", "Boil in water.", "Season with salt and pepper."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Continental",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 100, "protein_g": 2, "fat_g": 0, "carbs_g": 20},
+    "popularity": 4.4
+  },
+  {
+    "id": "r042",
+    "title": "French Fries",
+    "description": "Classic salted fried potato sticks.",
+    "ingredients": [
+      {"name": "potato", "qty": 3, "unit": "pcs"},
+      {"name": "oil", "qty": 2, "unit": "cups"},
+      {"name": "salt", "qty": 1, "unit": "tsp"}
+    ],
+    "steps": ["Cut potatoes into strips.", "Soak in cold water.", "Deep fry twice for crispiness."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Continental",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 3, "fat_g": 15, "carbs_g": 40},
+    "popularity": 5.0
+  },
+  {
+    "id": "r043",
+    "title": "Omelette",
+    "description": "Beaten eggs fried with veggies.",
+    "ingredients": [
+      {"name": "egg", "qty": 2, "unit": "pcs"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "green chilli", "qty": 1, "unit": "pc"},
+      {"name": "butter", "qty": 1, "unit": "tsp"}
+    ],
+    "steps": ["Whisk eggs with veggies.", "Pour into hot buttered pan.", "Fold and serve."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Continental",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 180, "protein_g": 12, "fat_g": 14, "carbs_g": 2},
+    "popularity": 4.8
+  },
+  {
+    "id": "r044",
+    "title": "Banana Milkshake",
+    "description": "Energy boosting drink.",
+    "ingredients": [
+      {"name": "banana", "qty": 2, "unit": "pcs"},
+      {"name": "milk", "qty": 1, "unit": "cup"},
+      {"name": "sugar", "qty": 1, "unit": "tbsp"},
+      {"name": "ice", "qty": 4, "unit": "cubes"}
+    ],
+    "steps": ["Blend everything until smooth."],
+    "difficulty": "Easy",
+    "cookTimeMin": 5,
+    "cuisine": "Beverage",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 5, "carbs_g": 45},
+    "popularity": 4.8
+  },
+  {
+    "id": "r045",
+    "title": "Cold Coffee",
+    "description": "Chilled creamy coffee.",
+    "ingredients": [
+      {"name": "milk", "qty": 1, "unit": "cup"},
+      {"name": "coffee", "qty": 2, "unit": "tsp"},
+      {"name": "sugar", "qty": 2, "unit": "tsp"},
+      {"name": "ice", "qty": 4, "unit": "cubes"}
+    ],
+    "steps": ["Blend coffee, sugar, milk, ice.", "Serve topped with chocolate powder."],
+    "difficulty": "Easy",
+    "cookTimeMin": 5,
+    "cuisine": "Beverage",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 150, "protein_g": 4, "fat_g": 5, "carbs_g": 20},
+    "popularity": 4.9
+  },
+  {
+    "id": "r046",
+    "title": "Lemonade",
+    "description": "Refreshing lime water.",
+    "ingredients": [
+      {"name": "lemon", "qty": 1, "unit": "pc"},
+      {"name": "water", "qty": 1, "unit": "cup"},
+      {"name": "sugar", "qty": 2, "unit": "tbsp"},
+      {"name": "salt", "qty": 1, "unit": "pinch"}
+    ],
+    "steps": ["Mix lemon juice, sugar, salt in water.", "Stir until dissolved.", "Serve with ice."],
+    "difficulty": "Easy",
+    "cookTimeMin": 5,
+    "cuisine": "Beverage",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 80, "protein_g": 0, "fat_g": 0, "carbs_g": 20},
+    "popularity": 4.7
+  },
+  {
+    "id": "r047",
+    "title": "Egg Bhurji",
+    "description": "Indian style scrambled eggs.",
+    "ingredients": [
+      {"name": "egg", "qty": 3, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 1, "unit": "pc"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+    ],
+    "steps": ["Sauté onion, tomato, chilli.", "Add beaten eggs.", "Scramble until cooked."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 18, "fat_g": 18, "carbs_g": 5},
+    "popularity": 4.8
+  },
+  {
+    "id": "r048",
+    "title": "Pancakes",
+    "description": "Fluffy breakfast cakes.",
+    "ingredients": [
+      {"name": "flour", "qty": 1, "unit": "cup"},
+      {"name": "milk", "qty": 1, "unit": "cup"},
+      {"name": "egg", "qty": 1, "unit": "pc"},
+      {"name": "baking powder", "qty": 1, "unit": "tsp"},
+      {"name": "butter", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Mix dry and wet ingredients.", "Pour batter on hot pan.", "Flip when bubbly."],
+    "difficulty": "Medium",
+    "cookTimeMin": 20,
+    "cuisine": "Continental",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 8, "fat_g": 10, "carbs_g": 50},
+    "popularity": 4.9
+  },
+  {
+    "id": "r049",
+    "title": "Garlic Bread",
+    "description": "Toasted bread with garlic butter.",
+    "ingredients": [
+      {"name": "bread", "qty": 4, "unit": "slices"},
+      {"name": "butter", "qty": 2, "unit": "tbsp"},
+      {"name": "garlic", "qty": 4, "unit": "cloves"},
+      {"name": "oregano", "qty": 1, "unit": "tsp"}
+    ],
+    "steps": ["Mix crushed garlic with butter.", "Spread on bread.", "Toast until golden."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Italian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 10, "carbs_g": 25},
+    "popularity": 4.8
+  },
+  {
+    "id": "r050",
+    "title": "Fruit Salad",
+    "description": "Bowl of mixed fresh fruits.",
+    "ingredients": [
+      {"name": "apple", "qty": 1, "unit": "pc"},
+      {"name": "banana", "qty": 1, "unit": "pc"},
+      {"name": "grapes", "qty": 0.5, "unit": "cup"},
+      {"name": "orange", "qty": 1, "unit": "pc"}
+    ],
+    "steps": ["Chop all fruits.", "Mix in a bowl.", "Serve fresh."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Continental",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 150, "protein_g": 2, "fat_g": 0, "carbs_g": 38},
+    "popularity": 4.6
+  },
+  {
+    "id": "r051",
+    "title": "Sabudana Khichdi",
+    "description": "Tapioca pearl pilaf for fasting.",
+    "ingredients": [
+      {"name": "sabudana", "qty": 1, "unit": "cup"},
+      {"name": "potato", "qty": 1, "unit": "pc"},
+      {"name": "peanuts", "qty": 0.25, "unit": "cup"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"}
+    ],
+    "steps": ["Soak sabudana.", "Sauté potato and peanuts.", "Add sabudana and cook until clear."],
+    "difficulty": "Medium",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 5, "fat_g": 12, "carbs_g": 60},
+    "popularity": 4.7
+  },
+  {
+    "id": "r052",
+    "title": "Methi Thepla",
+    "description": "Fenugreek flatbread.",
+    "ingredients": [
+      {"name": "wheat flour", "qty": 2, "unit": "cups"},
+      {"name": "fenugreek", "qty": 1, "unit": "bunch"},
+      {"name": "yogurt", "qty": 2, "unit": "tbsp"},
+      {"name": "spices", "qty": 1, "unit": "tsp"}
+    ],
+    "steps": ["Mix chopped fenugreek with flour.", "Knead dough.", "Roll and cook on tawa."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 8, "fat_g": 8, "carbs_g": 40},
+    "popularity": 4.6
+  },
+  {
+    "id": "r053",
+    "title": "Chicken Soup",
+    "description": "Clear broth with chicken and veggies.",
+    "ingredients": [
+      {"name": "chicken", "qty": 200, "unit": "g"},
+      {"name": "carrot", "qty": 1, "unit": "pc"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "celery", "qty": 1, "unit": "stalk"}
+    ],
+    "steps": ["Boil chicken and veggies.", "Simmer for 30 mins.", "Season and serve."],
+    "difficulty": "Easy",
+    "cookTimeMin": 40,
+    "cuisine": "Continental",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 25, "fat_g": 5, "carbs_g": 10},
+    "popularity": 4.5
+  },
+  {
+    "id": "r054",
+    "title": "Paneer Tikka",
+    "description": "Marinated grilled cottage cheese.",
+    "ingredients": [
+      {"name": "paneer", "qty": 250, "unit": "g"},
+      {"name": "yogurt", "qty": 0.5, "unit": "cup"},
+      {"name": "capsicum", "qty": 1, "unit": "pc"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Marinate paneer and veggies.", "Skewer them.", "Grill until charred."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 18, "fat_g": 20, "carbs_g": 10},
+    "popularity": 4.9
+  },
+  {
+    "id": "r055",
+    "title": "Butter Chicken",
+    "description": "Classic creamy chicken curry.",
+    "ingredients": [
+      {"name": "chicken", "qty": 500, "unit": "g"},
+      {"name": "butter", "qty": 4, "unit": "tbsp"},
+      {"name": "tomato", "qty": 4, "unit": "pcs"},
+      {"name": "cream", "qty": 0.5, "unit": "cup"},
+      {"name": "cashew", "qty": 10, "unit": "pcs"}
+    ],
+    "steps": ["Cook chicken tikkas.", "Prepare tomato butter gravy.", "Simmer chicken in gravy."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 600, "protein_g": 30, "fat_g": 40, "carbs_g": 15},
+    "popularity": 5.0
+  },
+  {
+    "id": "r056",
+    "title": "Besan Ladoo",
+    "description": "Sweet gram flour balls.",
+    "ingredients": [
+      {"name": "besan", "qty": 2, "unit": "cups"},
+      {"name": "ghee", "qty": 0.5, "unit": "cup"},
+      {"name": "sugar", "qty": 1, "unit": "cup"},
+      {"name": "cardamom", "qty": 0.5, "unit": "tsp"}
+    ],
+    "steps": ["Roast besan in ghee until aromatic.", "Cool slightly.", "Mix sugar and shape balls."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 10, "carbs_g": 25},
+    "popularity": 4.8
+  },
+  {
+    "id": "r057",
+    "title": "Jeera Rice",
+    "description": "Cumin flavored rice.",
+    "ingredients": [
+      {"name": "rice", "qty": 1, "unit": "cup"},
+      {"name": "cumin", "qty": 1, "unit": "tbsp"},
+      {"name": "ghee", "qty": 1, "unit": "tbsp"},
+      {"name": "water", "qty": 2, "unit": "cups"}
+    ],
+    "steps": ["Heat ghee, crackle cumin.", "Add rice and water.", "Cook until fluffy."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 4, "fat_g": 5, "carbs_g": 45},
+    "popularity": 4.7
+  },
+  {
+    "id": "r058",
+    "title": "Veg Burger",
+    "description": "Potato patty in a bun.",
+    "ingredients": [
+      {"name": "bun", "qty": 2, "unit": "pcs"},
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "peas", "qty": 0.25, "unit": "cup"},
+      {"name": "lettuce", "qty": 2, "unit": "leaves"},
+      {"name": "tomato", "qty": 2, "unit": "slices"}
+    ],
+    "steps": ["Make veg patty and fry.", "Toast buns.", "Assemble with veggies and sauce."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Continental",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 10, "fat_g": 15, "carbs_g": 55},
+    "popularity": 4.8
+  },
+  {
+    "id": "r059",
+    "title": "Chicken Momos",
+    "description": "Steamed chicken dumplings.",
+    "ingredients": [
+      {"name": "maida", "qty": 2, "unit": "cups"},
+      {"name": "chicken", "qty": 250, "unit": "g"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "soy sauce", "qty": 1, "unit": "tsp"}
+    ],
+    "steps": ["Make dough.", "Prepare minced chicken filling.", "Shape and steam."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Chinese",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 15, "fat_g": 8, "carbs_g": 35},
+    "popularity": 5.0
+  },
+  {
+    "id": "r060",
+    "title": "Gobi Manchurian",
+    "description": "Crispy cauliflower in spicy sauce.",
+    "ingredients": [
+      {"name": "cauliflower", "qty": 1, "unit": "head"},
+      {"name": "corn flour", "qty": 0.5, "unit": "cup"},
+      {"name": "soy sauce", "qty": 2, "unit": "tbsp"},
+      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Batter coat cauliflower and fry.", "Make spicy sauce.", "Toss florets in sauce."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 350, "protein_g": 6, "fat_g": 15, "carbs_g": 40},
+    "popularity": 4.9
+  },
+  {
+    "id": "r061",
+    "title": "Mutter Paneer",
+    "description": "Peas and paneer curry.",
+    "ingredients": [
+      {"name": "paneer", "qty": 200, "unit": "g"},
+      {"name": "peas", "qty": 1, "unit": "cup"},
+      {"name": "tomato", "qty": 3, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "cream", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Fry paneer.", "Make onion-tomato gravy.", "Add peas and paneer.", "Simmer."],
+    "difficulty": "Medium",
+    "cookTimeMin": 35,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 15, "fat_g": 25, "carbs_g": 20},
+    "popularity": 4.8
+  },
+  {
+    "id": "r062",
+    "title": "Bread Pakora",
+    "description": "Deep fried stuffed bread fritter.",
+    "ingredients": [
+      {"name": "bread", "qty": 4, "unit": "slices"},
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "besan", "qty": 1, "unit": "cup"},
+      {"name": "oil", "qty": 2, "unit": "cups"}
+    ],
+    "steps": ["Sandwich spiced potato between bread.", "Dip in besan batter.", "Deep fry."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 8, "fat_g": 15, "carbs_g": 45},
+    "popularity": 4.7
+  },
+  {
+    "id": "r063",
+    "title": "Fish Curry",
+    "description": "Spicy tamarind based fish stew.",
+    "ingredients": [
+      {"name": "fish", "qty": 500, "unit": "g"},
+      {"name": "tamarind", "qty": 1, "unit": "lemon size"},
+      {"name": "coconut", "qty": 0.5, "unit": "cup"},
+      {"name": "spices", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Extract tamarind juice.", "Make coconut paste.", "Boil curry with fish."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 25, "fat_g": 20, "carbs_g": 10},
+    "popularity": 4.8
+  },
+  {
+    "id": "r064",
+    "title": "Veg Salad",
+    "description": "Fresh mixed vegetable salad.",
+    "ingredients": [
+      {"name": "cucumber", "qty": 1, "unit": "pc"},
+      {"name": "tomato", "qty": 1, "unit": "pc"},
+      {"name": "carrot", "qty": 1, "unit": "pc"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "lemon", "qty": 0.5, "unit": "pc"}
+    ],
+    "steps": ["Chop all veggies.", "Toss with lemon juice and salt."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Continental",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 80, "protein_g": 2, "fat_g": 0, "carbs_g": 15},
+    "popularity": 4.3
+  },
+  {
+    "id": "r065",
+    "title": "Gulab Jamun",
+    "description": "Fried milk balls in syrup.",
+    "ingredients": [
+      {"name": "milk powder", "qty": 1, "unit": "cup"},
+      {"name": "maida", "qty": 0.25, "unit": "cup"},
+      {"name": "sugar", "qty": 2, "unit": "cups"},
+      {"name": "oil", "qty": 2, "unit": "cups"}
+    ],
+    "steps": ["Make dough.", "Fry balls slowly.", "Soak in warm sugar syrup."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 4, "fat_g": 12, "carbs_g": 45},
+    "popularity": 5.0
+  },
+  {
+    "id": "r066",
+    "title": "Rasgulla",
+    "description": "Spongy cottage cheese balls in syrup.",
+    "ingredients": [
+      {"name": "milk", "qty": 1, "unit": "liter"},
+      {"name": "lemon juice", "qty": 2, "unit": "tbsp"},
+      {"name": "sugar", "qty": 2, "unit": "cups"},
+      {"name": "water", "qty": 4, "unit": "cups"}
+    ],
+    "steps": ["Curdle milk to make chenna.", "Knead and shape balls.", "Boil in syrup."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 6, "fat_g": 2, "carbs_g": 40},
+    "popularity": 4.9
+  },
+  {
+    "id": "r067",
+    "title": "Veg Hakka Noodles",
+    "description": "Stir fried noodles with veggies.",
+    "ingredients": [
+      {"name": "noodles", "qty": 200, "unit": "g"},
+      {"name": "cabbage", "qty": 0.5, "unit": "cup"},
+      {"name": "carrot", "qty": 1, "unit": "pc"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Boil noodles.", "Stir fry veggies.", "Mix noodles and sauce."],
+    "difficulty": "Medium",
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 5, "fat_g": 8, "carbs_g": 55},
+    "popularity": 4.8
+  },
+  {
+    "id": "r068",
+    "title": "Malai Kofta",
+    "description": "Paneer dumplings in white gravy.",
+    "ingredients": [
+      {"name": "paneer", "qty": 200, "unit": "g"},
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "cream", "qty": 0.5, "unit": "cup"},
+      {"name": "cashew", "qty": 0.25, "unit": "cup"}
+    ],
+    "steps": ["Make koftas and fry.", "Prepare rich cashew gravy.", "Add koftas before serving."],
+    "difficulty": "Hard",
+    "cookTimeMin": 60,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 500, "protein_g": 12, "fat_g": 30, "carbs_g": 40},
+    "popularity": 4.9
+  },
+  {
+    "id": "r069",
+    "title": "Chicken 65",
+    "description": "Spicy deep fried chicken.",
+    "ingredients": [
+      {"name": "chicken", "qty": 300, "unit": "g"},
+      {"name": "curd", "qty": 0.5, "unit": "cup"},
+      {"name": "red chilli powder", "qty": 1, "unit": "tbsp"},
+      {"name": "curry leaves", "qty": 10, "unit": "pcs"}
+    ],
+    "steps": ["Marinate chicken.", "Deep fry.", "Toss with curry leaves and chilli."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 25, "fat_g": 25, "carbs_g": 5},
+    "popularity": 4.8
+  },
+  {
+    "id": "r070",
+    "title": "Aloo Gobi",
+    "description": "Potato and cauliflower dry curry.",
+    "ingredients": [
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "cauliflower", "qty": 1, "unit": "head"},
+      {"name": "turmeric", "qty": 0.5, "unit": "tsp"},
+      {"name": "ginger", "qty": 1, "unit": "inch"}
+    ],
+    "steps": ["Fry potato and gobi.", "Add ginger and spices.", "Steam cook until soft."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 6, "fat_g": 8, "carbs_g": 25},
+    "popularity": 4.7
+  },
+  {
+    "id": "r071",
+    "title": "Chana Masala",
+    "description": "Spicy chickpea curry.",
+    "ingredients": [
+      {"name": "chickpeas", "qty": 2, "unit": "cups"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "chana masala powder", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Boil chickpeas.", "Cook onion tomato base.", "Add chickpeas and spices."],
+    "difficulty": "Medium",
+    "cookTimeMin": 45,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 350, "protein_g": 15, "fat_g": 8, "carbs_g": 50},
+    "popularity": 4.8
+  },
+  {
+    "id": "r072",
+    "title": "Spring Rolls",
+    "description": "Crispy vegetable rolls.",
+    "ingredients": [
+      {"name": "cabbage", "qty": 1, "unit": "cup"},
+      {"name": "carrot", "qty": 0.5, "unit": "cup"},
+      {"name": "spring roll sheets", "qty": 5, "unit": "sheets"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Stir fry filling.", "Wrap in sheets.", "Deep fry."],
+    "difficulty": "Hard",
+    "cookTimeMin": 45,
+    "cuisine": "Chinese",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 4, "fat_g": 12, "carbs_g": 30},
+    "popularity": 4.7
+  },
+  {
+    "id": "r073",
+    "title": "Hot and Sour Soup",
+    "description": "Spicy and tangy Chinese soup.",
+    "ingredients": [
+      {"name": "vegetable stock", "qty": 3, "unit": "cups"},
+      {"name": "vinegar", "qty": 1, "unit": "tbsp"},
+      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"},
+      {"name": "mushrooms", "qty": 0.5, "unit": "cup"}
+    ],
+    "steps": ["Boil stock with veggies.", "Add sauces.", "Thicken with cornstarch."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 100, "protein_g": 2, "fat_g": 2, "carbs_g": 15},
+    "popularity": 4.6
+  },
+  {
+    "id": "r074",
+    "title": "Shahi Paneer",
+    "description": "Royal paneer in sweet nut gravy.",
+    "ingredients": [
+      {"name": "paneer", "qty": 250, "unit": "g"},
+      {"name": "cashew", "qty": 0.5, "unit": "cup"},
+      {"name": "cream", "qty": 0.25, "unit": "cup"},
+      {"name": "saffron", "qty": 1, "unit": "pinch"}
+    ],
+    "steps": ["Make cashew onion paste.", "Cook with aromatic spices.", "Add paneer and cream."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 500, "protein_g": 15, "fat_g": 35, "carbs_g": 25},
+    "popularity": 4.9
+  },
+  {
+    "id": "r075",
+    "title": "Vegetable Pulao",
+    "description": "Mildly spiced mixed veg rice.",
+    "ingredients": [
+      {"name": "rice", "qty": 1, "unit": "cup"},
+      {"name": "peas", "qty": 0.25, "unit": "cup"},
+      {"name": "carrot", "qty": 0.25, "unit": "cup"},
+      {"name": "beans", "qty": 0.25, "unit": "cup"}
+    ],
+    "steps": ["Sauté veggies.", "Add rice and water.", "Cook until fluffy."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 280, "protein_g": 5, "fat_g": 6, "carbs_g": 50},
+    "popularity": 4.5
+  },
+  {
+    "id": "r076",
+    "title": "Crispy Corn",
+    "description": "Fried corn kernels tossed in spices.",
+    "ingredients": [
+      {"name": "corn", "qty": 1, "unit": "cup"},
+      {"name": "corn flour", "qty": 2, "unit": "tbsp"},
+      {"name": "pepper", "qty": 1, "unit": "tsp"},
+      {"name": "capsicum", "qty": 0.25, "unit": "cup"}
+    ],
+    "steps": ["Coat corn in flour.", "Deep fry.", "Toss with veggies and spice."],
+    "difficulty": "Medium",
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 250, "protein_g": 4, "fat_g": 10, "carbs_g": 35},
+    "popularity": 4.7
+  },
+  {
+    "id": "r077",
+    "title": "Sev Puri",
+    "description": "Flat puris topped with potato and chutney.",
+    "ingredients": [
+      {"name": "papdi", "qty": 10, "unit": "pcs"},
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "sev", "qty": 0.5, "unit": "cup"},
+      {"name": "chutney", "qty": 0.25, "unit": "cup"}
+    ],
+    "steps": ["Arrange papdi.", "Top with mash potato.", "Drizzle chutneys and sev."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 8, "carbs_g": 30},
+    "popularity": 4.8
+  },
+  {
+    "id": "r078",
+    "title": "Dahi Puri",
+    "description": "Puri shells filled with yogurt and chutney.",
+    "ingredients": [
+      {"name": "puri", "qty": 6, "unit": "pcs"},
+      {"name": "curd", "qty": 1, "unit": "cup"},
+      {"name": "potato", "qty": 1, "unit": "pc"},
+      {"name": "chutney", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Crack puri top.", "Fill with potato.", "Pour sweet curd and chutneys."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 8, "carbs_g": 35},
+    "popularity": 4.9
+  },
+  {
+    "id": "r079",
+    "title": "Aloo Tikki",
+    "description": "Spiced potato patties.",
+    "ingredients": [
+      {"name": "potato", "qty": 4, "unit": "pcs"},
+      {"name": "peas", "qty": 0.5, "unit": "cup"},
+      {"name": "corn flour", "qty": 2, "unit": "tbsp"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Mash potato and peas.", "Shape patties.", "Shallow fry until crisp."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 4, "fat_g": 8, "carbs_g": 30},
+    "popularity": 4.8
+  },
+  {
+    "id": "r080",
+    "title": "Veg Korma",
+    "description": "Mixed vegetables in coconut curry.",
+    "ingredients": [
+      {"name": "mixed vegetables", "qty": 2, "unit": "cups"},
+      {"name": "coconut", "qty": 0.5, "unit": "cup"},
+      {"name": "cashew", "qty": 10, "unit": "pcs"},
+      {"name": "spices", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Boil veggies.", "Blend coconut and cashew.", "Simmer veggies in paste."],
+    "difficulty": "Medium",
+    "cookTimeMin": 40,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 6, "fat_g": 15, "carbs_g": 30},
+    "popularity": 4.6
+  },
+  {
+    "id": "r081",
+    "title": "Tandoori Chicken",
+    "description": "Roasted chicken marinated in yogurt.",
+    "ingredients": [
+      {"name": "chicken", "qty": 500, "unit": "g"},
+      {"name": "yogurt", "qty": 1, "unit": "cup"},
+      {"name": "lemon", "qty": 1, "unit": "pc"},
+      {"name": "spices", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Score chicken.", "Marinate overnight.", "Roast in oven or tandoor."],
+    "difficulty": "Hard",
+    "cookTimeMin": 50,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 35, "fat_g": 20, "carbs_g": 5},
+    "popularity": 5.0
+  },
+  {
+    "id": "r082",
+    "title": "Fried Rice",
+    "description": "Classic veg fried rice.",
+    "ingredients": [
+      {"name": "rice", "qty": 2, "unit": "cups"},
+      {"name": "beans", "qty": 0.25, "unit": "cup"},
+      {"name": "carrot", "qty": 0.25, "unit": "cup"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Cook rice.", "Stir fry fine chopped veggies.", "Toss with rice and sauce."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 300, "protein_g": 5, "fat_g": 8, "carbs_g": 50},
+    "popularity": 4.6
+  },
+  {
+    "id": "r083",
+    "title": "Chicken Lollipop",
+    "description": "Frenched chicken winglet appetizer.",
+    "ingredients": [
+      {"name": "chicken wings", "qty": 6, "unit": "pcs"},
+      {"name": "maida", "qty": 0.5, "unit": "cup"},
+      {"name": "ginger garlic paste", "qty": 1, "unit": "tbsp"},
+      {"name": "chilli sauce", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Shape wings.", "Batter coat.", "Deep fry.", "Toss in sauce."],
+    "difficulty": "Hard",
+    "cookTimeMin": 45,
+    "cuisine": "Chinese",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 20, "fat_g": 20, "carbs_g": 15},
+    "popularity": 4.9
+  },
+  {
+    "id": "r084",
+    "title": "Egg Bhurji Pav",
+    "description": "Scrambled egg served with bun.",
+    "ingredients": [
+      {"name": "egg", "qty": 3, "unit": "pcs"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "pav", "qty": 2, "unit": "pcs"},
+      {"name": "butter", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Make spicy scrambled egg.", "Butter toast the pav.", "Serve together."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 400, "protein_g": 18, "fat_g": 20, "carbs_g": 35},
+    "popularity": 4.7
+  },
+  {
+    "id": "r085",
+    "title": "Cheese Toast",
+    "description": "Open face cheese sandwich.",
+    "ingredients": [
+      {"name": "bread", "qty": 2, "unit": "slices"},
+      {"name": "cheese", "qty": 0.5, "unit": "cup"},
+      {"name": "chilli flakes", "qty": 1, "unit": "tsp"},
+      {"name": "capsicum", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Top bread with cheese and veggies.", "Grill until melted."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Continental",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 10, "fat_g": 12, "carbs_g": 25},
+    "popularity": 4.6
+  },
+  {
+    "id": "r086",
+    "title": "Curd Rice",
+    "description": "Soothing yogurt rice.",
+    "ingredients": [
+      {"name": "rice", "qty": 1, "unit": "cup"},
+      {"name": "curd", "qty": 1, "unit": "cup"},
+      {"name": "mustard seeds", "qty": 1, "unit": "tsp"},
+      {"name": "pomegranate", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Mash cooked rice.", "Mix with curd.", "Add tempering.", "Garnish."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 5, "carbs_g": 40},
+    "popularity": 4.7
+  },
+  {
+    "id": "r087",
+    "title": "Mushroom Soup",
+    "description": "Cream of mushroom soup.",
+    "ingredients": [
+      {"name": "mushroom", "qty": 200, "unit": "g"},
+      {"name": "milk", "qty": 1, "unit": "cup"},
+      {"name": "onion", "qty": 1, "unit": "pc"},
+      {"name": "butter", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Sauté mushrooms.", "Blend half.", "Simmer with milk and rest of mushrooms."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Continental",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 200, "protein_g": 8, "fat_g": 10, "carbs_g": 15},
+    "popularity": 4.5
+  },
+  {
+    "id": "r088",
+    "title": "Chicken Salad",
+    "description": "Grilled chicken with greens.",
+    "ingredients": [
+      {"name": "chicken", "qty": 200, "unit": "g"},
+      {"name": "lettuce", "qty": 1, "unit": "head"},
+      {"name": "olive oil", "qty": 1, "unit": "tbsp"},
+      {"name": "lemon", "qty": 1, "unit": "pc"}
+    ],
+    "steps": ["Grill chicken.", "Toss with lettuce and dressing."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Continental",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 25, "fat_g": 10, "carbs_g": 5},
+    "popularity": 4.6
+  },
+  {
+    "id": "r089",
+    "title": "Pesarattu",
+    "description": "Green gram dosa.",
+    "ingredients": [
+      {"name": "moong dal", "qty": 1, "unit": "cup"},
+      {"name": "ginger", "qty": 1, "unit": "inch"},
+      {"name": "green chilli", "qty": 2, "unit": "pcs"},
+      {"name": "onion", "qty": 1, "unit": "pc"}
+    ],
+    "steps": ["Soak moong dal.", "Blend to batter.", "Make dosa.", "Top with onions."],
+    "difficulty": "Medium",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 10, "fat_g": 5, "carbs_g": 30},
+    "popularity": 4.7
+  },
+  {
+    "id": "r090",
+    "title": "Rava Dosa",
+    "description": "Instant semolina crepe.",
+    "ingredients": [
+      {"name": "semolina", "qty": 1, "unit": "cup"},
+      {"name": "rice flour", "qty": 0.5, "unit": "cup"},
+      {"name": "curd", "qty": 0.25, "unit": "cup"},
+      {"name": "water", "qty": 2, "unit": "cups"}
+    ],
+    "steps": ["Mix thin batter.", "Pour on hot tawa.", "Cook until crisp."],
+    "difficulty": "Medium",
+    "cookTimeMin": 20,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 5, "fat_g": 8, "carbs_g": 40},
+    "popularity": 4.8
+  },
+  {
+    "id": "r091",
+    "title": "Egg Fried Rice",
+    "description": "Rice stir fried with scrambled egg.",
+    "ingredients": [
+      {"name": "rice", "qty": 2, "unit": "cups"},
+      {"name": "egg", "qty": 2, "unit": "pcs"},
+      {"name": "spring onion", "qty": 2, "unit": "stalks"},
+      {"name": "soy sauce", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Scramble eggs.", "Add rice and sauce.", "Stir fry."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Chinese",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 10, "fat_g": 10, "carbs_g": 50},
+    "popularity": 4.7
+  },
+  {
+    "id": "r092",
+    "title": "Chicken Pasta",
+    "description": "Pasta in red sauce with chicken.",
+    "ingredients": [
+      {"name": "pasta", "qty": 200, "unit": "g"},
+      {"name": "chicken", "qty": 150, "unit": "g"},
+      {"name": "tomato", "qty": 3, "unit": "pcs"},
+      {"name": "garlic", "qty": 2, "unit": "cloves"}
+    ],
+    "steps": ["Boil pasta.", "Cook chicken and sauce.", "Mix together."],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Italian",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 450, "protein_g": 25, "fat_g": 12, "carbs_g": 55},
+    "popularity": 4.8
+  },
+  {
+    "id": "r093",
+    "title": "Paneer Bhurji",
+    "description": "Scrambled spiced cottage cheese.",
+    "ingredients": [
+      {"name": "paneer", "qty": 200, "unit": "g"},
+      {"name": "onion", "qty": 2, "unit": "pcs"},
+      {"name": "tomato", "qty": 1, "unit": "pc"},
+      {"name": "capsicum", "qty": 1, "unit": "pc"}
+    ],
+    "steps": ["Crumble paneer.", "Sauté veggies.", "Mix paneer and cook for 5 mins."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 15, "fat_g": 20, "carbs_g": 10},
+    "popularity": 4.7
+  },
+  {
+    "id": "r094",
+    "title": "Aloo Matar",
+    "description": "Peas and potato curry.",
+    "ingredients": [
+      {"name": "potato", "qty": 2, "unit": "pcs"},
+      {"name": "peas", "qty": 1, "unit": "cup"},
+      {"name": "tomato", "qty": 2, "unit": "pcs"},
+      {"name": "onion", "qty": 1, "unit": "pc"}
+    ],
+    "steps": ["Make base gravy.", "Add diced potato and peas.", "Simmer until tender."],
+    "difficulty": "Easy",
+    "cookTimeMin": 25,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 220, "protein_g": 6, "fat_g": 5, "carbs_g": 35},
+    "popularity": 4.6
+  },
+  {
+    "id": "r095",
+    "title": "Oats Upma",
+    "description": "Healthy savory oats.",
+    "ingredients": [
+      {"name": "oats", "qty": 1, "unit": "cup"},
+      {"name": "carrot", "qty": 0.5, "unit": "cup"},
+      {"name": "peas", "qty": 0.25, "unit": "cup"},
+      {"name": "onion", "qty": 1, "unit": "pc"}
+    ],
+    "steps": ["Roast oats.", "Sauté veggies.", "Add water and oats.", "Cook until dry."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Indian",
+    "diet": ["vegan"],
+    "nutrition": {"calories": 200, "protein_g": 6, "fat_g": 4, "carbs_g": 35},
+    "popularity": 4.5
+  },
+  {
+    "id": "r096",
+    "title": "Fruit Custard",
+    "description": "Milk custard with fresh fruits.",
+    "ingredients": [
+      {"name": "milk", "qty": 2, "unit": "cups"},
+      {"name": "custard powder", "qty": 2, "unit": "tbsp"},
+      {"name": "sugar", "qty": 3, "unit": "tbsp"},
+      {"name": "mixed fruit", "qty": 1, "unit": "cup"}
+    ],
+    "steps": ["Thicken milk with custard powder.", "Cool completely.", "Mix in fruits."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Continental",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 6, "fat_g": 6, "carbs_g": 40},
+    "popularity": 4.8
+  },
+  {
+    "id": "r097",
+    "title": "Bread Pizza",
+    "description": "Instant pizza on bread slice.",
+    "ingredients": [
+      {"name": "bread", "qty": 2, "unit": "slices"},
+      {"name": "cheese", "qty": 0.5, "unit": "cup"},
+      {"name": "corn", "qty": 1, "unit": "tbsp"},
+      {"name": "capsicum", "qty": 1, "unit": "tbsp"}
+    ],
+    "steps": ["Apply sauce on bread.", "Top with veggies and cheese.", "Toast on tawa covered."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Italian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 8, "fat_g": 10, "carbs_g": 30},
+    "popularity": 4.7
+  },
+  {
+    "id": "r098",
+    "title": "Sweet Corn Soup",
+    "description": "Creamy corn soup.",
+    "ingredients": [
+      {"name": "corn", "qty": 1, "unit": "cup"},
+      {"name": "corn flour", "qty": 1, "unit": "tbsp"},
+      {"name": "sugar", "qty": 1, "unit": "tsp"},
+      {"name": "butter", "qty": 1, "unit": "tsp"}
+    ],
+    "steps": ["Boil corn.", "Blend half.", "Mix all and simmer.", "Thicken with starch."],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Chinese",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 150, "protein_g": 3, "fat_g": 4, "carbs_g": 25},
+    "popularity": 4.6
+  },
+  {
+    "id": "r099",
+    "title": "Chicken Sandwich",
+    "description": "Grilled chicken filling in bread.",
+    "ingredients": [
+      {"name": "bread", "qty": 2, "unit": "slices"},
+      {"name": "chicken", "qty": 100, "unit": "g"},
+      {"name": "mayonnaise", "qty": 1, "unit": "tbsp"},
+      {"name": "pepper", "qty": 1, "unit": "pinch"}
+    ],
+    "steps": ["Cook shredded chicken.", "Mix with mayo.", "Sandwich between bread."],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Continental",
+    "diet": ["non-vegetarian"],
+    "nutrition": {"calories": 350, "protein_g": 20, "fat_g": 12, "carbs_g": 30},
+    "popularity": 4.7
+  },
+  {
+    "id": "r100",
+    "title": "Mango Shake",
+    "description": "Seasonal mango milk drink.",
+    "ingredients": [
+      {"name": "mango", "qty": 1, "unit": "pc"},
+      {"name": "milk", "qty": 1, "unit": "cup"},
+      {"name": "sugar", "qty": 2, "unit": "tbsp"},
+      {"name": "ice cream", "qty": 1, "unit": "scoop"}
+    ],
+    "steps": ["Blend mango and milk.", "Serve with ice cream topping."],
+    "difficulty": "Easy",
+    "cookTimeMin": 5,
+    "cuisine": "Beverage",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 300, "protein_g": 6, "fat_g": 8, "carbs_g": 50},
+    "popularity": 5.0
+  },
+  {
+    "id": "r101",
+    "title": "Papdi Chaat",
+    "description": "Street food snack with tangy chutney.",
+    "ingredients": [
+      {"name": "papdi", "qty": 10, "unit": "pcs"},
+      {"name": "curd", "qty": 0.5, "unit": "cup"},
+      {"name": "potato", "qty": 1, "unit": "pc"},
+      {"name": "chutney", "qty": 2, "unit": "tbsp"}
+    ],
+    "steps": ["Layer papdi.", "Add potato and curd.", "Top with chutneys and spices."],
+    "difficulty": "Easy",
+    "cookTimeMin": 10,
+    "cuisine": "Indian",
+    "diet": ["vegetarian"],
+    "nutrition": {"calories": 250, "protein_g": 5, "fat_g": 10, "carbs_g": 35},
+    "popularity": 4.9
   }
 ]
