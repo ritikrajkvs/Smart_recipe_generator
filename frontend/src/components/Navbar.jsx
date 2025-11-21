@@ -49,15 +49,28 @@ const Navbar = () => {
         {/* --- 3. Right Side Actions --- */}
         <div className="flex items-center gap-4">
 
-          {/* --- LinkedIn Button (ONLY on Login or Signup) --- */}
+          {/* --- PREMIUM LINKEDIN BUTTON (ONLY on Login/Signup) --- */}
           {isAuthPage && (
             <a
               href="https://www.linkedin.com/in/ritikraj026"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-full text-sm font-semibold bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:-translate-y-0.5 transition-all"
+              className="flex items-center gap-2 px-6 py-2.5 rounded-full 
+                         bg-gradient-to-r from-blue-600 to-blue-500
+                         text-white font-semibold text-sm shadow-lg
+                         hover:shadow-xl hover:-translate-y-0.5 
+                         transition-all duration-300"
             >
-              Let’s Connect ↗
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="currentColor" 
+                viewBox="0 0 24 24" 
+                className="w-4 h-4"
+              >
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.98 0h3.83v2.18h.06c.54-1.02 1.86-2.18 3.83-2.18 4.1 0 4.85 2.7 4.85 6.22V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.16V24h-4V8z"/>
+              </svg>
+
+              <span>Let’s Connect</span>
             </a>
           )}
 
@@ -121,6 +134,7 @@ const Navbar = () => {
           )}
 
         </div>
+
       </div>
     </nav>
   );
