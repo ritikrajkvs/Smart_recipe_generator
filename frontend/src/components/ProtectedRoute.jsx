@@ -11,11 +11,10 @@ const ProtectedRoute = ({ children }) => {
   }
 
   if (!user) {
-    // User not logged in? Kick them to Login page
-    return <Navigate to="/login" replace />;
+    // FIX: Redirect unauthenticated users to the Signup page
+    return <Navigate to="/signup" replace />;
   }
 
-  // User is logged in? Show the page
   return children;
 };
 
