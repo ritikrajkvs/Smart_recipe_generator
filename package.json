@@ -1,15 +1,22 @@
 {
-  "name": "smart_recipe_generator_root",
-  "private": true,
+  "name": "smart-recipe-generator-backend",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-    "frontend": "npm start --prefix frontend",
-    "backend": "npm start --prefix backend"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.0"
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "node seed.js"
   },
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
