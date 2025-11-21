@@ -32,17 +32,20 @@ const RecipeDetails = () => {
 
   const rateRecipe = (r) => setRatings({ ...ratings, [id]: r });
   
-  // FIX APPLIED HERE: Map over recipe.ingredients, not recipe directly
-  const scaledIngredients = recipe ? recipe.ingredients.map(ing => ({
-    ...ing,
-    qty: Number((ing.qty * servings).toFixed(2))
-  })) : [];
-  
+  // FIX APPLIED HERE:
+  // We must check if recipe AND recipe.ingredients exist before mapping.
+  const scaledIngredients = 
+    (recipe && recipe.ingredients) 
+    ? recipe.ingredients.map(ing => ({
+        ...ing,
+        qty: Number((ing.qty * servings).toFixed(2))
+      })) 
+    : []; // Fallback to empty array
+
   const increaseServings = () => setServings(servings + 1);
   const decreaseServings = () => servings > 1 && setServings(servings - 1);
 
-  // Helper component for Nutrition Bars
-  // Note: Colors are hardcoded here to ensure Tailwind reads them during build
+  // Helper component for Nutrition Bars (Moved inside to be a valid function)
   const NutritionBar = ({ label, value, maxVal, color }) => {
     const percentage = Math.min((value / maxVal) * 100, 100);
     let barColor;
