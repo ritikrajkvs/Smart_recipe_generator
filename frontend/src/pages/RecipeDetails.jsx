@@ -1,0 +1,22 @@
+import React, { useEffect, useState, useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
+const RecipeDetails = ()=>{
+  const { id } = useParams();
+  const { favorites, setFavorites, ratings, setRatings } = useContext(AppContext);
+  const [recipe, setRecipe] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [servings, setServings] = useState(1);
+  useEffect(()=>{ const fetchRecipe = async ()=>{ try{ const res = await fetch(`http://localhost:5000/api/recipes/${id}`); const data = await res.json(); if(data.success) setRecipe(data.recipe); }catch(err){console.error(err);} setLoading(false); }; fetchRecipe(); },[id]);
+  const isFavorite = favorites.includes(id);
+  const userRating = ratings[id]||0;
+  const toggleFavorite = ()=>{ if(isFavorite) setFavorites(favorites.filter(f=>f!==id)); else setFavorites([...favorites,id]); };
+  const rateRecipe = (r)=> setRatings({...ratings, [id]: r});
+  const scaledIngredients = recipe ? recipe.ingredients.map(ing=>({...ing, qty: Number((ing.qty*servings).toFixed(2))})) : [];
+  const increaseServings = ()=> setServings(servings+1);
+  const decreaseServings = ()=> servings>1 && setServings(servings-1);
+  if(loading) return <p className="p-5 mt-20">Loading...</p>;
+  if(!recipe) return <p className="p-5 mt-20">Recipe not found.</p>;
+  return (<div className="p-5 max-w-3xl mx-auto mt-20"><h1 className="text-3xl font-bold mb-2">{recipe.title}</h1><div className="flex gap-4 text-gray-600 mb-4"><p>⏱ {recipe.cookTimeMin} min</p><p>🔥 {recipe.difficulty}</p><p>🍽 {recipe.cuisine}</p></div><button onClick={toggleFavorite} className={`px-4 py-2 rounded mb-4 ${isFavorite ? 'bg-red-500 text-white' : 'bg-gray-200'}`}>{isFavorite ? '❤️ Remove Favorite' : '🤍 Add to Favorites'}</button><div className="mb-5"><p className="font-semibold mb-2">Rate this recipe:</p><div className="flex gap-2">{[1,2,3,4,5].map(s=><button key={s} onClick={()=>rateRecipe(s)} className={`text-2xl ${userRating>=s ? 'text-yellow-500' : 'text-gray-400'}`}>★</button>)}</div></div><div className="mb-5"><p className="font-semibold mb-2">Serving Size:</p><div className="flex items-center gap-4"><button onClick={decreaseServings} className="bg-gray-300 px-3 py-1 rounded text-xl">-</button><p className="text-lg font-bold">{servings}</p><button onClick={increaseServings} className="bg-gray-300 px-3 py-1 rounded text-xl">+</button></div></div><h2 className="text-xl font-semibold mt-6 mb-2">Ingredients:</h2><ul className="list-disc pl-6 text-gray-700">{scaledIngredients.map((ing,idx)=><li key={idx}>{ing.name} – {ing.qty} {ing.unit}</li>)}</ul><h2 className="text-xl font-semibold mt-6 mb-2">Steps:</h2><ol className="list-decimal pl-6 text-gray-700">{recipe.steps.map((s,idx)=><li key={idx} className="mb-1">{s}</li>)}</ol><h2 className="text-xl font-semibold mt-6 mb-2">Nutrition:</h2><div className="grid grid-cols-2 gap-3 text-gray-700"><p>Calories: {recipe.nutrition.calories*servings}</p><p>Protein: {recipe.nutrition.protein_g*servings}g</p><p>Fat: {recipe.nutrition.fat_g*servings}g</p><p>Carbs: {recipe.nutrition.carbs_g*servings}g</p></div></div>);
+};
+export default RecipeDetails;

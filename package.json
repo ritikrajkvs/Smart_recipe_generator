@@ -1,0 +1,15 @@
+{
+  "name": "smart_recipe_generator_root",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "frontend": "npm start --prefix frontend",
+    "backend": "npm start --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
