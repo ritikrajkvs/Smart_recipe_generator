@@ -30,3 +30,4 @@ app.get('/api/health', (_, res) => res.json({ ok: true }));
 
 const port = PORT || 5000;
 app.listen(port, () => console.log(`🚀 Backend running on port ${port}`));
+module.exports = app;
