@@ -20,12 +20,10 @@ const Home = () => {
     <div className="min-h-screen pt-24 pb-12 px-4 relative w-full overflow-x-hidden bg-slate-50 font-sans">
       
       {/* --- Optimized Background (Fixed Position = No Scroll Lag) --- */}
+      {/* Using 'fixed' prevents repaints during scroll */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-        {/* Green Blob */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-300/30 rounded-full blur-3xl animate-blob"></div>
-        {/* Orange Blob */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-orange-300/30 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-        {/* Blue Blob */}
         <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
       </div>
 
@@ -50,7 +48,7 @@ const Home = () => {
         </div>
 
         {/* --- Main Input Card --- */}
-        {/* Removed backdrop-blur entirely to save GPU resources. Used high-opacity white instead. */}
+        {/* High opacity white background instead of heavy backdrop-blur */}
         <div className="w-full bg-white/95 rounded-3xl shadow-2xl shadow-slate-200/60 border border-white p-1 md:p-8 mb-16">
           <div className="bg-white rounded-2xl p-6 md:p-10 border border-slate-100 shadow-inner">
             
