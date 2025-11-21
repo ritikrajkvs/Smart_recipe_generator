@@ -5,8 +5,11 @@ import Results from './pages/Results';
 import RecipeDetails from './pages/RecipeDetails';
 import Favorites from './pages/Favorites';
 import Suggested from './pages/Suggested';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Navbar from './components/Navbar';
 import { AppProvider } from './context/AppContext';
+
 export default function App(){
   return (
     <AppProvider>
@@ -19,6 +22,8 @@ export default function App(){
             <Route path='/recipe/:id' element={<RecipeDetails/>}/>
             <Route path='/favorites' element={<Favorites/>}/>
             <Route path='/suggested' element={<Suggested/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/signup' element={<Signup/>}/>
           </Routes>
         </div>
       </BrowserRouter>
