@@ -25,7 +25,7 @@ const RecipeDetails = () => {
   const isFavorite = favorites.includes(id);
   const userRating = ratings[id] || 0;
 
-  // Toggle favorite status and persist to local storage
+  // Toggle favorite status
   const toggleFavorite = () => {
     if (isFavorite) setFavorites(favorites.filter(f => f !== id));
     else setFavorites([...favorites, id]);
@@ -34,7 +34,7 @@ const RecipeDetails = () => {
   const rateRecipe = (r) => setRatings({ ...ratings, [id]: r });
   
   // Scale ingredients based on serving size
-  const scaledIngredients = recipe ? recipe.ingredients.map(ing => ({
+  const scaledIngredients = recipe ? recipe.map((ing) => ({
     ...ing,
     qty: Number((ing.qty * servings).toFixed(2))
   })) : [];
@@ -42,10 +42,7 @@ const RecipeDetails = () => {
   const increaseServings = () => setServings(servings + 1);
   const decreaseServings = () => servings > 1 && setServings(servings - 1);
 
-  if (loading) return <div className="flex justify-center pt-32"><div className="animate-spin h-8 w-8 border-4 border-green-500 border-t-transparent rounded-full"></div></div>;
-  if (!recipe) return <p className="p-10 text-center text-slate-500">Recipe not found.</p>;
-
-  // Helper function for nutrition bars
+  // Helper component for Nutrition Bars
   const NutritionBar = ({ label, value, maxVal, color }) => {
     const percentage = Math.min((value / maxVal) * 100, 100);
     return (
@@ -61,6 +58,8 @@ const RecipeDetails = () => {
     );
   };
 
+  if (loading) return <div className="flex justify-center pt-32"><div className="animate-spin h-8 w-8 border-4 border-green-500 border-t-transparent rounded-full"></div></div>;
+  if (!recipe) return <p className="p-10 text-center text-slate-500">Recipe not found.</p>;
 
   return (
     <div className="max-w-5xl mx-auto mt-10 p-6 pb-20">
@@ -159,7 +158,6 @@ const RecipeDetails = () => {
           <div className="bg-green-50 p-6 rounded-2xl border border-green-100 shadow-lg">
             <h3 className="font-extrabold text-xl text-green-800 mb-4 border-b border-green-200 pb-3">Nutrition Breakdown</h3>
             <div className="space-y-4">
-              {/* Note: maxVal is arbitrary for scaling purposes */}
               <NutritionBar label="Protein" value={Math.round(recipe.nutrition.protein_g * servings)} maxVal={50} color="blue" />
               <NutritionBar label="Carbs" value={Math.round(recipe.nutrition.carbs_g * servings)} maxVal={100} color="orange" />
               <NutritionBar label="Fat" value={Math.round(recipe.nutrition.fat_g * servings)} maxVal={40} color="red" />
