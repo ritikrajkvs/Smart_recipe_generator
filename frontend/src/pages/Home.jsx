@@ -19,24 +19,26 @@ const Home = () => {
   return (
     <div className="min-h-screen pt-24 pb-12 px-4 relative w-full overflow-x-hidden bg-slate-50 font-sans">
       
-      {/* --- Optimized Background (Fixed Position = No Scroll Lag) --- */}
-      {/* Using 'fixed' prevents repaints during scroll */}
+      {/* --- Optimized Background (Fixed Position = Zero Lag) --- */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-300/30 rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-orange-300/30 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+        {/* Green Blob */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-300/30 rounded-full blur-3xl animate-blob will-change-transform"></div>
+        {/* Orange Blob */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-orange-300/30 rounded-full blur-3xl animate-blob animation-delay-2000 will-change-transform"></div>
+        {/* Blue Blob */}
+        <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl animate-blob animation-delay-4000 will-change-transform"></div>
       </div>
 
-      {/* Floating Ingredients */}
-      <div className="hidden lg:block absolute top-32 left-20 text-6xl animate-float opacity-80">🍅</div>
-      <div className="hidden lg:block absolute top-40 right-20 text-6xl animate-float delay-100 opacity-80">🥦</div>
-      <div className="hidden lg:block absolute bottom-40 left-32 text-6xl animate-float delay-200 opacity-80">🧀</div>
+      {/* Floating Ingredients (Emojis are lightweight) */}
+      <div className="hidden lg:block absolute top-32 left-20 text-6xl animate-float opacity-80 will-change-transform">🍅</div>
+      <div className="hidden lg:block absolute top-40 right-20 text-6xl animate-float delay-100 opacity-80 will-change-transform">🥦</div>
+      <div className="hidden lg:block absolute bottom-40 left-32 text-6xl animate-float delay-200 opacity-80 will-change-transform">🧀</div>
 
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
         
         {/* --- Hero Section --- */}
         <div className="text-center mb-12 max-w-2xl px-4">
-          <span className="inline-block py-1 px-3 rounded-full bg-green-100 text-green-700 text-xs font-bold tracking-wide mb-6 border border-green-200 uppercase">
+          <span className="inline-block py-1 px-3 rounded-full bg-green-100 text-green-700 text-xs font-bold tracking-wide mb-6 border border-green-200 uppercase shadow-sm">
             ✨ AI-Powered Kitchen Assistant
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
@@ -47,9 +49,8 @@ const Home = () => {
           </p>
         </div>
 
-        {/* --- Main Input Card --- */}
-        {/* High opacity white background instead of heavy backdrop-blur */}
-        <div className="w-full bg-white/95 rounded-3xl shadow-2xl shadow-slate-200/60 border border-white p-1 md:p-8 mb-16">
+        {/* --- Main Input Card (High Performance Glass Effect) --- */}
+        <div className="w-full bg-white/95 rounded-3xl shadow-2xl shadow-slate-200/60 border border-white p-1 md:p-8 mb-16 transform-gpu">
           <div className="bg-white rounded-2xl p-6 md:p-10 border border-slate-100 shadow-inner">
             
             {/* Input Method Header */}
@@ -64,7 +65,7 @@ const Home = () => {
               
               {/* Column 1: Image Scan */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-4">
-                <div className="bg-blue-50 p-3 rounded-full w-12 h-12 flex items-center justify-center text-2xl mb-2">📸</div>
+                <div className="bg-blue-50 p-3 rounded-full w-12 h-12 flex items-center justify-center text-2xl mb-2 shadow-sm">📸</div>
                 <div>
                   <h3 className="font-bold text-slate-800 text-lg">Photo Scan</h3>
                   <p className="text-sm text-slate-500">Upload a photo of your pantry or fridge shelves.</p>
@@ -72,6 +73,7 @@ const Home = () => {
                 <div className="w-full">
                   <ImageUploader 
                     onIngredientsDetected={(detected) => 
+                      // Reset ingredients list on new upload
                       setIngredients([...new Set(detected)])
                     } 
                   />
@@ -80,7 +82,7 @@ const Home = () => {
 
               {/* Column 2: Manual Input */}
               <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-4 md:pl-10">
-                <div className="bg-orange-50 p-3 rounded-full w-12 h-12 flex items-center justify-center text-2xl mb-2">📝</div>
+                <div className="bg-orange-50 p-3 rounded-full w-12 h-12 flex items-center justify-center text-2xl mb-2 shadow-sm">📝</div>
                 <div>
                   <h3 className="font-bold text-slate-800 text-lg">Manual List</h3>
                   <p className="text-sm text-slate-500">Type ingredients you already have on hand.</p>
@@ -98,7 +100,7 @@ const Home = () => {
                 disabled={ingredients.length === 0}
                 className={`relative px-12 py-4 rounded-full text-lg font-bold text-white transition-all transform shadow-xl 
                   ${ingredients.length > 0 
-                    ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:scale-105 hover:shadow-green-300/50 cursor-pointer' 
+                    ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:scale-105 hover:shadow-green-300/50 cursor-pointer active:scale-95' 
                     : 'bg-slate-300 cursor-not-allowed'
                   }`}
               >
@@ -115,7 +117,7 @@ const Home = () => {
             { icon: '💰', title: 'Save Money', desc: 'Cook at home instead of ordering out.' },
             { icon: '⚡', title: 'Save Time', desc: 'No more scrolling for hours to decide.' },
           ].map((feature, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow text-center md:text-left">
+            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow text-center md:text-left transform-gpu">
               <div className="text-4xl mb-3 bg-slate-50 w-16 h-16 mx-auto md:mx-0 rounded-full flex items-center justify-center shadow-inner">{feature.icon}</div>
               <h3 className="font-bold text-slate-900 text-lg mb-1">{feature.title}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
