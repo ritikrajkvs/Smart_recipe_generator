@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext';
 
 const RecipeDetails = () => {
   const { id } = useParams();
-  const { favorites, setFavorites, ratings, setRatings } = useContext(AppContext);
+  const { favorites, toggleFavorite, ratings, setRatings } = useContext(AppContext);
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
   const [servings, setServings] = useState(1);
@@ -24,28 +24,19 @@ const RecipeDetails = () => {
   const isFavorite = favorites.includes(id);
   const userRating = ratings[id] || 0;
 
-  // Toggle favorite status
-  const toggleFavorite = () => {
-    if (isFavorite) setFavorites(favorites.filter(f => f !== id));
-    else setFavorites([...favorites, id]);
-  };
-
+  const handleToggle = () => toggleFavorite(id);
   const rateRecipe = (r) => setRatings({ ...ratings, [id]: r });
   
-  // FIX APPLIED HERE:
-  // We must check if recipe AND recipe.ingredients exist before mapping.
-  const scaledIngredients = 
-    (recipe && recipe.ingredients) 
+  const scaledIngredients = (recipe && recipe.ingredients) 
     ? recipe.ingredients.map(ing => ({
         ...ing,
         qty: Number((ing.qty * servings).toFixed(2))
       })) 
-    : []; // Fallback to empty array
-
+    : [];
+  
   const increaseServings = () => setServings(servings + 1);
   const decreaseServings = () => servings > 1 && setServings(servings - 1);
 
-  // Helper component for Nutrition Bars (Moved inside to be a valid function)
   const NutritionBar = ({ label, value, maxVal, color }) => {
     const percentage = Math.min((value / maxVal) * 100, 100);
     let barColor;
@@ -66,14 +57,12 @@ const RecipeDetails = () => {
     );
   };
 
-
   if (loading) return <div className="flex justify-center pt-32"><div className="animate-spin h-8 w-8 border-4 border-green-500 border-t-transparent rounded-full"></div></div>;
   if (!recipe) return <p className="p-10 text-center text-slate-500">Recipe not found.</p>;
 
   return (
     <div className="max-w-5xl mx-auto mt-10 p-6 pb-20">
       
-      {/* --- 1. Header Section --- */}
       <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 mb-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-emerald-600"></div>
         
@@ -85,26 +74,16 @@ const RecipeDetails = () => {
           </div>
         </div>
 
-        {/* User Interaction and Rating */}
         <div className="flex items-center justify-between border-t border-slate-100 pt-6">
-          
-          {/* Rating Stars */}
           <div className="flex items-center gap-2">
             <p className="text-slate-500 text-sm font-bold uppercase mr-2">Rate:</p>
             {[1, 2, 3, 4, 5].map(s => (
-                <button 
-                  key={s} 
-                  onClick={() => rateRecipe(s)} 
-                  className={`text-2xl transition-transform hover:scale-110 ${userRating >= s ? 'text-yellow-400' : 'text-slate-200 hover:text-yellow-200'}`}
-                >
-                  ★
-                </button>
+                <button key={s} onClick={() => rateRecipe(s)} className={`text-2xl transition-transform hover:scale-110 ${userRating >= s ? 'text-yellow-400' : 'text-slate-200 hover:text-yellow-200'}`}>★</button>
               ))}
           </div>
 
-          {/* Favorite Button */}
           <button 
-            onClick={toggleFavorite} 
+            onClick={handleToggle} 
             className={`p-3 rounded-full transition-all text-sm font-semibold flex items-center gap-2
               ${isFavorite ? 'bg-red-50 text-red-500 border border-red-200' : 'bg-slate-50 text-slate-400 hover:bg-slate-100'}`}
           >
@@ -115,7 +94,6 @@ const RecipeDetails = () => {
           </button>
         </div>
 
-        {/* Stats Bar */}
         <div className="grid grid-cols-3 gap-4 border-t border-slate-100 pt-6 mt-6">
           <div className="text-center border-r border-slate-100">
             <p className="text-slate-400 text-xs font-bold uppercase">Time</p>
@@ -134,18 +112,11 @@ const RecipeDetails = () => {
         </div>
       </div>
       
-      {/* --- 2. Main Content Grid --- */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        {/* Left Column: Ingredients & Nutrition */}
         <div className="lg:col-span-1 space-y-8">
-          
-          {/* Ingredients List */}
           <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
             <div className="flex justify-between items-center border-b pb-4 mb-4">
                <h3 className="font-extrabold text-2xl text-slate-800">Ingredients</h3>
-               
-               {/* Serving Control */}
                <div className="flex items-center bg-slate-100 rounded-full p-1 shadow-inner">
                 <button onClick={decreaseServings} className="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-md hover:text-green-600 font-bold">-</button>
                 <span className="w-16 text-center font-bold text-slate-800">{servings} Servings</span>
@@ -163,24 +134,20 @@ const RecipeDetails = () => {
             </ul>
           </div>
           
-          {/* Nutrition Card */}
           <div className="bg-green-50 p-6 rounded-2xl border border-green-100 shadow-lg">
             <h3 className="font-extrabold text-xl text-green-800 mb-4 border-b border-green-200 pb-3">Nutrition Breakdown</h3>
             <div className="space-y-4">
               <NutritionBar label="Protein" value={Math.round(recipe.nutrition.protein_g * servings)} maxVal={50} color="blue" />
               <NutritionBar label="Carbs" value={Math.round(recipe.nutrition.carbs_g * servings)} maxVal={100} color="orange" />
               <NutritionBar label="Fat" value={Math.round(recipe.nutrition.fat_g * servings)} maxVal={40} color="red" />
-              
               <div className="flex justify-between text-base pt-3 border-t border-green-200 mt-4">
                  <span className="font-bold text-green-700">Total Calories</span>
                  <span className="font-extrabold text-xl text-green-900">{Math.round(recipe.nutrition.calories * servings)}</span>
               </div>
             </div>
           </div>
-
         </div>
 
-        {/* Right Column: Instructions */}
         <div className="lg:col-span-2">
           <div className="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
             <h2 className="text-3xl font-extrabold text-slate-800 mb-6 border-b pb-4">Instructions</h2>
