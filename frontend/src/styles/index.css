@@ -18,6 +18,7 @@ html {
 /* --- High Performance GPU Animations --- */
 
 @keyframes blob {
+  /* Using translate3d forces Hardware Acceleration */
   0% { transform: translate3d(0px, 0px, 0px) scale(1); }
   33% { transform: translate3d(30px, -50px, 0px) scale(1.1); }
   66% { transform: translate3d(-20px, 20px, 0px) scale(0.9); }
@@ -25,8 +26,8 @@ html {
 }
 
 .animate-blob {
-  animation: blob 10s infinite; /* Slower animation = smoother feel */
-  will-change: transform; /* Tells browser to optimize this layer */
+  animation: blob 10s infinite;
+  will-change: transform; /* Crucial: Tells browser to optimize this */
 }
 
 @keyframes float {
