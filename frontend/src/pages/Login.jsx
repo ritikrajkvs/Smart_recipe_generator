@@ -8,10 +8,9 @@ const Login = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
 
-  // Quick Demo Login for Reviewers
+  // Note: Ensure you have a 'demo@example.com' user set up in your DB if you enable this
   const fillDemoCredentials = () => {
     setFormData({ email: 'demo@example.com', password: 'password123' });
-    // You should ensure this user exists in your DB or handle it gracefully
   };
 
   const handleSubmit = async (e) => {
@@ -29,7 +28,7 @@ const Login = () => {
   return (
     <div className="min-h-screen flex bg-white font-sans">
       
-      {/* --- LEFT: Professional Form --- */}
+      {/* --- LEFT SIDE: Minimal Form --- */}
       <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 sm:px-16 lg:px-24 py-12 relative z-10">
         
         <div className="mb-12 lg:hidden">
@@ -37,10 +36,8 @@ const Login = () => {
         </div>
 
         <div className="max-w-sm w-full mx-auto">
-          <div className="mb-8">
-            <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">Welcome back</h1>
-            <p className="text-slate-500">Please enter your details to sign in.</p>
-          </div>
+          <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">Welcome back</h1>
+          <p className="text-slate-500 mb-8">Please enter your details to sign in.</p>
 
           {/* Impress Interviewer Button */}
           <button 
@@ -51,7 +48,7 @@ const Login = () => {
             <span>⚡</span> Click here to auto-fill Demo User
           </button>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Email</label>
               <input 
@@ -59,7 +56,7 @@ const Login = () => {
                 placeholder="Enter your email" 
                 required 
                 value={formData.email}
-                className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-green-500 focus:ring-4 focus:ring-green-500/10 transition-all outline-none text-slate-800 font-medium"
+                className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-green-500 focus:ring-4 focus:ring-green-500/10 transition-all outline-none text-slate-800 font-medium placeholder:text-slate-300"
                 onChange={e => setFormData({...formData, email: e.target.value})} 
               />
             </div>
@@ -71,7 +68,7 @@ const Login = () => {
                 placeholder="••••••••" 
                 required 
                 value={formData.password}
-                className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-green-500 focus:ring-4 focus:ring-green-500/10 transition-all outline-none text-slate-800 font-medium"
+                className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-green-500 focus:ring-4 focus:ring-green-500/10 transition-all outline-none text-slate-800 font-medium placeholder:text-slate-300"
                 onChange={e => setFormData({...formData, password: e.target.value})} 
               />
             </div>
@@ -79,12 +76,17 @@ const Login = () => {
             <button 
               type="submit" 
               disabled={isLoading}
-              className={`w-full py-4 rounded-xl font-bold text-white shadow-xl shadow-green-600/20 transition-all transform hover:-translate-y-0.5 active:scale-95
+              className={`w-full py-4 rounded-xl font-bold text-white shadow-lg shadow-green-600/20 transition-all transform hover:-translate-y-0.5 active:scale-95
                 ${isLoading 
                   ? 'bg-slate-400 cursor-not-allowed' 
                   : 'bg-slate-900 hover:bg-slate-800'}`}
             >
-              {isLoading ? 'Signing in...' : 'Sign In'}
+              {isLoading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                  Signing in...
+                </span>
+              ) : 'Sign In'}
             </button>
           </form>
 
@@ -99,23 +101,34 @@ const Login = () => {
         </div>
       </div>
 
-      {/* --- RIGHT: Aesthetic Showcase --- */}
+      {/* --- RIGHT SIDE: Aesthetic Visual --- */}
       <div className="hidden lg:flex w-1/2 relative overflow-hidden bg-slate-900">
+        
+        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-60 scale-105 hover:scale-100 transition-transform duration-[20s]"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1543353071-087f9a7ce56d?q=80&w=2535&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2670&auto=format&fit=crop')" }}
         ></div>
+
+        {/* Aesthetic Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
 
-        <div className="relative z-10 m-16 mt-auto text-white max-w-lg">
+        {/* Content */}
+        <div className="relative z-10 m-16 mt-auto text-white max-w-md">
           <div className="w-12 h-1 bg-green-500 rounded-full mb-6"></div>
           <h2 className="text-4xl font-bold leading-tight mb-4 font-serif tracking-wide">
-            "The only real stumbling block is fear of failure. In cooking, you've got to have a what-the-hell attitude."
+            "Cooking is like love. It should be entered into with abandon or not at all."
           </h2>
-          <p className="text-slate-300 text-lg font-light opacity-80">
-            — Julia Child
+          <p className="text-slate-300 text-lg font-light">
+            Discover thousands of recipes based on what you have.
           </p>
         </div>
+
+        {/* Floating Glass Element */}
+        <div className="absolute top-12 right-12 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-2xl">
+            <span className="text-3xl">🥗</span>
+        </div>
+
       </div>
 
     </div>
