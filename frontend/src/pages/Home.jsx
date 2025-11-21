@@ -19,16 +19,20 @@ const Home = () => {
   return (
     <div className="min-h-screen pt-24 pb-12 px-4 relative w-full overflow-x-hidden bg-slate-50 font-sans">
       
-      {/* --- Background Decorations (High Performance) --- */}
-      {/* Removed mix-blend-multiply and reduced opacity to prevent heavy blending calculations */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-300/40 rounded-full filter blur-3xl opacity-60 animate-blob transform-gpu will-change-transform"></div>
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-orange-300/40 rounded-full filter blur-3xl opacity-60 animate-blob animation-delay-2000 transform-gpu will-change-transform"></div>
-      <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-blue-300/40 rounded-full filter blur-3xl opacity-60 animate-blob animation-delay-4000 transform-gpu will-change-transform"></div>
+      {/* --- Optimized Background (Fixed Position = No Scroll Lag) --- */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        {/* Green Blob */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-300/30 rounded-full blur-3xl animate-blob"></div>
+        {/* Orange Blob */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-orange-300/30 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        {/* Blue Blob */}
+        <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+      </div>
 
-      {/* Floating Ingredients (Optimized) */}
-      <div className="hidden lg:block absolute top-32 left-20 text-6xl animate-float opacity-80 transform-gpu will-change-transform">🍅</div>
-      <div className="hidden lg:block absolute top-40 right-20 text-6xl animate-float delay-100 opacity-80 transform-gpu will-change-transform"></div>
-      <div className="hidden lg:block absolute bottom-40 left-32 text-6xl animate-float delay-200 opacity-80 transform-gpu will-change-transform">🧀</div>
+      {/* Floating Ingredients */}
+      <div className="hidden lg:block absolute top-32 left-20 text-6xl animate-float opacity-80">🍅</div>
+      <div className="hidden lg:block absolute top-40 right-20 text-6xl animate-float delay-100 opacity-80">🥦</div>
+      <div className="hidden lg:block absolute bottom-40 left-32 text-6xl animate-float delay-200 opacity-80">🧀</div>
 
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
         
@@ -38,17 +42,16 @@ const Home = () => {
             ✨ AI-Powered Kitchen Assistant
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
-            Turn Your <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">Leftovers</span> into <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Lunch.</span>
+            Turn Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">Leftovers</span> into <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Lunch.</span>
           </h1>
           <p className="text-lg text-slate-600">
             Stop wondering "what's for dinner?". Snap a photo of your fridge, and let AI generate the perfect recipe instantly.
           </p>
         </div>
 
-        {/* --- Main Input Card (Optimized: No Backdrop Blur) --- */}
-        {/* Replaced 'backdrop-blur-xl bg-white/80' with 'bg-white/95'. This looks identical but requires 0% GPU power for blurring. */}
-        <div className="w-full bg-white/95 rounded-3xl shadow-2xl shadow-slate-200/60 border border-white p-1 md:p-8 mb-16 transform-gpu">
+        {/* --- Main Input Card --- */}
+        {/* Removed backdrop-blur entirely to save GPU resources. Used high-opacity white instead. */}
+        <div className="w-full bg-white/95 rounded-3xl shadow-2xl shadow-slate-200/60 border border-white p-1 md:p-8 mb-16">
           <div className="bg-white rounded-2xl p-6 md:p-10 border border-slate-100 shadow-inner">
             
             {/* Input Method Header */}
@@ -71,7 +74,6 @@ const Home = () => {
                 <div className="w-full">
                   <ImageUploader 
                     onIngredientsDetected={(detected) => 
-                      // Reset ingredients list on new upload
                       setIngredients([...new Set(detected)])
                     } 
                   />
@@ -108,14 +110,14 @@ const Home = () => {
           </div>
         </div>
 
-        {/* --- Feature Highlights Grid --- */}
+        {/* --- Feature Highlights --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full px-4">
           {[
             { icon: '🗑️', title: 'Reduce Waste', desc: 'Use what you have before it goes bad.' },
             { icon: '💰', title: 'Save Money', desc: 'Cook at home instead of ordering out.' },
             { icon: '⚡', title: 'Save Time', desc: 'No more scrolling for hours to decide.' },
           ].map((feature, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow text-center md:text-left transform-gpu">
+            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow text-center md:text-left">
               <div className="text-4xl mb-3 bg-slate-50 w-16 h-16 mx-auto md:mx-0 rounded-full flex items-center justify-center shadow-inner">{feature.icon}</div>
               <h3 className="font-bold text-slate-900 text-lg mb-1">{feature.title}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
