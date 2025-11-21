@@ -1,7 +1,56 @@
 import React, { useState } from 'react';
-const FilterPanel = ({ onApplyFilters })=>{
-  const [diet,setDiet]=useState(''); const [difficulty,setDifficulty]=useState(''); const [maxTime,setMaxTime]=useState('');
-  const apply = ()=> onApplyFilters({ diet: diet||null, difficulty: difficulty||null, maxTime: maxTime||null });
-  return (<div className="p-4 border rounded-lg bg-white shadow-md mb-4"><h2 className="text-lg font-semibold mb-3">Filters</h2><div className="mb-3"><label className="block mb-1 font-medium">Diet</label><select value={diet} onChange={e=>setDiet(e.target.value)} className="w-full p-2 border rounded"><option value="">Any</option><option value="vegetarian">Vegetarian</option><option value="vegan">Vegan</option><option value="gluten-free">Gluten-Free</option></select></div><div className="mb-3"><label className="block mb-1 font-medium">Difficulty</label><select value={difficulty} onChange={e=>setDifficulty(e.target.value)} className="w-full p-2 border rounded"><option value="">Any</option><option value="Easy">Easy</option><option value="Medium">Medium</option><option value="Hard">Hard</option></select></div><div className="mb-3"><label className="block mb-1 font-medium">Max Cooking Time (minutes)</label><input type="number" placeholder="e.g. 30" value={maxTime} onChange={e=>setMaxTime(e.target.value)} className="w-full p-2 border rounded" /></div><button onClick={apply} className="w-full bg-blue-600 text-white py-2 rounded mt-2">Apply Filters</button></div>);
+
+const FilterPanel = ({ onApplyFilters }) => {
+  const [diet, setDiet] = useState('');
+  const [difficulty, setDifficulty] = useState('');
+  const [maxTime, setMaxTime] = useState('');
+
+  const apply = () => onApplyFilters({ diet: diet || null, difficulty: difficulty || null, maxTime: maxTime || null });
+
+  return (
+    <div className="p-4 border rounded-lg bg-white shadow-md mb-4">
+      <h2 className="text-lg font-semibold mb-3">Filters</h2>
+      
+      {/* Diet Filter */}
+      <div className="mb-3">
+        <label className="block mb-1 font-medium">Diet</label>
+        <select value={diet} onChange={e => setDiet(e.target.value)} className="w-full p-2 border rounded">
+          <option value="">Any</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="non-vegetarian">Non-Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="gluten-free">Gluten-Free</option>
+        </select>
+      </div>
+      
+      {/* Difficulty Filter */}
+      <div className="mb-3">
+        <label className="block mb-1 font-medium">Difficulty</label>
+        <select value={difficulty} onChange={e => setDifficulty(e.target.value)} className="w-full p-2 border rounded">
+          <option value="">Any</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+      
+      {/* Time Filter */}
+      <div className="mb-3">
+        <label className="block mb-1 font-medium">Max Cooking Time (minutes)</label>
+        <input 
+          type="number" 
+          placeholder="e.g. 30" 
+          value={maxTime} 
+          onChange={e => setMaxTime(e.target.value)} 
+          className="w-full p-2 border rounded" 
+        />
+      </div>
+      
+      <button onClick={apply} className="w-full bg-blue-600 text-white py-2 rounded mt-2">
+        Apply Filters
+      </button>
+    </div>
+  );
 };
+
 export default FilterPanel;
