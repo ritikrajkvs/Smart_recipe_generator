@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* --- Optimized Animations (GPU Accelerated) --- */
+/* --- High Performance GPU Animations --- */
 
 @keyframes blob {
   0% { transform: translate3d(0px, 0px, 0px) scale(1); }
@@ -25,8 +25,8 @@ html {
 }
 
 .animate-blob {
-  animation: blob 7s infinite;
-  will-change: transform;
+  animation: blob 10s infinite; /* Slower animation = smoother feel */
+  will-change: transform; /* Tells browser to optimize this layer */
 }
 
 @keyframes float {
