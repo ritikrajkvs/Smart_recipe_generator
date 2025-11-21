@@ -1,0 +1,123 @@
+[
+  {
+    "id": "r001",
+    "title": "Tomato Basil Pasta",
+    "ingredients": [
+      {
+        "name": "pasta",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "tomato",
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "basil",
+        "qty": 10,
+        "unit": "g"
+      },
+      {
+        "name": "garlic",
+        "qty": 2,
+        "unit": "cloves"
+      }
+    ],
+    "steps": [
+      "Boil pasta",
+      "Saute garlic and tomato",
+      "Mix"
+    ],
+    "difficulty": "Easy",
+    "cookTimeMin": 20,
+    "cuisine": "Italian",
+    "diet": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 420,
+      "protein_g": 12,
+      "fat_g": 10,
+      "carbs_g": 65
+    },
+    "popularity": 4.5
+  },
+  {
+    "id": "r002",
+    "title": "Paneer Butter Masala",
+    "ingredients": [
+      {
+        "name": "paneer",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "tomato",
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "butter",
+        "qty": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "steps": [
+      "Make gravy",
+      "Add paneer"
+    ],
+    "difficulty": "Medium",
+    "cookTimeMin": 30,
+    "cuisine": "Indian",
+    "diet": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 520,
+      "protein_g": 15,
+      "fat_g": 35,
+      "carbs_g": 20
+    },
+    "popularity": 4.8
+  },
+  {
+    "id": "r003",
+    "title": "Veg Fried Rice",
+    "ingredients": [
+      {
+        "name": "rice",
+        "qty": 250,
+        "unit": "g"
+      },
+      {
+        "name": "carrot",
+        "qty": 1,
+        "unit": "pc"
+      },
+      {
+        "name": "peas",
+        "qty": 50,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Cook rice",
+      "Stir fry veg",
+      "Mix"
+    ],
+    "difficulty": "Easy",
+    "cookTimeMin": 15,
+    "cuisine": "Asian",
+    "diet": [
+      "vegetarian"
+    ],
+    "nutrition": {
+      "calories": 380,
+      "protein_g": 8,
+      "fat_g": 6,
+      "carbs_g": 70
+    },
+    "popularity": 4.6
+  }
+]

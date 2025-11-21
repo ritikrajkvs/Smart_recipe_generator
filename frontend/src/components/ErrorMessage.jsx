@@ -1,0 +1,1 @@
+import React from 'react';const ErrorMessage=({message})=> <div className='bg-red-100 text-red-600 px-4 py-3 rounded border border-red-300'>{message}</div>;export default ErrorMessage;
