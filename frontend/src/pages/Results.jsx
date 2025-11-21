@@ -17,7 +17,7 @@ const Results = ()=>{
     setLoading(true); setError('');
     try{
       const params = new URLSearchParams({ ingredients: query, diet: filters.diet||'', difficulty: filters.difficulty||'', maxTime: filters.maxTime||'' });
-      const res = await fetch(`http://localhost:5000/api/recipes?${params.toString()}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/recipes?${params.toString()}`);
       const data = await res.json();
       if(data.success) setRecipes(data.results); else setError('Failed to fetch recipes.');
     }catch(err){ console.error(err); setError('Server error. Please check backend connection.'); }
