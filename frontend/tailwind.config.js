@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+      // Custom animation keyframes for floating elements
       animation: {
         blob: "blob 7s infinite",
         float: "float 6s ease-in-out infinite",
