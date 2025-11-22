@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
-const IngredientInput = ({ onAdd }) => {
+const IngredientInput = () => {
+  const { ingredients, setIngredients } = useContext(AppContext);
   const [input, setInput] = useState('');
 
   const handleAddIngredient = () => {
     if (input.trim() === '') return;
-    if (onAdd) onAdd(input.trim());
+
+    // Add ingredient to global state (your original logic)
+    setIngredients([...ingredients, input.trim()]);
+
     setInput('');
   };
 
@@ -21,7 +26,7 @@ const IngredientInput = ({ onAdd }) => {
         className="w-full px-4 py-3 rounded-xl border border-slate-200 shadow-sm focus:ring-2 focus:ring-green-400 focus:outline-none text-sm"
       />
 
-      {/* FIXED: Add Ingredient Button stays inside screen */}
+      {/* FIX: Button stays inside screen on mobile */}
       <div className="w-full flex justify-center sm:justify-start">
         <button
           onClick={handleAddIngredient}
