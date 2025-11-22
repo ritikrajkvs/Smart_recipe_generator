@@ -21,12 +21,35 @@ async function loadAllRecipes() {
 exports.getMatchedRecipes = async (req, res) => {
   try {
     const { ingredients, diet, difficulty, maxTime } = req.query;
-    if (!ingredients) return res.status(400).json({ success: false, error: 'ingredients query required' });
-
-    const ingredientList = ingredients.split(',').map(i => i.trim().toLowerCase()).filter(Boolean);
     const allRecipes = await loadAllRecipes();
-    const filters = { diet: diet || null, difficulty: difficulty || null, maxTime: maxTime ? Number(maxTime) : null };
-    const results = matchRecipes(allRecipes, ingredientList, filters);
+    let results = [];
+
+    if (ingredients) {
+      // Normal Search Mode: Match ingredients
+      const ingredientList = ingredients.split(',').map(i => i.trim().toLowerCase()).filter(Boolean);
+      const filters = { diet: diet || null, difficulty: difficulty || null, maxTime: maxTime ? Number(maxTime) : null };
+      results = matchRecipes(allRecipes, ingredientList, filters);
+    } else {
+      // Recommendation Mode: Return all (filtered by params only)
+      let candidates = allRecipes;
+      
+      // Apply basic filters if they exist
+      if (diet) candidates = candidates.filter(r => r.diet && r.diet.map(d=>d.toLowerCase()).includes(diet.toLowerCase()));
+      if (difficulty) candidates = candidates.filter(r => r.difficulty === difficulty);
+      if (maxTime) candidates = candidates.filter(r => r.cookTimeMin <= Number(maxTime));
+
+      // Wrap in the expected structure
+      results = candidates.map(r => ({
+        recipe: r,
+        score: r.popularity || 0,
+        matchedIngredients: [],
+        missingIngredients: []
+      }));
+
+      // Sort by popularity (highest first)
+      results.sort((a, b) => b.score - a.score);
+    }
+
     return res.json({ success: true, count: results.length, results });
   } catch (err) {
     console.error('getMatchedRecipes error', err);
