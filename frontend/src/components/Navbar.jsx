@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
 const Navbar = () => {
   const location = useLocation();
   const { favorites, user, logout } = useContext(AppContext);
+
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
   const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
@@ -13,7 +15,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
-        {/* --- 1. Logo Section --- */}
+        {/* LOGO */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-2xl shadow-sm border border-green-100 group-hover:rotate-12 transition-transform duration-300">
             🥗
@@ -23,7 +25,21 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* --- 2. Center Navigation (Hidden on Auth Pages) --- */}
+        {/* HAMBURGER BUTTON — only on mobile */}
+        <button
+          className="md:hidden flex items-center justify-center p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            {mobileOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+
+        {/* CENTER NAV (HIDDEN ON AUTH + MOBILE) */}
         {!isAuthPage && user && (
           <div className="hidden md:flex items-center bg-slate-50/80 p-1.5 rounded-full border border-slate-200/60">
             {[
@@ -46,10 +62,9 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* --- 3. Right Side Actions --- */}
-        <div className="flex items-center gap-4">
+        {/* RIGHT SIDE (DESKTOP) */}
+        <div className="hidden md:flex items-center gap-4">
 
-          {/* --- PREMIUM LINKEDIN BUTTON (ONLY on Login/Signup) --- */}
           {isAuthPage && (
             <a
               href="https://www.linkedin.com/in/ritikraj026"
@@ -61,22 +76,15 @@ const Navbar = () => {
                          hover:shadow-xl hover:-translate-y-0.5 
                          transition-all duration-300"
             >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="currentColor" 
-                viewBox="0 0 24 24" 
-                className="w-4 h-4"
-              >
-                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.98 0h3.83v2.18h.06c.54-1.02 1.86-2.18 3.83-2.18 4.1 0 4.85 2.7 4.85 6.22V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.16V24h-4V8z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.98 0h3.83v2.18h.06c.54-1.02 1.86-2.18 3.83-2.18 4.1 0 4.85 2.7 4.85 6.22V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.16V24h-4V8z" />
               </svg>
-
               <span>Let’s Connect</span>
             </a>
           )}
 
           {user ? (
             <>
-              {/* Saved Button */}
               <Link
                 to="/favorites"
                 className={`relative group flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all duration-300 
@@ -95,7 +103,6 @@ const Navbar = () => {
                 )}
               </Link>
 
-              {/* User Profile & Logout */}
               <div className="flex items-center gap-3 pl-2">
                 <div className="hidden lg:block text-right">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Signed in as</p>
@@ -118,7 +125,6 @@ const Navbar = () => {
               </div>
             </>
           ) : (
-            /* Auth Buttons (Visible when logged out) */
             <div className="flex items-center gap-3">
               {location.pathname !== '/login' && (
                 <Link to="/login" className="px-6 py-2.5 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-50 transition-colors">
@@ -132,10 +138,69 @@ const Navbar = () => {
               )}
             </div>
           )}
-
         </div>
 
       </div>
+
+      {/* MOBILE MENU */}
+      {mobileOpen && (
+        <div className="md:hidden bg-white border-t border-slate-200 shadow-lg px-4 py-4 space-y-3 animate-fadeIn">
+
+          {!isAuthPage && user && (
+            <>
+              <Link to="/" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Home</Link>
+              <Link to="/results" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Recipes</Link>
+              <Link to="/suggested" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">For You</Link>
+            </>
+          )}
+
+          {isAuthPage && (
+            <a
+              href="https://www.linkedin.com/in/ritikraj026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-3 rounded-full 
+                         bg-gradient-to-r from-blue-600 to-blue-500
+                         text-white font-semibold shadow"
+            >
+              LinkedIn – Let's Connect
+            </a>
+          )}
+
+          {user ? (
+            <>
+              <Link
+                to="/favorites"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-2 py-3 text-slate-800 font-semibold"
+              >
+                ❤️ Saved ({favorites.length})
+              </Link>
+
+              <button
+                onClick={() => { logout(); setMobileOpen(false); }}
+                className="w-full text-left py-3 text-red-500 font-semibold"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              {location.pathname !== '/login' && (
+                <Link to="/login" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">
+                  Log In
+                </Link>
+              )}
+
+              {location.pathname !== '/signup' && (
+                <Link to="/signup" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">
+                  Sign Up
+                </Link>
+              )}
+            </>
+          )}
+        </div>
+      )}
     </nav>
   );
 };
