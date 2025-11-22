@@ -3,39 +3,70 @@ import { AppContext } from '../context/AppContext';
 
 const IngredientInput = () => {
   const { ingredients, setIngredients } = useContext(AppContext);
-  const [input, setInput] = useState('');
+  const [inputValue, setInputValue] = useState('');
 
-  const handleAddIngredient = () => {
-    if (input.trim() === '') return;
+  const handleAdd = () => {
+    const ing = inputValue.trim().toLowerCase();
+    if (!ing) return;
+    
+    // Prevent duplicates
+    if (!ingredients.includes(ing)) {
+      setIngredients([...ingredients, ing]);
+    }
+    setInputValue('');
+  };
 
-    // Add ingredient to global state (your original logic)
-    setIngredients([...ingredients, input.trim()]);
+  const handleRemove = (ingToRemove) => {
+    setIngredients(ingredients.filter(ing => ing !== ingToRemove));
+  };
 
-    setInput('');
+  // Use onKeyDown for better browser compatibility than onKeyPress
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleAdd();
+    }
   };
 
   return (
-    <div className="w-full space-y-4">
-
-      {/* Input Field */}
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter ingredient"
-        className="w-full px-4 py-3 rounded-xl border border-slate-200 shadow-sm focus:ring-2 focus:ring-green-400 focus:outline-none text-sm"
-      />
-
-      {/* FIX: Button stays inside screen on mobile */}
-      <div className="w-full flex justify-center sm:justify-start">
-        <button
-          onClick={handleAddIngredient}
-          className="px-5 py-2.5 bg-green-600 text-white rounded-full font-bold text-sm shadow-md hover:bg-green-700 transition-all"
+    <div className="w-full">
+      {/* Modern Input Group */}
+      <div className="flex gap-2 mb-3">
+        <input 
+          value={inputValue} 
+          onChange={(e) => setInputValue(e.target.value)} 
+          onKeyDown={handleKeyDown} 
+          placeholder="e.g. tomato" 
+          className="flex-1 px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm text-sm sm:text-base"
+        />
+        <button 
+          onClick={handleAdd} 
+          className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-sm active:scale-95 text-sm sm:text-base"
         >
-          Add Ingredient
+          Add
         </button>
       </div>
 
+      {/* Ingredient Tags (Pill Design) */}
+      {ingredients.length > 0 && (
+        <div className="flex flex-wrap gap-2 max-h-40 overflow-y-auto">
+          {ingredients.map((ing, idx) => (
+            <span 
+              key={idx} 
+              className="inline-flex items-center gap-1 pl-3 pr-1 py-1 bg-white text-slate-600 text-xs sm:text-sm font-medium rounded-full border border-slate-200 shadow-sm"
+            >
+              {ing}
+              <button 
+                onClick={() => handleRemove(ing)}
+                className="p-1 hover:bg-red-50 hover:text-red-500 rounded-full text-slate-400 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                  <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                </svg>
+              </button>
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
