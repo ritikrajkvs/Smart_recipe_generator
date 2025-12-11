@@ -1,204 +1,80 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { AppContext } from '../context/AppContext';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeUser } from '../utils/userSlice';
 
 const Navbar = () => {
   const location = useLocation();
-  const { favorites, user, logout } = useContext(AppContext);
-
+  const dispatch = useDispatch();
+  const user = useSelector((store) => store.user);
+  const favorites = user?.favorites || [];
+  
   const [mobileOpen, setMobileOpen] = useState(false);
-
   const isActive = (path) => location.pathname === path;
   const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    dispatch(removeUser());
+    setMobileOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-
-        {/* LOGO */}
+        
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-2xl shadow-sm border border-green-100 group-hover:rotate-12 transition-transform duration-300">
-            🥗
-          </div>
-          <span className="text-2xl font-extrabold bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent tracking-tight">
-            Smart Recipe Generator
-          </span>
+          <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-2xl shadow-sm border border-green-100 group-hover:rotate-12 transition-transform duration-300">🥗</div>
+          <span className="text-2xl font-extrabold bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent tracking-tight">RecipeGen</span>
         </Link>
 
-        {/* HAMBURGER BUTTON — only on mobile */}
-        <button
-          className="md:hidden flex items-center justify-center p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="md:hidden flex items-center justify-center p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition" onClick={() => setMobileOpen(!mobileOpen)}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
+            {mobileOpen ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
           </svg>
         </button>
 
-        {/* CENTER NAV (HIDDEN ON AUTH + MOBILE) */}
         {!isAuthPage && user && (
           <div className="hidden md:flex items-center bg-slate-50/80 p-1.5 rounded-full border border-slate-200/60">
-            {[
-              { path: '/', label: 'Home' },
-              { path: '/results', label: 'Recipes' },
-              { path: '/suggested', label: 'For You' }
-            ].map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
-                  isActive(link.path)
-                    ? 'bg-white text-green-600 shadow-md shadow-slate-200/50'
-                    : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'
-                }`}
-              >
-                {link.label}
-              </Link>
+            {[{ path: '/', label: 'Home' }, { path: '/results', label: 'Recipes' }, { path: '/suggested', label: 'For You' }].map((link) => (
+              <Link key={link.path} to={link.path} className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${isActive(link.path) ? 'bg-white text-green-600 shadow-md shadow-slate-200/50' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'}`}>{link.label}</Link>
             ))}
           </div>
         )}
 
-        {/* RIGHT SIDE (DESKTOP) */}
         <div className="hidden md:flex items-center gap-4">
-
           {isAuthPage && (
-            <a
-              href="https://www.linkedin.com/in/ritikraj026"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-2.5 rounded-full 
-                         bg-gradient-to-r from-blue-600 to-blue-500
-                         text-white font-semibold text-sm shadow-lg
-                         hover:shadow-xl hover:-translate-y-0.5 
-                         transition-all duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4">
-                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.98 0h3.83v2.18h.06c.54-1.02 1.86-2.18 3.83-2.18 4.1 0 4.85 2.7 4.85 6.22V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.16V24h-4V8z" />
-              </svg>
-              <span>Let’s Connect</span>
-            </a>
+            <a href="https://www.linkedin.com/in/ritikraj026" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"><span>Let’s Connect</span></a>
           )}
 
           {user ? (
             <>
-              <Link
-                to="/favorites"
-                className={`relative group flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all duration-300 
-                  ${isActive('/favorites')
-                    ? 'bg-red-50 border-red-200 text-red-600'
-                    : 'bg-transparent border-transparent text-slate-500 hover:bg-red-50 hover:text-red-500'
-                  }`}
-              >
+              <Link to="/favorites" className={`relative group flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all duration-300 ${isActive('/favorites') ? 'bg-red-50 border-red-200 text-red-600' : 'bg-transparent border-transparent text-slate-500 hover:bg-red-50 hover:text-red-500'}`}>
                 <span className={`text-lg transition-transform duration-300 ${isActive('/favorites') ? 'scale-110' : 'group-hover:scale-125'}`}>❤️</span>
                 <span className="font-bold text-sm">Saved</span>
-
-                {favorites.length > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-extrabold h-5 w-5 flex items-center justify-center rounded-full border-2 border-white shadow-sm">
-                    {favorites.length}
-                  </span>
-                )}
+                {favorites.length > 0 && <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-extrabold h-5 w-5 flex items-center justify-center rounded-full border-2 border-white shadow-sm">{favorites.length}</span>}
               </Link>
-
               <div className="flex items-center gap-3 pl-2">
-                <div className="hidden lg:block text-right">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Signed in as</p>
-                  <p className="text-sm font-bold text-slate-800 leading-tight">{user.username}</p>
-                </div>
-
-                <div className="w-10 h-10 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg ring-2 ring-slate-100">
-                  {user.username.charAt(0).toUpperCase()}
-                </div>
-
-                <button
-                  onClick={logout}
-                  title="Logout"
-                  className="p-2 rounded-full text-slate-400 hover:bg-slate-100 hover:text-red-500 transition-colors ml-1"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                  </svg>
+                <div className="hidden lg:block text-right"><p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Signed in as</p><p className="text-sm font-bold text-slate-800 leading-tight">{user.username}</p></div>
+                <div className="w-10 h-10 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg ring-2 ring-slate-100">{user.username.charAt(0).toUpperCase()}</div>
+                <button onClick={handleLogout} title="Logout" className="p-2 rounded-full text-slate-400 hover:bg-slate-100 hover:text-red-500 transition-colors ml-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" /></svg>
                 </button>
               </div>
             </>
           ) : (
             <div className="flex items-center gap-3">
-              {location.pathname !== '/login' && (
-                <Link to="/login" className="px-6 py-2.5 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-50 transition-colors">
-                  Log In
-                </Link>
-              )}
-              {location.pathname !== '/signup' && (
-                <Link to="/signup" className="px-6 py-2.5 rounded-full text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-lg shadow-slate-200 transition-all hover:-translate-y-0.5">
-                  Sign Up
-                </Link>
-              )}
+              {location.pathname !== '/login' && <Link to="/login" className="px-6 py-2.5 rounded-full text-sm font-bold text-slate-600 hover:bg-slate-50 transition-colors">Log In</Link>}
+              {location.pathname !== '/signup' && <Link to="/signup" className="px-6 py-2.5 rounded-full text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-lg shadow-slate-200 transition-all hover:-translate-y-0.5">Sign Up</Link>}
             </div>
           )}
         </div>
-
       </div>
-
-      {/* MOBILE MENU */}
+      
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-slate-200 shadow-lg px-4 py-4 space-y-3 animate-fadeIn">
-
-          {!isAuthPage && user && (
-            <>
-              <Link to="/" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Home</Link>
-              <Link to="/results" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Recipes</Link>
-              <Link to="/suggested" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">For You</Link>
-            </>
-          )}
-
-          {isAuthPage && (
-            <a
-              href="https://www.linkedin.com/in/ritikraj026"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-3 rounded-full 
-                         bg-gradient-to-r from-blue-600 to-blue-500
-                         text-white font-semibold shadow"
-            >
-              LinkedIn – Let's Connect
-            </a>
-          )}
-
-          {user ? (
-            <>
-              <Link
-                to="/favorites"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-2 py-3 text-slate-800 font-semibold"
-              >
-                ❤️ Saved ({favorites.length})
-              </Link>
-
-              <button
-                onClick={() => { logout(); setMobileOpen(false); }}
-                className="w-full text-left py-3 text-red-500 font-semibold"
-              >
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              {location.pathname !== '/login' && (
-                <Link to="/login" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">
-                  Log In
-                </Link>
-              )}
-
-              {location.pathname !== '/signup' && (
-                <Link to="/signup" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">
-                  Sign Up
-                </Link>
-              )}
-            </>
-          )}
+          {!isAuthPage && user && <><Link to="/" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Home</Link><Link to="/results" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Recipes</Link><Link to="/suggested" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">For You</Link></>}
+          {user ? <><Link to="/favorites" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 py-3 text-slate-800 font-semibold">❤️ Saved ({favorites.length})</Link><button onClick={handleLogout} className="w-full text-left py-3 text-red-500 font-semibold">Logout</button></> : <>{location.pathname !== '/login' && <Link to="/login" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Log In</Link>}{location.pathname !== '/signup' && <Link to="/signup" onClick={() => setMobileOpen(false)} className="block py-3 text-slate-800 font-semibold">Sign Up</Link>}</>}
         </div>
       )}
     </nav>
