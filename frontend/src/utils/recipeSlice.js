@@ -4,28 +4,19 @@ const recipeSlice = createSlice({
   name: "recipe",
   initialState: {
     ingredients: [],
-    favorites: [],
-    ratings: JSON.parse(localStorage.getItem('ratings') || '{}'),
+    ratings: JSON.parse(localStorage.getItem("ratings") || "{}"),
   },
   reducers: {
     setIngredients: (state, action) => {
       state.ingredients = action.payload;
     },
-    setFavorites: (state, action) => {
-      state.favorites = action.payload;
+    addRating: (state, action) => {
+      const { id, rating } = action.payload;
+      state.ratings[id] = rating;
+      localStorage.setItem("ratings", JSON.stringify(state.ratings));
     },
-    addFavorite: (state, action) => {
-      state.favorites.push(action.payload);
-    },
-    removeFavorite: (state, action) => {
-      state.favorites = state.favorites.filter(id => id !== action.payload);
-    },
-    setRatings: (state, action) => {
-      state.ratings = action.payload;
-      localStorage.setItem('ratings', JSON.stringify(action.payload));
-    }
   },
 });
 
-export const { setIngredients, setFavorites, addFavorite, removeFavorite, setRatings } = recipeSlice.actions;
+export const { setIngredients, addRating } = recipeSlice.actions;
 export default recipeSlice.reducer;
