@@ -26,7 +26,7 @@ A full-stack, AI-powered application that suggests recipes based on the ingredie
 ### Frontend
 - **Framework:** React.js (Vite)
 - **Styling:** Tailwind CSS
-- **State Management:** React Context API
+- **State Management:** React Redux toolkit
 - **Routing:** React Router DOM
 - **HTTP Client:** Axios
 
