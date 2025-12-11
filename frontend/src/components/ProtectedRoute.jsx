@@ -1,18 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { AppContext } from '../context/AppContext';
+import { useSelector } from 'react-redux';
 import LoadingSpinner from './LoadingSpinner';
 
 const ProtectedRoute = ({ children }) => {
-  const { user, isAuthLoading } = useContext(AppContext);
+  const user = useSelector((store) => store.user);
+  const token = localStorage.getItem('token');
 
-  if (isAuthLoading) {
+  // If there is a token but no user yet, assume loading
+  if (token && !user) {
     return <div className="h-screen flex items-center justify-center"><LoadingSpinner /></div>;
   }
 
-  if (!user) {
-    // FIX: Redirect unauthenticated users to the Signup page
-    return <Navigate to="/signup" replace />;
+  // If no user and no token, redirect
+  if (!user && !token) {
+    return <Navigate to="/login" replace />;
   }
 
   return children;
