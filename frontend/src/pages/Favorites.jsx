@@ -1,9 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AppContext } from '../context/AppContext';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import RecipeCard from '../components/RecipeCard';
 
 const Favorites = () => {
-  const { favorites } = useContext(AppContext);
+  const user = useSelector((store) => store.user);
+  const favorites = user?.favorites || [];
   const [favRecipes, setFavRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -12,28 +13,19 @@ const Favorites = () => {
       setLoading(true);
       try {
         const results = [];
-        // Loop through every saved ID
         for (const id of favorites) {
-          // FIX: Use VITE_API_URL
           const res = await fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`);
           const data = await res.json();
-          
           if (data.success) {
-            results.push({
-              recipe: data.recipe,
-              score: 100, // Favorites are a 100% match
-              matchedIngredients: [],
-              missingIngredients: []
-            });
+            results.push({ recipe: data.recipe, score: 100, matchedIngredients: [], missingIngredients: [] });
           }
         }
         setFavRecipes(results);
-      } catch (err) {
-        console.error(err);
-      }
+      } catch (err) { console.error(err); }
       setLoading(false);
     };
-    loadFavorites();
+    if (favorites.length > 0) loadFavorites();
+    else setLoading(false);
   }, [favorites]);
 
   return (
